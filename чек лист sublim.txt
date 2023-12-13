@@ -1,22 +1,8 @@
 C:\Users\колян\Documents\TOP-Akademy\Python>cd sublim
 
+руссифицировал админку и поставил местное время. ()
 C:\Users\колян\Documents\TOP-Akademy\Python\sublim>py -m  pipenv shell
-Creating a virtualenv for this project...
-Pipfile: C:\Users\колян\Documents\TOP-Akademy\Python\sublim\Pipfile
-Using default python from C:\Users\колян\AppData\Local\Programs\Python\Python311
-\python.exe (3.11.4) to create virtualenv...
-created virtual environment CPython3.11.4.final.0-64 in 2241ms
-  creator CPython3Windows(dest=C:\Users\колян\.virtualenvs\sublim-NUwLPTSV, clea
-r=False, no_vcs_ignore=False, global=False)
-  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle
-, via=copy, app_data_dir=C:\Users\колян\AppData\Local\pypa\virtualenv)
-    added seed packages: pip==23.2.1, setuptools==68.2.2, wheel==0.41.2
-  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerSh
-ellActivator,PythonActivator
+C:\Users\колян\Documents\TOP-Akademy\Python\sublim\sublim> py manage.py runserver
 
-Successfully created virtual environment!
-Virtualenv location: C:\Users\колян\.virtualenvs\sublim-NUwLPTSV
-Creating a Pipfile for this project...
-Launching subshell in virtual environment...
-Microsoft Windows [Version 6.3.9600]
-(c) Корпорация Майкрософт (Microsoft Corporation), 2013. Все права защищены.
+
+pip install django
