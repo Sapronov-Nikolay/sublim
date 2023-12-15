@@ -1,14 +1,23 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% block content %}
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
     <script src="{% static 'main/js/body.js' %}"></script>
-    <title>План</title>
-</head>
+    <title>Товары</title>
+
 <body>
-    <p>Разработка плана странички</p>
+    <h1>Сублимированные товары</h1>
+    <table border="1">
+        {% for товар in Товары %}
+            <tr>
+                <th>{{товар.namegood}}</th>
+                <th>{{товар.specification}}</th>
+                <th>{{товар.price}}</th>
+        {% endfor %}
+ <!--           <th>количество</th>    -->
+            </tr>
+        
+    </table>
+{% endblock %}
 </body>
-</html>
