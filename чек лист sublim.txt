@@ -1,8 +1,11 @@
 C:\Users\колян\Documents\TOP-Akademy\Python>cd sublim
 
 руссифицировал админку и поставил местное время. ()
-C:\Users\колян\Documents\TOP-Akademy\Python\sublim>py -m  pipenv shell
-C:\Users\колян\Documents\TOP-Akademy\Python\sublim\sublim> py manage.py runserver
-
-
-pip install django
+04.12.2023 г. C:\Users\колян\Documents\TOP-Akademy\Python\sublim>py -m  pipenv shell
+06.12.2023 г. C:\Users\колян\Documents\TOP-Akademy\Python\sublim\sublim> py manage.py runserver
+13.12.2023 г. Выстроили первоначальную структуру для дальнейшей работы.
+                файлы html, файлы папки static (css (index), js (для body, futter, header, menu), img)
+15.12.2023 г. провели создание модели таблицы, её регистрация и прописями параметров в views и urls
+16.12.2023 г. Вынес файл static на каталог выше.
+                дальнейшая работа...
+.
