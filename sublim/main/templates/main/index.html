@@ -10,7 +10,6 @@
     <h1>Сублимированные товары</h1>
     <table border="1">
         {% for товар in Товары %}
-<<<<<<< HEAD
         <tr>
             <th><img width="200px" height="200px" src="/static/main/img/{{товар.picture}}"></th>
             <th>{{товар.namegood}}</th>
@@ -20,17 +19,6 @@
             <!--           <th>количество</th>    -->
         </tr>
 
-=======
-            <tr>
-                <th><img width="200px" height="200px" src="{% static 'main/img/{{товар.picture}}' %}"></th>
-                <th>{{товар.namegood}}</th>
-                <th>{{товар.specification}}</th>
-                <th>{{товар.price}}</th>
-        {% endfor %}
- <!--           <th>количество</th>    -->
-            </tr>
-        
->>>>>>> 0ad3bddd6bf87b9bdbea99ad428fe77d9dcafe39
     </table>
     {% endblock %}
 </body>
