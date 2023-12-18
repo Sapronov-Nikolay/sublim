@@ -12,7 +12,7 @@
     <table border="1">
         {% for товар in Товары %}
             <tr>
-                <th><img width="200px" height="200px" src="/static/main/img/{{товар.picture}}"></th>
+                <th><img width="200px" height="200px" src="{% static 'main/img/{{товар.picture}}' %}"></th>
                 <th>{{товар.namegood}}</th>
                 <th>{{товар.specification}}</th>
                 <th>{{товар.price}}</th>
