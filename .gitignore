@@ -1,5 +1,6 @@
 /Pipfile.lock
 topsecret.py
 desktop.ini
-img
 db.sqlite3
+__pycache__
+migrations
