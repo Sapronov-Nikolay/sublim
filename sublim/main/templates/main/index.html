@@ -1,25 +1,24 @@
-{% load static %}
 {% block content %}
+{% load static %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/ico" href="{% static 'main/img/xmas_icon_260233.ico' %}">
-    <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
-    <script src="{% static 'main/js/body.js' %}"></script>
-    <title>Товары</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'main/css/body.css' %}">
+<script src="{% static 'main/js/body.js' %}"></script>
+<title>Товары</title>
 
 <body>
     <h1>Сублимированные товары</h1>
     <table border="1">
         {% for товар in Товары %}
-            <tr>
-                <th><img width="200px" height="200px" src="{% static 'main/img/{{товар.picture}}' %}"></th>
-                <th>{{товар.namegood}}</th>
-                <th>{{товар.specification}}</th>
-                <th>{{товар.price}}</th>
-        {% endfor %}
- <!--           <th>количество</th>    -->
-            </tr>
-        
+        <tr>
+            <th><img width="200px" height="200px" src="/static/main/img/{{товар.picture}}"></th>
+            <th>{{товар.namegood}}</th>
+            <th>{{товар.specification}}</th>
+            <th>{{товар.price}}</th>
+            {% endfor %}
+            <!--           <th>количество</th>    -->
+        </tr>
+
     </table>
-{% endblock %}
+    {% endblock %}
 </body>
