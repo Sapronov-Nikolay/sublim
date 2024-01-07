@@ -1,0 +1,8 @@
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'main/css/body.css' %}">
+
+
+{% block content %}{% endblock %} <!--Без него не отображается таблица-->
+
+<footer> {% now "Y" %} © Вася, крутой разработчик </footer>

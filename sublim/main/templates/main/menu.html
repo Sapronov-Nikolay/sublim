@@ -1,0 +1,16 @@
+<title>{% block title %}Товары{% endblock %}</title>
+<div id="mainmenu">
+    <ul>
+        {% for nav in navset %}
+        {% if nav.active %}
+        <li class="active">
+            {% else %}
+        <li>
+            {% endif %}
+            <a href="{{nav.url}}">{{nav.text}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<h3>Тфблица</h3> <!--Отображается на всех страницах а должна только над таблицей-->
+{% include 'main/tovars.html' %} <!--Отображает таблицу при нажатии на значение "Товары" из меню-->

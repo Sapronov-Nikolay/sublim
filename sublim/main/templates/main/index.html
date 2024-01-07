@@ -1,24 +1,14 @@
-{% block content %}
 {% load static %}
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>{% block title %}Главная страница{% endblock %}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
 <script src="{% static 'main/js/body.js' %}"></script>
-<title>Товары</title>
-
+</head>
+{% include 'main/menu.html' %}  <!--Отображает параметры из menu.html и header_footer.html-->
 <body>
-    <h1>Сублимированные товары</h1>
-    <table border="1">
-        {% for товар in Товары %}
-        <tr>
-            <th><img width="200px" height="200px" src="/static/main/img/{{товар.picture}}"></th>
-            <th>{{товар.namegood}}</th>
-            <th>{{товар.specification}}</th>
-            <th>{{товар.price}}</th>
-            {% endfor %}
-            <!--           <th>количество</th> -->
-        </tr>
-
-    </table>
-    {% endblock %}
+    <h1>ВСЁ И ВСЯ</h1> <!--Отображается корректно, только на главной странице-->
 </body>
+</html>
