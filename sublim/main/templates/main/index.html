@@ -2,13 +2,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <meta charset="UTF-8">
 <title>{% block title %}Главная страница{% endblock %}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
 <script src="{% static 'main/js/body.js' %}"></script>
 </head>
-{% include 'main/menu.html' %}  <!--Отображает параметры из menu.html и header_footer.html-->
-<body>
+    <body>
+    {% include 'main/menu.html' %}  <!--Отображает параметры из menu.html и header_footer.html-->
     <h1>ВСЁ И ВСЯ</h1> <!--Отображается корректно, только на главной странице-->
-</body>
+    </body>
 </html>

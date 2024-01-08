@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Good, Kategory
-
+#               ЗАКОМЕНЧЕНА СТАРАЯ ФУНКЦИЯ ЧТОБ ЗА НЕЁ РАБОТАЛИ ДРУГИЕ ПАРАМЕТРЫ
 # class GoodAdmin(admin.ModelAdmin):
 #    list_display = [
 #        field.name for field in Good._meta.fields if field.name != "id"]
