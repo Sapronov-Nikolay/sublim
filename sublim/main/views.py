@@ -41,7 +41,7 @@ def pokupki(request):
 
     return render(
         request,
-        "main/menu.html",
+        "main/tovars.html",
 
         # Kонтекст передаваемых переменных
         {
