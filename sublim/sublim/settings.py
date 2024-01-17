@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'mptt', # Библиотека для работы с древовидными структурами
+
     'main',
     'top_menu',
 ]
