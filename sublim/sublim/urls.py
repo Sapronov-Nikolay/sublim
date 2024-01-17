@@ -26,8 +26,11 @@ urlpatterns = [
 ]
 
 navset = [            # Функция выводит меню
-    {'url': '/',     'text': 'Главная',     'active': False},
-    {'url': '/shop', 'text': 'Товары', 'active': False},
+    {'url': '/',         'text': 'Акции',             'active': False},
+    {'url': '/shop',     'text': 'Магазин',          'active': False},
+    {'url': '/delivery', 'text': 'Доставка',          'active': False},
+    {'url': '/recipies', 'text': 'Рецепты',           'active': False},
+    {'url': '/sublim',   'text': 'О сублимировании',  'active': False},
 ]
 
 if settings.DEBUG:
