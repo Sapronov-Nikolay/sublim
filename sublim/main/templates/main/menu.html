@@ -4,6 +4,17 @@
 <title>{% block title %}Товары{% endblock %}</title>
 <div id="mainmenu">
     <ul>
+        {% for nav in topnavset %}
+        {% if nav.active %}
+        <li class="active">
+            {% else %}
+        <li>
+            {% endif %}
+            <a href="{{nav.url}}">{{nav.text}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <ul>
         {% for nav in navset %}
         {% if nav.active %}
         <li class="active">

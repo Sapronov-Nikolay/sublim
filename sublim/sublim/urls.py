@@ -25,7 +25,7 @@ urlpatterns = [
     path('', include('main.urls')),
 ]
 
-navset = [
+topnavset = [
     {'url': '/catalog', 'text':  'Каталог',          'active': False},
     {'url': '/search', 'text':  'Поиск',             'active': False},
     {'url': '/basket', 'text':  'Корзина',           'active': False},
@@ -34,7 +34,7 @@ navset = [
 
 ]
 
-navset2 =[
+navset =[
     {'url': '/',         'text': 'Акции',             'active': False},
     {'url': '/shop',     'text': 'Магазин',           'active': False},
     {'url': '/delivery', 'text': 'Доставка',          'active': False},

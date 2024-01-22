@@ -6,6 +6,14 @@ import sublim
 from django.shortcuts import render
 from .models import Good, Kategory
 
+def get_top_menu(active):
+    result = []
+    for elem in sublim.urls.topnavset:
+        if elem['url'] == active:
+            elem['active'] = True
+        result.append(elem)
+    return result
+
 def get_menu(active):
     result = []
     for elem in sublim.urls.navset:
@@ -28,8 +36,8 @@ def index(request):
         # Kонтекст передаваемых переменных
         {
             "Товар": Good.objects.all(), "Категории": kateg,
-            "navset": get_menu("/")
-
+            "topnavset": get_top_menu("/"),
+            "navset": get_menu("/"),
         }
     )
 
