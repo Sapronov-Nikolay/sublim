@@ -23,6 +23,7 @@ def get_menu(active):
     return result
 
 def index(request):
+#    all_goods = Good.objects.filter(namegood)
     result = ""
 
     kateg = ""
@@ -40,6 +41,36 @@ def index(request):
             "navset": get_menu("/"),
         }
     )
+# Пытаемся сделать поисковик. Он будет искать нам искомое по частям слов и буквосочетаниям
+'''СПИСЫВАЕМ С ЭТОГО!!!
+def add_task(request):
+    if request.method == 'POST':
+        print(request.POST)
+        task_data = TaskForm(request.POST)
+        if task_data.is_valid():
+             print(task_data.cleaned_data)
+    task_form = TaskForm()
+    return render(            
+        request,         
+        'tasklist/form.html',
+        {
+           'task_form_auto_gen': task_form
+        }
+    )
+'''
+def add_good(request):
+    if request.method == 'POST':
+        print(request.POST)
+        good_poisk = GoodForm(request.POST)
+        if good_poisk.is_valid():
+            print(good_poisk.namegood)
+    good_form = GoodForm() # ругается на это
+    return render(
+        render(
+
+        )
+    )
+
 
 def pokupki(request):
     summa = 0
@@ -60,3 +91,5 @@ def pokupki(request):
 
         }
     )
+
+

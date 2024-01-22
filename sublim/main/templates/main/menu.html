@@ -4,6 +4,13 @@
 <title>{% block title %}Товары{% endblock %}</title>
 <div id="mainmenu">
     <ul>
+        <form action='/namegood/add' method="post">
+            {% csrf_token %}
+            <li class="search"><input id="srh" name="poisk" type="text">
+                {{ good_form_auto_gen }}
+                <input type='button' value='Найти'>
+            </li>
+        </form>
         {% for nav in topnavset %}
         {% if nav.active %}
         <li class="active">

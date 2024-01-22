@@ -27,7 +27,6 @@ urlpatterns = [
 
 topnavset = [
     {'url': '/catalog', 'text':  'Каталог',          'active': False},
-    {'url': '/search', 'text':  'Поиск',             'active': False},
     {'url': '/basket', 'text':  'Корзина',           'active': False},
     {'url': '/persacc', 'text':  'Личный кабинет',   'active': False},
     {'url': '/registration', 'text':  'Регистрация', 'active': False},
