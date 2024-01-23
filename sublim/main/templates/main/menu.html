@@ -4,6 +4,8 @@
 <title>{% block title %}Товары{% endblock %}</title>
 <div id="mainmenu">
     <ul>
+        {% for nav in topnavset %}
+        {% if forloop.counter == 2 %}
         <form action='/namegood/add' method="post">
             {% csrf_token %}
             <li class="search"><input id="srh" name="poisk" type="text">
@@ -11,7 +13,7 @@
                 <input type='button' value='Найти'>
             </li>
         </form>
-        {% for nav in topnavset %}
+        {% else %}
         {% if nav.active %}
         <li class="active">
             {% else %}
@@ -19,6 +21,7 @@
             {% endif %}
             <a href="{{nav.url}}">{{nav.text}}</a>
         </li>
+        {% endif %}
         {% endfor %}
     </ul>
     <ul>
