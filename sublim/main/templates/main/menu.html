@@ -6,11 +6,11 @@
     <ul>
         {% for nav in topnavset %}
         {% if forloop.counter == 2 %}
-        <form action='/namegood/add' method="post">
+        <form action={% url 'search' %} method="post">
             {% csrf_token %}
             <li class="search"><input id="srh" name="poisk" type="text">
                 {{ good_form_auto_gen }}
-                <input type='button' value='Найти'>
+                <input type='submit' value='Найти'>
             </li>
         </form>
         {% else %}

@@ -5,6 +5,7 @@ import sublim
 #from .forms import *
 from django.shortcuts import render
 from .models import Good, Kategory
+from .forms import GoodForm
 
 def get_top_menu(active):
     result = []
@@ -58,6 +59,29 @@ def add_task(request):
         }
     )
 '''
+
+def search(request):
+    goods = Good.objects.all()  # filter(namegood)
+    if request.method == 'POST':
+        print(request.POST)
+        good_data = GoodForm(request.POST)
+        if good_data.is_valid():
+             print(good_data.cleaned_data)
+    kateg = ""
+    for a in Kategory.objects.all():
+        kateg += a.kategoriya
+        
+    return render(
+        request,
+        "main/index.html",
+
+        # Kонтекст передаваемых переменных
+        {
+            "Товар": goods, "Категории": kateg,
+            "topnavset": get_top_menu("/"),
+            "navset": get_menu("/"),
+        }
+    )
 def add_good(request):
     if request.method == 'POST':
         print(request.POST)
