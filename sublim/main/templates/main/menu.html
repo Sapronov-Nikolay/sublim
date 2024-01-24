@@ -1,0 +1,38 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
+<title>{% block title %}Товары{% endblock %}</title>
+<div id="mainmenu">
+    <ul>
+        {% for nav in topnavset %}
+        {% if forloop.counter == 2 %}
+        <form action={% url 'search' %} method="post">
+            {% csrf_token %}
+            <li class="search"><input id="srh" name="poisk" type="text">
+                {{ good_form_auto_gen }}
+                <input type='submit' value='Найти'>
+            </li>
+        </form>
+        {% else %}
+        {% if nav.active %}
+        <li class="active">
+            {% else %}
+        <li>
+            {% endif %}
+            <a href="{{nav.url}}">{{nav.text}}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for nav in navset %}
+        {% if nav.active %}
+        <li class="active">
+            {% else %}
+        <li>
+            {% endif %}
+            <a href="{{nav.url}}">{{nav.text}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
