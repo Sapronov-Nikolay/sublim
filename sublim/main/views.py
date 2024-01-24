@@ -1,11 +1,12 @@
 
 import sublim
-#from . import views
-#from django.http import HttpResponse
-#from .forms import *
+# from . import views
+# from django.http import HttpResponse
+# from .forms import *
 from django.shortcuts import render
 from .models import Good, Kategory
-from .forms import GoodForm
+from .forms import GoodForm, SearchForm
+
 
 def get_top_menu(active):
     result = []
@@ -15,6 +16,7 @@ def get_top_menu(active):
         result.append(elem)
     return result
 
+
 def get_menu(active):
     result = []
     for elem in sublim.urls.navset:
@@ -23,8 +25,9 @@ def get_menu(active):
         result.append(elem)
     return result
 
+
 def index(request):
-#    all_goods = Good.objects.filter(namegood)
+    #    all_goods = Good.objects.filter(namegood)
     result = ""
 
     kateg = ""
@@ -42,6 +45,8 @@ def index(request):
             "navset": get_menu("/"),
         }
     )
+
+
 # Пытаемся сделать поисковик. Он будет искать нам искомое по частям слов и буквосочетаниям
 '''СПИСЫВАЕМ С ЭТОГО!!!
 def add_task(request):
@@ -60,35 +65,41 @@ def add_task(request):
     )
 '''
 
+
 def search(request):
-    goods = Good.objects.all()  # filter(namegood)
+    # goods = Good.objects.all()  # filter(namegood=input()) # , 'картофель'])
+    goods = []
     if request.method == 'POST':
-        print(request.POST)
-        good_data = GoodForm(request.POST)
-        if good_data.is_valid():
-             print(good_data.cleaned_data)
+        # print(request.POST)
+        # print(request.POST['poisk'])
+        goods = Good.objects.filter(namegood=request.POST['poisk'])
+
     kateg = ""
     for a in Kategory.objects.all():
         kateg += a.kategoriya
-        
+
     return render(
         request,
-        "main/index.html",
+        "main/tovars.html",
 
         # Kонтекст передаваемых переменных
         {
-            "Товар": goods, "Категории": kateg,
-            "topnavset": get_top_menu("/"),
-            "navset": get_menu("/"),
+
+            "Товары": goods,
+            "summa": 0,  # summa,
+            "navset": get_menu("/shop")
+
         }
     )
+
+
 def add_good(request):
     if request.method == 'POST':
         print(request.POST)
         good_poisk = GoodForm(request.POST)
         if good_poisk.is_valid():
             print(good_poisk.namegood)
-    good_form = GoodForm() # ругается на это
+    good_form = GoodForm()  # ругается на это
     return render(
         render(
 
@@ -115,5 +126,3 @@ def pokupki(request):
 
         }
     )
-
-
