@@ -11,7 +11,9 @@
         <th>{{товар.content}}</th>
         <th>{{товар.specification}}</th>
         <th>{{товар.price}}</th>
+        <th><input type="number"><input type="button" value="Добавить"></th>
     </tr>
     {% endfor %}
 </table>
+{% include 'main/cart.html' %}   <!--кнопка Заказать--> 
 {% endblock %}

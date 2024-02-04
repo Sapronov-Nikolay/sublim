@@ -20,3 +20,11 @@ class Kategory(models.Model):
 
 def __str__(self):
     return str(self.kategoriya)
+
+class Cart(models.Model):
+    picture = models.ImageField(upload_to="images/%y/%m/%d/")
+    namegood = models.CharField(max_length=30)
+    price = models.FloatField()
+
+def __str__(self):
+    return str(self.namegood)

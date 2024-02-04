@@ -5,7 +5,7 @@ import sublim
 # from .forms import *
 from django.shortcuts import render
 from .models import Good, Kategory
-from .forms import GoodForm, SearchForm
+from .forms import GoodForm, CartForm
 
 
 def get_top_menu(active):
@@ -119,10 +119,19 @@ def pokupki(request):
 
         # Kонтекст передаваемых переменных
         {
-
             "Товары": goods,
             "summa": summa,
             "navset": get_menu("/shop")
+        }
+    )
 
+def add_cart(request):
+    if request.method == 'POST':
+        print(request.POST)
+    cart_form = CartForm()
+    return render(
+        request, 'main/cart.html',
+        {
+            'cart_form_auto_gen': cart_form
         }
     )
