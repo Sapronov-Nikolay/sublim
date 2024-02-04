@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Good, Kategory
+from .models import Good, Kategory, Cart
 #               ЗАКОМЕНЧЕНА СТАРАЯ ФУНКЦИЯ ЧТОБ ЗА НЕЁ РАБОТАЛИ ДРУГИЕ ПАРАМЕТРЫ
 # class GoodAdmin(admin.ModelAdmin):
 #    list_display = [
@@ -13,5 +13,10 @@ class KategoryAdmin(admin.ModelAdmin):
     list_display = [
         field.name for field in Kategory._meta.fields if field.name != "id"
     ]
+
+class CartAdmin(admin.ModelAdmin):
+    list_display = ('picture', 'namegood', 'price')
+
 admin.site.register(Kategory, KategoryAdmin)
 admin.site.register(Good, GoodAdmin)
+admin.site.register(Cart, CartAdmin)
