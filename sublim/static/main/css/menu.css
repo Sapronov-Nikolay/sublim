@@ -20,6 +20,7 @@ a {
     text-decoration: none;
     color: black;
 }
+
 a:visited {
     text-decoration: none;
     color: black;
@@ -34,11 +35,11 @@ a:visited {
 #cart {
     background-color: #dafc1a;
     font-weight: 600;
-    font-family:'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
-    font-size:24px;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
+    font-size: 24px;
     margin-top: 20px;
-    float:right;
-    width:200px;
-    height:40px;
+    float: right;
+    width: 200px;
+    height: 40px;
     text-align: center;
 }

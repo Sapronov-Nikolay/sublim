@@ -1,7 +1,8 @@
 {% extends 'main/header_footer.html' %}
-
+{% load static %}
 {% block content %}
-{% include 'main/menu.html' %}  <!--Отображает параметры из menu.html и header_footer.html-->
+<script src="{% static 'main/js/cart.js' %}"> </script>
+{% include 'main/menu.html' %} <!--Отображает параметры из menu.html и header_footer.html-->
 <h3>Таблица</h3> <!--Отображается на всех страницах а должна только над таблицей-->
 <table border="1">
     {% for товар in Товары %}
@@ -11,9 +12,10 @@
         <th>{{товар.content}}</th>
         <th>{{товар.specification}}</th>
         <th>{{товар.price}}</th>
-        <th><input type="number"><input type="button" value="Добавить"></th>
+        <th><input type="number" id="i{{forloop.counter}}"><input type="button" value="Добавить"
+                onclick="add_to_cart(document.getElementById('i{{forloop.counter}}'))"></th>
     </tr>
     {% endfor %}
 </table>
-{% include 'main/cart.html' %}   <!--кнопка Заказать--> 
+{% include 'main/cart.html' %} <!--кнопка Заказать-->
 {% endblock %}
