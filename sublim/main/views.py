@@ -47,24 +47,6 @@ def index(request):
     )
 
 
-# Пытаемся сделать поисковик. Он будет искать нам искомое по частям слов и буквосочетаниям
-'''СПИСЫВАЕМ С ЭТОГО!!!
-def add_task(request):
-    if request.method == 'POST':
-        print(request.POST)
-        task_data = TaskForm(request.POST)
-        if task_data.is_valid():
-             print(task_data.cleaned_data)
-    task_form = TaskForm()
-    return render(            
-        request,         
-        'tasklist/form.html',
-        {
-           'task_form_auto_gen': task_form
-        }
-    )
-'''
-
 
 def search(request):
     # goods = Good.objects.all()  # filter(namegood=input()) # , 'картофель'])
@@ -127,7 +109,10 @@ def pokupki(request):
 
 def add_cart(request):
     if request.method == 'POST':
-        print(request.POST)
+        for key in request.POST:
+            if key[1:].isdigit() and key[0] == 'i':
+                t = Good.objects.get(pk=int(key[1:]))
+                print(t, t.namegood, request.POST[key])
     cart_form = CartForm()
     return render(
         request, 'main/cart.html',

@@ -1,10 +1,7 @@
-{% block content %}
-
 {% load static %}
+<script src="{% static 'main/js/cart.js' %}"> </script>
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
-<form action="main/add" method="post">
-{% csrf_token %}
-<input id='cart' type="button" value="Заказать">
-{{ cart_form_auto_gen }}
-</form>
-{% endblock %}
+
+<h3>Заказы</h3>
+
+{% for  %}
