@@ -26,19 +26,23 @@ urlpatterns = [
 ]
 
 topnavset = [
-    {'url': '/catalog', 'text':  'Каталог',          'active': False},
-    {'url': '/basket', 'text':  'Корзина',           'active': False},
-    {'url': '/persacc', 'text':  'Личный кабинет',   'active': False},
-    {'url': '/registration', 'text':  'Регистрация', 'active': False},
+    {'url': '/catalog',         'text':  'Каталог',             'active': False},
+    {'url': '/basket',          'text':  'Корзина',             'active': False},
+    {'url': '/persacc',         'text':  'Личный кабинет',      'active': False},
+    {'url': '/registration',    'text':  'Регистрация',         'active': False},
 
 ]
 
 navset =[
-    {'url': '/',         'text': 'Акции',             'active': False},
-    {'url': '/shop',     'text': 'Магазин',           'active': False},
-    {'url': '/delivery', 'text': 'Доставка',          'active': False},
-    {'url': '/recipies', 'text': 'Рецепты',           'active': False},
-    {'url': '/sublim',   'text': 'О сублимировании',  'active': False},
+    {'url': '/',                'text': 'Акции',                'active': False},
+    {'url': '/shop',            'text': 'Магазин',              'active': False},
+    {'url': '/delivery',        'text': 'Доставка',             'active': False},
+    {'url': '/recipies',        'text': 'Рецепты',              'active': False},
+    {'url': '/sublim',          'text': 'О сублимировании',     'active': False},
+]
+
+cartnavset = [
+    {'url': '/cart',            'text': 'Заказать',             'active': False},
 ]
 
 if settings.DEBUG:
