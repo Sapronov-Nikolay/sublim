@@ -127,7 +127,10 @@ def pokupki(request):
 
 def add_cart(request):
     if request.method == 'POST':
-        print(request.POST)
+        for key in request.POST:
+            if key[1:].isdigit() and key[0] == 'i':
+                t = Good.objects.get(pk=int(key[1:]))
+                print(t, t.namegood, request.POST[key])
     cart_form = CartForm()
     return render(
         request, 'main/cart.html',
