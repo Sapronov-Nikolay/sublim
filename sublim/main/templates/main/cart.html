@@ -6,10 +6,12 @@
     <table border="1">
         {% for zakaz in cart_form_auto_gen %}
         <tr>
-            <th img width="50px" height="50px" src="/media/{{товар.picture}}">
+            <th img width="50px" height="50px" src="/media/{{zakaz.picture}}">
             </th>
-            <th width="50px" height="50px">{{товар.namegood}}</th>
-            <th width="50px" height="50px">{{товар.price}}</th>
+            <th width="50px" height="50px">{{zakaz.namegood}}</th>
+            <th width="50px" height="50px">{{zakaz.price}}</th>
+            <th width="50px" height="50px">{{zakaz.t}}</th>
+            <th width="50px" height="50px">{{zakaz.summa}}</th>
         </tr>
         {% endfor %}
     </table>

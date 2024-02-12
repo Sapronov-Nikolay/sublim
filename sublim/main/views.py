@@ -117,7 +117,6 @@ def add_cart(request):
     return render(
         request, 'main/cart.html',
         {
-            'cart_form_auto_gen': cart_form,
-            'товар': t
+            'cart_form_auto_gen': cart_form[t, t.namegood,]
         }
     )
