@@ -47,7 +47,6 @@ def index(request):
     )
 
 
-
 def search(request):
     # goods = Good.objects.all()  # filter(namegood=input()) # , 'картофель'])
     goods = []
@@ -107,6 +106,7 @@ def pokupki(request):
         }
     )
 
+
 def add_cart(request):
     if request.method == 'POST':
         for key in request.POST:
@@ -117,6 +117,7 @@ def add_cart(request):
     return render(
         request, 'main/cart.html',
         {
-            'cart_form_auto_gen': cart_form
+            'cart_form_auto_gen': cart_form,
+            'товар': t
         }
     )
