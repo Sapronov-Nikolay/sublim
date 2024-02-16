@@ -8,12 +8,17 @@ ul {
 li {
     border: 2px solid black;
     padding: 20px;
-    background-color: #30dff7de;
+    background-color: #cf30f7de;
 }
 
 li.active {
-    background-color: #30dff7de;
+    background-color: #a1f730de;
 
+}
+
+ul.leftmenu {
+    background-color: #58f730de;
+    position: absolute;
 }
 
 a {

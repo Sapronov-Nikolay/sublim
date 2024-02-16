@@ -25,24 +25,38 @@ urlpatterns = [
     path('', include('main.urls')),
 ]
 
+# def get_top_menu(active): во views.py
 topnavset = [
-    {'url': '/catalog',         'text':  'Каталог',             'active': False},
-    {'url': '/basket',          'text':  'Корзина',             'active': False},
-    {'url': '/persacc',         'text':  'Личный кабинет',      'active': False},
-    {'url': '/registration',    'text':  'Регистрация',         'active': False},
+    {'url': '/catalog',                  'text':  'Каталог',              'active': False},
+    {'url': '/basket',                   'text':  'Корзина',              'active': False},
+    {'url': '/persacc',                  'text':  'Личный кабинет',       'active': False},
+    {'url': '/registration',             'text':  'Регистрация',          'active': False},
 
 ]
-
-navset =[
-    {'url': '/',                'text': 'Акции',                'active': False},
-    {'url': '/shop',            'text': 'Магазин',              'active': False},
-    {'url': '/delivery',        'text': 'Доставка',             'active': False},
-    {'url': '/recipies',        'text': 'Рецепты',              'active': False},
-    {'url': '/sublim',          'text': 'О сублимировании',     'active': False},
+# def get_menu(active): во views.py
+navset = [
+    {'url': '/',                         'text': 'Акции',                 'active': False},
+    {'url': '/shop',                     'text': 'Магазин',               'active': False},
+    {'url': '/delivery',                 'text': 'Доставка',              'active': False},
+    {'url': '/recipies',                 'text': 'Рецепты',               'active': False},
+    {'url': '/sublim',                   'text': 'О сублимировании',      'active': False},
 ]
-
+# def add_cart(request): во views.py
 cartnavset = [
-    {'url': '/cart',            'text': 'Заказать',             'active': False},
+    {'url': '/cart',                     'text': 'Заказать',              'active': False},
+]
+# во views.py
+leftmenu = [
+    {'url': '/main',                     'text': 'Главная',               'active': False},
+    {'url': '/meat',                     'text': 'Мясные',                'active': False},
+    {'url': '/vegetable',                'text': 'Овощные',               'active': False},
+    {'url': '/fruit',                    'text': 'Фруктовые',             'active': False},
+    {'url': '/berry',                    'text': 'Ягодные',               'active': False},
+    {'url': '/mixtures',                 'text': 'Смеси',                 'active': False},
+    {'url': '/coffee_chicory',           'text': 'Кофе (цикорий)',        'active': False},
+    {'url': '/mushrooms',                'text': 'Грибы',                 'active': False},
+    {'url': '/seasoning',                'text': 'Приправы',              'active': False},
+    {'url': '/confectionary_products',   'text': 'Кондитерские изделия',  'active': False},
 ]
 
 if settings.DEBUG:
