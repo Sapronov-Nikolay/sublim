@@ -36,4 +36,16 @@
         </li>
         {% endfor %}
     </ul>
+
+    <ul>
+        {% for nav in leftmenu %}
+        {% if nav.active %}
+        <li class="active">
+            {% else %}
+        <li>
+            {% endif %}
+            <a href="{{nav.url}}">{{nav.text}}</a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>

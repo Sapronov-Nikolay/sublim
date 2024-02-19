@@ -25,6 +25,14 @@ def get_menu(active):
         result.append(elem)
     return result
 
+def get_leftmenu(active):
+    result = []
+    for elem in sublim.urls.leftmenu:
+        if elem['url'] == active:
+            elem['active'] = True
+        result.append(elem)
+    return result
+
 
 def index(request):
     #    all_goods = Good.objects.filter(namegood)
@@ -43,6 +51,7 @@ def index(request):
             "Товар": Good.objects.all(), "Категории": kateg,
             "topnavset": get_top_menu("/"),
             "navset": get_menu("/"),
+            "leftmenu": get_leftmenu("/"),
         }
     )
 
