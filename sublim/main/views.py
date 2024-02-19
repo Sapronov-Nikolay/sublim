@@ -5,7 +5,7 @@ import sublim
 # from .forms import *
 from django.shortcuts import render
 from .models import Good, Kategory
-from .forms import GoodForm, CartForm
+from .forms import GoodForm  # , CartForm
 
 
 def get_top_menu(active):
@@ -108,15 +108,22 @@ def pokupki(request):
 
 
 def add_cart(request):
+    cart_form = []
     if request.method == 'POST':
         for key in request.POST:
             if key[1:].isdigit() and key[0] == 'i':
                 t = Good.objects.get(pk=int(key[1:]))
                 print(t, t.namegood, request.POST[key])
-    cart_form = CartForm()
+                cart_form.append({
+                    'picture': t.picture,
+                    'namegood': t.namegood,
+                    'price': t.price,
+                    'kolvo': request.POST[key],
+                    'summa': float(t.price)*float(request.POST[key])
+                })
     return render(
         request, 'main/cart.html',
         {
-            'cart_form_auto_gen': cart_form[t, t.namegood,]
+            'cart_form_auto_gen': cart_form
         }
     )
