@@ -1,6 +1,7 @@
 {% extends 'main/header_footer.html' %}
 {% load static %}
 {% block content %}
+<title>{% block title %}Товары{% endblock %}</title>
 <script src="{% static 'main/js/cart.js' %}"> </script>
 {% include 'main/menu.html' %} <!--Отображает параметры из menu.html и header_footer.html-->
 <h3>Таблица</h3> <!--Отображается на всех страницах а должна только над таблицей-->

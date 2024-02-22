@@ -1,16 +1,24 @@
+
 {% extends 'main/header_footer.html' %}
 
 {% block content %}
+<title>{% block title %}Главная страница{% endblock %}</title>
 {% include 'main/menu.html' %}  <!--Отображает параметры из menu.html и header_footer.html-->
 
 {% load static %}
 <html lang="ru">
     <meta charset="UTF-8">
-<title>{% block title %}Главная страница{% endblock %}</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
 <link rel="shortcut icon" type="image/ico" href="{% static 'img/xmas_icon_260233.ico' %}"/>
 <script src="{% static 'main/js/body.js' %}"></script>
-    <h1>ПОЛЕ ДЛЯ ОТОБРАЖЕНИЯ КАРТОЧЕК С ТОВАРАМИ!</h1> <!--Отображается корректно, только на главной странице-->
-    
+<body id='bg' style="background-image: url({% static 'main/img/sublimats-VS.jpg' %});">
+</body>
+
+    <h1>ПОЛЕ ДЛЯ ОТОБРАЖЕНИЯ КАРТОЧЕК С ТОВАРАМИ!</h1>
+    <h3>Сублимированные продукты — это готовые блюда, из которых промышленным способом полностью испаряют влагу.
+    В процессе сублимации вкус и аромат пищи не меняются, витамины не разрушаются, зато вес и объём уменьшаются в 5-10 раз.
+    Одна порция сублиматов весит 30-50 г.
+    За счёт сублимированных продуктов можно снизить вес раскладки до удобных 400-500 г, не уменьшая при этом суточную калорийность.</h3> <!--Отображается корректно, только на главной странице-->
 {% endblock %}

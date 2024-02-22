@@ -8,3 +8,10 @@ body {
 #tovars {
     background-color: #80ff00cb;
 }
+
+#bg {
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
