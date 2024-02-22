@@ -7,20 +7,20 @@
 <h3>Таблица</h3> <!--Отображается на всех страницах а должна только над таблицей-->
 
 <form action="/cart/" method="post">
-{% csrf_token %}
-<table border="1">
-    {% for товар in Товары %}
-    <tr>
-        <th><img width="200px" height="200px" src="/media/{{товар.picture}}"></th>
-        <th>{{товар.namegood}}</th>
-        <th>{{товар.content}}</th>
-        <th>{{товар.specification}}</th>
-        <th>{{товар.price}}</th>
-        <th><input type="number" name="i{{товар.id}}" id="i{{товар.id}}"><input type="button" value="Добавить"
-                onclick="add_to_cart(document.getElementById('i{{товар.id}}'))"></th>
-    </tr>
-    {% endfor %}
-</table>
-<input id="cart" type="submit" value="Заказать">
+    {% csrf_token %}
+    <table border="1">
+        {% for товар in Товары %}
+        <tr>
+            <th><img width="200px" height="200px"> {{товар.picture}}</th>
+            <th>{{товар.namegood}}</th>
+            <th>{{товар.content}}</th>
+            <th>{{товар.specification}}</th>
+            <th>{{товар.price}}</th>
+            <th><input type="number" name="i{{товар.id}}" id="i{{товар.id}}"><input type="button" value="Добавить"
+                    onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"></th>
+        </tr>
+        {% endfor %}
+    </table>
+    <input id="cart" type="submit" value="Заказать">
 </form>
 {% endblock %}

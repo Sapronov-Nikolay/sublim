@@ -15,7 +15,7 @@ class SearchForm(ModelForm):
         # model = models.Good
         fields = ["poisk"]
 
-class CartForm(ModelForm):
-    class Meta:
-        model = models.Cart
-        fields = [field.name for field in models.Cart._meta.fields if field.name != "id"]
+# class CartForm(ModelForm):
+#    class Meta:
+#        model = models.Cart
+#        fields = [field.name for field in models.Cart._meta.fields if field.name != "id"]
