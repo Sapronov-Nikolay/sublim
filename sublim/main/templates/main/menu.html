@@ -1,14 +1,14 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
-<title>{% block title %}Товары{% endblock %}</title>
-<div id="mainmenu">
-    <ul>
-        {% for nav in topnavset %}
+<title>{% block title %}Меню{% endblock %}</title>
+<div>
+     <ul>
+        {% for nav in search %}
         {% if forloop.counter == 2 %}
         <form action={% url 'search' %} method="post">
             {% csrf_token %}
-            <li class="search"><input id="srh" name="poisk" type="text">
+            <li class="search"><input id="srh" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
                 {{ good_form_auto_gen }}
                 <input type='submit' value='Найти'>
             </li>
@@ -24,8 +24,25 @@
         {% endif %}
         {% endfor %}
     </ul>
+</div>
 
-    <ul>
+<div id="mainmenu">
+    <ul class="nav">
+        {% for nav in topnavset %}
+        {% if nav.active %}
+        <li class="active">
+            {% else %}
+        <li>
+            {% endif %}
+            <a href="{{nav.url}}">{{nav.text}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!---->
+<div>
+    <ul class="nav">
         {% for nav in navset %}
         {% if nav.active %}
         <li class="active">
@@ -36,8 +53,10 @@
         </li>
         {% endfor %}
     </ul>
+</div>
 
-    <ul>
+<div>
+    <ul class="left">
         {% for nav in leftmenu %}
         {% if nav.active %}
         <li class="active">

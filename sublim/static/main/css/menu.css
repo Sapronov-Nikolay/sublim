@@ -1,24 +1,39 @@
-ul {
+ul.nav {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+#mainmenu {
+    border: 2px solid black;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
-    width: 90vw;
+    display: inline;
+    background-color: #a3def5a6;
 }
-
-li {
-    border: 2px solid black;
+/* для горизонтального меню */
+.nav li {
+    padding: 10px;
+    background-color: #16352981;
+    display: inline;
+    margin: 0px;
+}
+/* Текстовая часть горизонтального меню */
+.nav li a {
+    display: inline-block;
     padding: 20px;
-    background-color: #cf30f7de;
+    
 }
 
-li.active {
-    background-color: #a1f730de;
-
-}
-
-ul.leftmenu {
-    background-color: #58f730de;
-    position: absolute;
+.left li {
+    background-color: #d8affade;
+    padding: 20px;
+    display: block;
+    width: 80px;
+    line-height: 1em;
 }
 
 a {
@@ -26,9 +41,13 @@ a {
     color: black;
 }
 
+a:hover {
+    color: #f3fcf8fd;
+}
+
+/* Убрано подчёркивание с текстовых сылок */
 a:visited {
     text-decoration: none;
-    color: black;
 }
 
 .search {

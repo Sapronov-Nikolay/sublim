@@ -50,7 +50,7 @@ def index(request):
         # Kонтекст передаваемых переменных
         {
             "Товар": Good.objects.all(), "Категории": kateg,
-            "topnavset": get_top_menu("/"),
+            "search": get_top_menu("/"),
             "navset": get_menu("/"),
             "leftmenu": get_leftmenu("/"),
         }
@@ -136,4 +136,12 @@ def add_cart(request):
         {
             'cart_form_auto_gen': cart_form
         }
+    )
+
+
+def privet(request):
+    return render(request, 'main/privet.html', 
+            {
+                "mainmenu": get_top_menu("/")
+            }
     )
