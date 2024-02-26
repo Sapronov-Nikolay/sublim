@@ -25,6 +25,7 @@ def get_menu(active):
         result.append(elem)
     return result
 
+
 def get_leftmenu(active):
     result = []
     for elem in sublim.urls.leftmenu:
@@ -124,7 +125,7 @@ def add_cart(request):
                 t = Good.objects.get(pk=int(key[1:]))
                 print(t, t.namegood, request.POST[key])
                 cart_form.append({
-                    'picture': t.picture,
+                    # 'picture': t.picture,
                     'namegood': t.namegood,
                     'price': t.price,
                     'kolvo': request.POST[key],
