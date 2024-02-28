@@ -121,16 +121,18 @@ def add_cart(request):
     cart_form = []
     if request.method == 'POST':
         for key in request.POST:
+            print(key, request.POST[key])
             if key[1:].isdigit() and key[0] == 'i':
                 t = Good.objects.get(pk=int(key[1:]))
                 print(t, t.namegood, request.POST[key])
-                cart_form.append({
-                    # 'picture': t.picture,
-                    'namegood': t.namegood,
-                    'price': t.price,
-                    'kolvo': request.POST[key],
-                    'summa': float(t.price)*float(request.POST[key])
-                })
+                if float(request.POST[key]) > 0:
+                    cart_form.append({
+                        # 'picture': t.picture,
+                        'namegood': t.namegood,
+                        'price': t.price,
+                        'kolvo': request.POST[key],
+                        'summa': float(t.price)*float(request.POST[key])
+                    })
     return render(
         request, 'main/cart.html',
         {
