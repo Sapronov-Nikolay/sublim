@@ -131,6 +131,7 @@ def add_cart(request):
                         'namegood': t.namegood,
                         'price': t.price,
                         'kolvo': request.POST[key],
+                        'picture': t.picture,
                         'summa': float(t.price)*float(request.POST[key])
                     })
     return render(
