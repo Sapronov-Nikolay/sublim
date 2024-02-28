@@ -11,7 +11,7 @@
     <table border="1">
         {% for товар in Товары %}
         <tr>
-            <th><img width="200px" height="200px"> {{товар.picture}}</th>
+            <th><img width="200px" height="200px" src="/media/{{товар.picture}}" ></th>
             <th>{{товар.namegood}}</th>
             <th>{{товар.content}}</th>
             <th>{{товар.specification}}</th>
