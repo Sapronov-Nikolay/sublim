@@ -16,8 +16,8 @@
             <th>{{товар.content}}</th>
             <th>{{товар.specification}}</th>
             <th>{{товар.price}}</th>
-            <th><input type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"><input type="button" value="Добавить"
-                    onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"></th>
+            <th><input type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"
+                    onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input type="button" value="Добавить"></th>
         </tr>
         {% endfor %}
     </table>
