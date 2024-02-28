@@ -2,29 +2,16 @@
 
 <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
 <title>{% block title %}Меню{% endblock %}</title>
-<div>
-     <ul>
-        {% for nav in search %}
-        {% if forloop.counter == 2 %}
-        <form action={% url 'search' %} method="post">
-            {% csrf_token %}
-            <li class="search"><input id="srh" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
-                {{ good_form_auto_gen }}
-                <input type='submit' value='Найти'>
-            </li>
-        </form>
-        {% else %}
-        {% if nav.active %}
-        <li class="active">
-            {% else %}
-        <li>
-            {% endif %}
-            <a href="{{nav.url}}">{{nav.text}}</a>
+<div>    
+    <form action={% url 'search' %} method="post">
+    {% csrf_token %}
+        <li class="search"><input id="srh" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
+        {{ good_form_auto_gen }}
+        <input type='submit' value='Найти'>
         </li>
-        {% endif %}
-        {% endfor %}
-    </ul>
+    </form>
 </div>
+
 
 <div id="mainmenu">
     <ul class="nav">

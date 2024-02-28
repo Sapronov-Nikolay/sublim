@@ -1,19 +1,42 @@
 ul.nav {
+    display: block;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: auto;
+    background-color:#e6f39be8
+}
+
+ul.top_menu {
+    padding: 20px;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
     overflow: auto;
+    background-color:#53ecb9e5;
+    border: 1px solid black;
 }
 
-#mainmenu {
-    border: 2px solid black;
+.top_menu li {
+    margin-left: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+}
+
+li {
+    background-color: #3d4220e1;
+    background-attachment: 2px;
+}
+
+/*#mainmenu {
+    border: 1px solid black;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     display: inline;
     background-color: #a3def5a6;
-}
+} 
 /* для горизонтального меню */
 .nav li {
     padding: 10px;
@@ -41,6 +64,7 @@ a {
     color: black;
 }
 
+/* Цвет текста при наведении курсора */
 a:hover {
     color: #f3fcf8fd;
 }

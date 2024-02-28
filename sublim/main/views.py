@@ -50,7 +50,7 @@ def index(request):
         {
             "Товар": Good.objects.all(), "Категории": kateg,
             "search": get_top_menu("/"),
-            "navset": get_menu("/"),
+            "navset": get_menu("/"), # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
             "leftmenu": get_leftmenu("/"),
         }
     )
@@ -77,7 +77,7 @@ def search(request):
 
             "Товары": goods,
             "summa": 0,  # summa,
-            "navset": get_menu("/shop")
+            "navset": get_menu("/shop") # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
 
         }
     )
@@ -133,7 +133,8 @@ def add_cart(request):
     return render(
         request, 'main/cart.html',
         {
-            'cart_form_auto_gen': cart_form
+            'cart_form_auto_gen': cart_form,
+            "navset": get_menu("/"),
         }
     )
 
@@ -141,6 +142,19 @@ def add_cart(request):
 def privet(request):
     return render(request, 'main/privet.html', 
             {
-                "mainmenu": get_top_menu("/")
+                #"mainmenu": get_top_menu("/"),
+                "navset": get_menu("/"), # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
+                "katalogs": [  # наполнение выпадающего списка
+                    '',
+                    'Грибы',
+                    'Кондитерские изделия',
+                    'Кофе (цикорий)',
+                    'Мясные',
+                    'Овощные',
+                    'Приправы',
+                    'Смеси',
+                    'Фруктовые',
+                    'Ягодные',
+                ]
             }
     )

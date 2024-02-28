@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+    path('top_menu/', include('top_menu.urls')),
 ]
 
 # def get_top_menu(active): во views.py
@@ -35,7 +36,7 @@ topnavset = [
 ]
 # def get_menu(active): во views.py
 navset = [
-    {'url': '/',                         'text': 'Акции',                 'active': False},
+    {'url': '/',                         'text': 'Главная',               'active': False},
     {'url': '/shop',                     'text': 'Магазин',               'active': False},
     {'url': '/delivery',                 'text': 'Доставка',              'active': False},
     {'url': '/recipies',                 'text': 'Рецепты',               'active': False},
@@ -47,7 +48,7 @@ cartnavset = [
 ]
 # во views.py
 leftmenu = [
-    {'url': '/main',                     'text': 'Главная',               'active': False},
+    {'url': '/kategores',                'text': 'Категории',             'active': False},
     {'url': '/meat',                     'text': 'Мясные',                'active': False},
     {'url': '/vegetable',                'text': 'Овощные',               'active': False},
     {'url': '/fruit',                    'text': 'Фруктовые',             'active': False},

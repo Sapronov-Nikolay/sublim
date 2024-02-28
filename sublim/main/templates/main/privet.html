@@ -3,17 +3,32 @@
 {% block content %}
 <title>{% block title %}Приветствие{% endblock %}</title>
 {% include 'main/menu.html' %}  <!--Отображает параметры из menu.html и header_footer.html-->
-{{topnavset}}
+
+
 {% load static %}
 <html lang="ru">
     <meta charset="UTF-8">
-
+<!-- Метатег viewport, решающий проблему отображения текста -->
+<!-- - с разной плотностью пикселей на разных устройствах -->
+<!-- Параметр width=device-width приравнивает ширину вьюпорта к CSS-ширине устройства. -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
 <link rel="shortcut icon" type="image/ico" href="{% static 'img/xmas_icon_260233.ico' %}"/>
 <script src="{% static 'main/js/body.js' %}"></script>
 <body id='bg' style="background-image: url({% static 'main/img/sublimats-VS.jpg' %});">
 </body>
+<label for="katalog">Главная</label>
+<!--Кнопка с выпадающем меню-->
+<select>
+    {% for katalog in katalogs %}
+        {% if katalog == 'Мясные' %}
+            <option id="opt1" selected>{{katalog}}</option>
+        {% else %}
+            <option>{{katalog}}</option>
+        {% endif %}
+    {% endfor %}
+</select>
 
     <h1>Зачем нужно приветствие на сайте?</h1>
     <h4>Приветственное письмо – это первое обращение к аудитории, оно встречает «на входе». 

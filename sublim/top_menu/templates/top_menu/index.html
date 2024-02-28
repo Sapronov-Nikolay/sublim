@@ -1,1 +1,40 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
+    <title>{{Document}}</title>
+</head>
+<body>
+    <p>{{text}}</p>
+
+ <div>
+    <ul class="top_menu">
+        {% for m in menu %}
+        <li>
+            {{m}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    <ul class="nav">
+        {% for p in posts %}
+        <li>
+            <h2>{{p.namegood}}</h2>
+            <p>{{p.content}}</p>
+            <hr>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
+
+
+
