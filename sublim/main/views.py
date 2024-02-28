@@ -119,6 +119,7 @@ def pokupki(request):
 
 def add_cart(request):
     cart_form = []
+    total_sum = 0
     if request.method == 'POST':
         for key in request.POST:
             print(key, request.POST[key])
@@ -132,13 +133,15 @@ def add_cart(request):
                         'price': t.price,
                         'kolvo': request.POST[key],
                         'picture': t.picture,
-                        'summa': float(t.price)*float(request.POST[key])
+                        'summa': int(float(t.price) * float(request.POST[key])),
                     })
+                    total_sum += float(t.price) * float(request.POST[key])
     return render(
         request, 'main/cart.html',
         {
             'cart_form_auto_gen': cart_form,
             "navset": get_menu("/"),
+            'total_sum': int(total_sum)
         }
     )
 
