@@ -4,6 +4,7 @@
 {% load static %}
 
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
     <title>{{Document}}</title>
@@ -14,9 +15,9 @@
  <div>
     <ul class="top_menu">
         {% for m in menu %}
-        <li>
-            {{m}}
-        </li>
+            <li><a href="/">{{m.main}}</a>
+                <a class="goods" href="/shop">{{m.goods}}</a>
+                <a class="cart" href="/cart">{{m.cart}}</li>
         {% endfor %}
     </ul>
 </div>
@@ -26,7 +27,7 @@
         {% for p in posts %}
         <li>
             <h2>{{p.namegood}}</h2>
-            <p>{{p.content}}</p>
+            <p>{{p.content|linebreaks|truncatewords:50}}</p>
             <hr>
         </li>
         {% endfor %}

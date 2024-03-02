@@ -5,15 +5,17 @@ from main.models import *
 
 
 
-menu = ["Главная", "| Товары", "| Корзина", "| О сублимировании", "| Регистрация"]
+menu = [{'main': "Главная"},
+        {'goods': "Товары"}, 
+        {'cart': "Корзина"}, "О сублимировании", "Регистрация"
+]
 def index(request):
     posts = Good.objects.all()
-    return render(request, 'top_menu/index.html', 
-        {
+    contexttop = {
         'Document': 'главное на сегодня',
         'posts': posts,   # отображает модель с товарами
         'text': 'Содержимое',
         'menu': menu    # Отображает меню в index.html значение {{m}} class="top_menu"
-        }
-    )
+    }
+    return render(request, 'top_menu/index.html', context=contexttop)
 

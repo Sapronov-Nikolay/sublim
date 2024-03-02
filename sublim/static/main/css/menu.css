@@ -22,10 +22,10 @@ ul.top_menu {
     margin-left: 10px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: block;
+    color: #e8ff19;
 }
 
 li {
-    background-color: #3d4220e1;
     background-attachment: 2px;
 }
 
@@ -39,7 +39,6 @@ li {
 } 
 /* для горизонтального меню */
 .nav li {
-    padding: 10px;
     background-color: #16352981;
     display: inline;
     margin: 0px;
@@ -59,20 +58,28 @@ li {
     line-height: 1em;
 }
 
+
+/* ГРУППА ССЫЛКИ */
+a.cart {
+    color: #251111
+}
+a.goods {
+    color:#eaf81e
+}
 a {
     text-decoration: none;
-    color: black;
+    color: #bef81e;
 }
-
 /* Цвет текста при наведении курсора */
 a:hover {
     color: #f3fcf8fd;
 }
-
 /* Убрано подчёркивание с текстовых сылок */
 a:visited {
     text-decoration: none;
-}
+} /* ГРУППА ССЫЛКИ-END */
+
+
 
 .search {
     background-color: none;
