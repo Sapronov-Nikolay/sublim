@@ -13,12 +13,13 @@
         {% for товар in Товары %}
         <tr>
             <th><img width="200px" height="200px" src="/media/{{товар.picture}}" ></th>
-            <th>{{товар.namegood}}</th>
-            <th>{{товар.content}}</th>
-            <th>{{товар.specification}}</th>
-            <th>{{товар.price}}</th>
-            <th><input type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"
-                    onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input type="button" value="Добавить"></th>
+            <th width=" 15%">{{товар.namegood}}</th>
+            <th width=" 35%">{{товар.content}}</th>
+            <th width=" 2%">{{товар.specification}}</th>
+            <th width=" 5%">{{товар.price}}</th>
+            <th width=" 5%">{{товар.discount}} %</th>
+            <th width=" 10%"><input type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"
+        onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input type="button" value="Добавить"></th>
         </tr>
         {% endfor %}
     </table>

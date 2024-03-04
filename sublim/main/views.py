@@ -4,7 +4,7 @@ import sublim
 # from django.http import HttpResponse
 # from .forms import *
 from django.shortcuts import render
-from .models import Good, Kategory
+from .models import Good, Category
 from .forms import GoodForm  # , CartForm
 
 
@@ -39,9 +39,9 @@ def index(request):
     #    all_goods = Good.objects.filter(namegood)
     result = ""
 
-    kateg = ""
-    for a in Kategory.objects.all():
-        kateg += a.kategoriya
+    categ = ""
+    for a in Category.objects.all():
+        categ += a.categoriya
 
     return render(
         request,
@@ -49,7 +49,7 @@ def index(request):
 
         # Kонтекст передаваемых переменных
         {
-            "Товар": Good.objects.all(), "Категории": kateg,
+            "Товар": Good.objects.all(), "Категории": categ,
             "search": get_top_menu("/"),
             "navset": get_menu("/"), # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
             "leftmenu": get_leftmenu("/"),
@@ -65,9 +65,9 @@ def search(request):
         # print(request.POST['poisk'])
         goods = Good.objects.filter(namegood=request.POST['poisk'])
 
-    kateg = ""
-    for a in Kategory.objects.all():
-        kateg += a.kategoriya
+    categ = ""
+    for a in Category.objects.all():
+        categ += a.categoriya
 
     return render(
         request,
@@ -151,7 +151,7 @@ def privet(request):
             {
                 #"mainmenu": get_top_menu("/"),
                 "navset": get_menu("/"), # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
-                "katalogs": [  # наполнение выпадающего списка
+                "catalogs": [  # наполнение выпадающего списка
                     '',
                     'Грибы',
                     'Кондитерские изделия',

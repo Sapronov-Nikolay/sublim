@@ -48,7 +48,7 @@ cartnavset = [
 ]
 # во views.py
 leftmenu = [
-    {'url': '/kategores',                'text': 'Категории',             'active': False},
+    {'url': '/categores',                'text': 'Категории',             'active': False},
     {'url': '/meat',                     'text': 'Мясные',                'active': False},
     {'url': '/vegetable',                'text': 'Овощные',               'active': False},
     {'url': '/fruit',                    'text': 'Фруктовые',             'active': False},

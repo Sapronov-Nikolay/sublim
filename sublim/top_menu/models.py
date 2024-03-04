@@ -12,4 +12,6 @@ class Main(MPTTModel):
     class MPTTMeta:
          order_insertion_by = ['name']
 
-     
+    class Meta:
+        verbose_name = 'меню'
+        verbose_name_plural = 'Меню'

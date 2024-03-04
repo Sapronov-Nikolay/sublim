@@ -18,14 +18,14 @@
 <script src="{% static 'main/js/body.js' %}"></script>
 <body id='bg' style="background-image: url({% static 'main/img/sublimats-VS.jpg' %});">
 </body>
-<label for="katalog">Главная</label>
+<label for="catalog">Главная</label>
 <!--Кнопка с выпадающем меню-->
 <select>
-    {% for katalog in katalogs %}
-        {% if katalog == 'Мясные' %}
-            <option id="opt1" selected>{{katalog}}</option>
+    {% for catalog in catalogs %}
+        {% if catalog == 'Мясные' %}
+            <option id="opt1" selected>{{catalog}}</option>
         {% else %}
-            <option>{{katalog}}</option>
+            <option>{{catalog}}</option>
         {% endif %}
     {% endfor %}
 </select>
