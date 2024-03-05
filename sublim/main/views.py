@@ -2,7 +2,7 @@
 import sublim
 # from . import views
 # from django.http import HttpResponse
-# from .forms import *
+from django.db.models import Q
 from django.shortcuts import render
 from .models import Good, Category
 from .forms import GoodForm  # , CartForm
@@ -145,6 +145,14 @@ def add_cart(request):
         }
     )
 
+# Функция для поиска товаров по категориям
+def search_cat(request):
+    good = Good.objects.filter(
+        Q(category__categoriya__icontains=request.GET['good']) |
+        Q(name__icontains=request.GET['categoriya'])
+    )
+    return render(request, 'tavars.html', { 'good': good})
+
 
 def privet(request):
     return render(request, 'main/privet.html', 
@@ -152,8 +160,9 @@ def privet(request):
                 #"mainmenu": get_top_menu("/"),
                 "navset": get_menu("/"), # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
                 "catalogs": [  # наполнение выпадающего списка
-                    '',
+                    'Бобы',
                     'Грибы',
+                    ''
                     'Кондитерские изделия',
                     'Кофе (цикорий)',
                     'Мясные',
@@ -161,7 +170,7 @@ def privet(request):
                     'Приправы',
                     'Смеси',
                     'Фруктовые',
-                    'Ягодные',
+                    'Ягоды',
                 ]
             }
     )

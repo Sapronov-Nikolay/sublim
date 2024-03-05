@@ -49,4 +49,4 @@ class Cart(models.Model):
         verbose_name_plural = 'Корзина'  # Единственное число ОДНА КОРЗИНА
 
     def __str__(self):
-        return str(self.namegood)  # Отображает имя, вместо "Cart object(pk) pk - это ID"
+        return self.namegood  # Отображает имя, вместо "Cart object(pk) pk - это ID"
