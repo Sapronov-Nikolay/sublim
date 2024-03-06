@@ -31,16 +31,20 @@ topnavset = [
     {'url': '/catalog',                  'text':  'Каталог',              'active': False},
     {'url': '/basket',                   'text':  'Корзина',              'active': False},
     {'url': '/persacc',                  'text':  'Личный кабинет',       'active': False},
-    {'url': '/registration',             'text':  'Регистрация',          'active': False},
+    {'url': '/registration',
+        'text':  'Регистрация',          'active': False},
 
 ]
 # def get_menu(active): во views.py
 navset = [
     {'url': '/',                         'text': 'Главная',               'active': False},
     {'url': '/shop',                     'text': 'Магазин',               'active': False},
+    {'url': '/cart',                    'text':
+     'Корзина',               'active': False},
     {'url': '/delivery',                 'text': 'Доставка',              'active': False},
     {'url': '/recipies',                 'text': 'Рецепты',               'active': False},
     {'url': '/sublim',                   'text': 'О сублимировании',      'active': False},
+
 ]
 # def add_cart(request): во views.py
 cartnavset = [
@@ -54,11 +58,14 @@ leftmenu = [
     {'url': '/fruit',                    'text': 'Фруктовые',             'active': False},
     {'url': '/berry',                    'text': 'Ягодные',               'active': False},
     {'url': '/mixtures',                 'text': 'Смеси',                 'active': False},
-    {'url': '/coffee_chicory',           'text': 'Кофе (цикорий)',        'active': False},
+    {'url': '/coffee_chicory',
+        'text': 'Кофе (цикорий)',        'active': False},
     {'url': '/mushrooms',                'text': 'Грибы',                 'active': False},
     {'url': '/seasoning',                'text': 'Приправы',              'active': False},
-    {'url': '/confectionary_products',   'text': 'Кондитерские изделия',  'active': False},
+    {'url': '/confectionary_products',
+        'text': 'Кондитерские изделия',  'active': False},
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
