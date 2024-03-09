@@ -19,6 +19,7 @@ from django.urls import path
 from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
+from main.views import page_not_found
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,19 +29,17 @@ urlpatterns = [
 
 # def get_top_menu(active): во views.py
 topnavset = [
-    {'url': '/catalog',                  'text':  'Каталог',              'active': False},
-    {'url': '/basket',                   'text':  'Корзина',              'active': False},
-    {'url': '/persacc',                  'text':  'Личный кабинет',       'active': False},
-    {'url': '/registration',
-        'text':  'Регистрация',          'active': False},
+    {'url': '/basket',                   'text': 'Корзина',              'active': False},
+    {'url': '/persacc',                  'text': 'Личный кабинет',       'active': False},
+    {'url': '/registration',             'text': 'Регистрация',          'active': False},
 
 ]
 # def get_menu(active): во views.py
 navset = [
     {'url': '/',                         'text': 'Главная',               'active': False},
     {'url': '/shop',                     'text': 'Магазин',               'active': False},
-    {'url': '/cart',                    'text':
-     'Корзина',               'active': False},
+    {'url': '/categories',               'text': 'Каталог',               'active': False},
+    {'url': '/cart',                     'text': 'Корзина',               'active': False},
     {'url': '/delivery',                 'text': 'Доставка',              'active': False},
     {'url': '/recipies',                 'text': 'Рецепты',               'active': False},
     {'url': '/sublim',                   'text': 'О сублимировании',      'active': False},
@@ -58,14 +57,14 @@ leftmenu = [
     {'url': '/fruit',                    'text': 'Фруктовые',             'active': False},
     {'url': '/berry',                    'text': 'Ягодные',               'active': False},
     {'url': '/mixtures',                 'text': 'Смеси',                 'active': False},
-    {'url': '/coffee_chicory',
-        'text': 'Кофе (цикорий)',        'active': False},
+    {'url': '/coffee_chicory',           'text': 'Кофе (цикорий)',        'active': False},
     {'url': '/mushrooms',                'text': 'Грибы',                 'active': False},
     {'url': '/seasoning',                'text': 'Приправы',              'active': False},
-    {'url': '/confectionary_products',
-        'text': 'Кондитерские изделия',  'active': False},
+    {'url': '/confectionary_products',   'text': 'Кондитерские изделия',  'active': False},
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+handler404 = page_not_found

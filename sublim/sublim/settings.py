@@ -22,7 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# чтобы переключаться ЗАКОММЕНТИРУЙ или РАЗКОММЕНТИРУЙ нужное значение
 DEBUG = True
+#DEBUG = False  # При этом не работает "static" - Запустите сервер по команде: py manage.py runserver --insecure. MEDIA при этом не грузятся
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -34,15 +36,18 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+  # Пакеты по умолчанию при создании проекта впервые
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'mptt', # Библиотека для работы с древовидными структурами
-
+  # Сторонние пакеты и библиотеки, установленные при работе с проектом, и требующие регистрации здесь
+    'django_extensions',            # Пакет для внесения записей в базу данных SQL через консоль. Активизируется py manage.py shell_plus --print-sql
+    'static_autocollect',           # Копирует отдельно все и статические файлы
+    'mptt',                         # Библиотека для работы с древовидными структурами
+  # Приложения проекта, созданные в проекте, и требующие регистрации здесь
     'main',
     'top_menu',
 ]

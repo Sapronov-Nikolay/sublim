@@ -1,9 +1,9 @@
 
 import sublim
 # from . import views
-# from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.db.models import Q
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import Good, Category
 from .forms import GoodForm  # , CartForm
 
@@ -145,32 +145,19 @@ def add_cart(request):
         }
     )
 
-# Функция для поиска товаров по категориям
-def search_cat(request):
-    good = Good.objects.filter(
-        Q(category__categoriya__icontains=request.GET['good']) |
-        Q(name__icontains=request.GET['categoriya'])
-    )
-    return render(request, 'tavars.html', { 'good': good})
-
-
+# "Это для приветственного окна"
 def privet(request):
-    return render(request, 'main/privet.html', 
-            {
-                #"mainmenu": get_top_menu("/"),
-                "navset": get_menu("/"), # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
-                "catalogs": [  # наполнение выпадающего списка
-                    'Бобы',
-                    'Грибы',
-                    ''
-                    'Кондитерские изделия',
-                    'Кофе (цикорий)',
-                    'Мясные',
-                    'Овощные',
-                    'Приправы',
-                    'Смеси',
-                    'Фруктовые',
-                    'Ягоды',
-                ]
-            }
-    )
+    return render(request, 'main/privet.html', {"navset": get_menu("/")})
+
+
+# Функция для поиска товаров по категориям
+            # ЦЕЛЫЙ ДЕНЬ ЮЗАЮ ТУТ ВСЁ И НИЧЕГО НЕ ВЫХОДИТ
+def show_category(request, category_slug):
+    Good = get_object_or_404(Category, slug=category_slug)
+    slug = Good.CATEGORY.all()
+    return render(request, 'main/categories.html', {"navset": get_menu("/")}, slug)
+
+
+# Для отображения сообщения вместо нехнической информайии при DEBUG = False в settings.py
+def page_not_found(request, exception):
+    return HttpResponseNotFound('<h1>Страница не найдена</h1>') 

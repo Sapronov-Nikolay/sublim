@@ -9,4 +9,5 @@ urlpatterns = [
     path('shop/', views.pokupki),
     path('cart/', views.add_cart),
     path('index/', views.index),
+    path('categories/<slug:category_slug>/', views.show_category, name='namegood')
 ]

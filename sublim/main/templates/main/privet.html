@@ -18,17 +18,7 @@
 <script src="{% static 'main/js/body.js' %}"></script>
 <body id='bg' style="background-image: url({% static 'main/img/sublimats-VS.jpg' %});">
 </body>
-<label for="catalog">Главная</label>
-<!--Кнопка с выпадающем меню-->
-<select>
-    {% for catalog in catalogs %}
-        {% if catalog == 'Мясные' %}
-            <option id="opt1" selected>{{catalog}}</option>
-        {% else %}
-            <option>{{catalog}}</option>
-        {% endif %}
-    {% endfor %}
-</select>
+
 
     <h1>Зачем нужно приветствие на сайте?</h1>
     <h4>Приветственное письмо – это первое обращение к аудитории, оно встречает «на входе». 

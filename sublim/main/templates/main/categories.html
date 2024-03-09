@@ -1,0 +1,35 @@
+{% extends 'main/header_footer.html' %}
+
+{% load static %}
+<html lang="ru">
+    <meta charset="UTF-8">
+<!-- Метатег viewport, решающий проблему отображения текста -->
+<!-- - с разной плотностью пикселей на разных устройствах -->
+<!-- Параметр width=device-width приравнивает ширину вьюпорта к CSS-ширине устройства. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="{% static 'main/css/body.css' %}">
+<link rel="shortcut icon" type="image/ico" href="{% static 'img/xmas_icon_260233.ico' %}"/>
+<script src="{% static 'main/js/body.js' %}"></script>
+<body id='bg' style="background-image: url({% static 'main/img/sublimats-VS.jpg' %});">
+</body>
+{% block content %}
+{% include 'main/menu.html' %}
+
+<label for="slug">Категории</label>
+<!--Кнопка с выпадающем меню-->
+<select>
+    {% for slug in categories %}
+        {% if slug == 'Мясные' %}
+            <option id="opt1" selected>{{slug}}</option>
+        {% else %}
+            <option>{{slug}}</option>
+        {% endif %}
+    {% endfor %}
+</select>
+
+
+
+<p>Привет КАТЕГОРИИ</p>
+
+{% endblock %}
