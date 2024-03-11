@@ -1,8 +1,7 @@
 
 import sublim
 # from . import views
-from django.http import HttpResponse, HttpResponseNotFound
-from django.db.models import Q
+from django.http import HttpResponseNotFound
 from django.shortcuts import get_object_or_404, render
 from .models import Good, Category
 from .forms import GoodForm  # , CartForm
@@ -63,11 +62,8 @@ def search(request):
     if request.method == 'POST':
         # print(request.POST)
         # print(request.POST['poisk'])
-        goods = Good.objects.filter(namegood=request.POST['poisk'])
+        goods = Good.objects.filter(namegood=request.POST['poisk'].lower())
 
-    categ = ""
-    for a in Category.objects.all():
-        categ += a.categoriya
 
     return render(
         request,
@@ -151,11 +147,22 @@ def privet(request):
 
 
 # Функция для поиска товаров по категориям
-            # ЦЕЛЫЙ ДЕНЬ ЮЗАЮ ТУТ ВСЁ И НИЧЕГО НЕ ВЫХОДИТ
-def show_category(request, category_slug):
-    Good = get_object_or_404(Category, slug=category_slug)
-    slug = Good.CATEGORY.all()
-    return render(request, 'main/categories.html', {"navset": get_menu("/")}, slug)
+def show_category(request, category_slug=""):
+    categories = map(
+        lambda cat: Category.objects.get(pk=cat['category_id']),
+        Good.objects.order_by().values('category_id').distinct()
+    )
+    print(categories)
+    #if category_slug:
+    #    Good = get_object_or_404(Category, slug=category_slug)
+        
+    return render(
+        request,
+        'main/categories.html',
+        {
+            "navset": get_menu("/"),
+            "categories": categories
+            })
 
 
 # Для отображения сообщения вместо нехнической информайии при DEBUG = False в settings.py
