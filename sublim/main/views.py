@@ -95,10 +95,19 @@ def add_good(request):
 
 
 def pokupki(request):
-    summa = 0
+    print("\n\n\nkuku", request.method, request.GET)
+    categories = map(
+        lambda cat: Category.objects.get(pk=cat['category_id']),
+        Good.objects.order_by().values('category_id').distinct()
+    )
     goods = Good.objects.all()
-    for g in goods:
-        summa += g.price
+    cat_id = 1
+    if 'category' in request.GET:
+        print('Катя: ', request.GET['category'])
+        cat_id = Category.objects.get(
+                categoriya=request.GET['category']).id
+        goods = Good.objects.filter(
+            category_id=cat_id)
 
     return render(
         request,
@@ -107,8 +116,9 @@ def pokupki(request):
         # Kонтекст передаваемых переменных
         {
             "Товары": goods,
-            "summa": summa,
-            "navset": get_menu("/shop")
+            "cat_selected": cat_id,
+            "navset": get_menu("/shop"),
+            "categories": categories,
         }
     )
 

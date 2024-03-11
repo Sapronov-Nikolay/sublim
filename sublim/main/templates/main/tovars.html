@@ -5,10 +5,24 @@
 <link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}" >
 <script src="{% static 'main/js/cart.js' %}"> </script>
 {% include 'main/menu.html' %} <!--Отображает параметры из menu.html и header_footer.html-->
-<h3>Таблица</h3> <!--Отображается на всех страницах а должна только над таблицей-->
 
+<form action="/shop/">
+    {% csrf_token %}
+    <!--Кнопка с выпадающем меню-->
+    <select onchange="this.form.submit()" name="category">
+        {% for slug in categories %}
+            {% if slug.id == cat_selected %}
+                <option selected>{{slug}}</option>
+            {% else %}
+                <option>{{slug}}</option>
+            {% endif %}
+        {% endfor %}
+    </select>
+</form>
 <form action="/cart/" method="post">
     {% csrf_token %}
+    <!--Кнопка с выпадающем меню-->
+
     <table border="1">
         {% for товар in Товары %}
         <tr>
