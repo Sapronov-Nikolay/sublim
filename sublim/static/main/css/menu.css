@@ -1,10 +1,13 @@
 ul.nav {
     display: block;
+    justify-content: space-around;
     align-items: center;
     align-content: center;
     justify-content: center;
     overflow: auto;
-    background-color:#e6f39be8
+    background-color:#e6f39be8;
+    left: 50%;
+    right: 50%;
 }
 
 ul.top_menu {
@@ -29,6 +32,46 @@ li {
     background-attachment: 2px;
 }
 
+/* Выпадающее меню */
+.tovar-form-cat {
+    display:block;
+    border-radius: 25px;
+    font-family: Open Sans Condensed, sans-serif;
+    background-color: #1cb921;
+    color: rgb(228, 248, 117);
+    padding: 5px;
+    font-size: 25px;
+    border: none;
+    right: 50px;
+}
+
+.tovar-select-cat {
+    font-family: Open Sans Condensed, sans-serif;
+    background-color: #1cb921;
+    transition: background-color 1s ease-in-out;
+    color: rgb(228, 248, 117);
+    padding: 5px;
+    font-size: 25px;
+    border-color: greenyellow;
+    border-radius: 25px;
+    position: 50px;
+}
+
+.tovar-select-cat:hover {
+    transition: box-shadow, color, 0.3s ease-in-out;
+    box-shadow: 5px -5px 10px 0px #105215be;
+    color: rgb(250, 227, 17);
+    
+}
+
+.tovar-form-cat:active {
+    margin-block-start: 0.5lh;
+    line-height: 0, 1,2;
+    color: currentColor;
+    transition: line-height 0.5s, color 0.5s;
+
+}
+
 /*#mainmenu {
     border: 1px solid black;
     list-style-type: none;
@@ -37,16 +80,26 @@ li {
     display: inline;
     background-color: #a3def5a6;
 } 
-/* для горизонтального меню */
+
+/* для горизонтального меню кнопки*/
 .nav li {
-    background-color: #16352981;
+    background-color: #3d8836e8;
     display: inline;
-    margin: 0px;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    left: 20%;
+    right: 20%;
+    text-align: center;
+    border-radius: 10px;
 }
 /* Текстовая часть горизонтального меню */
 .nav li a {
     display: inline-block;
     padding: 20px;
+    font-size: 20px;
+    
+
     
 }
 
@@ -59,7 +112,7 @@ li {
 }
 
 
-/* ГРУППА ССЫЛКИ */
+/* ГРУППА ССЫЛКИ КНОПКА ЗАКАЗАТЬ*/
 a.cart {
     color: #251111
 }

@@ -16,7 +16,7 @@
 {% block content %}
 {% include 'main/menu.html' %}
 
-<label for="slug">Категории</label>
+{% comment %} <label for="slug">Категории</label>
 <!--Кнопка с выпадающем меню-->
 <select>
     {% for slug in categories %}
@@ -27,5 +27,5 @@
         {% endif %}
     {% endfor %}
 </select>
-
+{% endcomment %}
 {% endblock %}
