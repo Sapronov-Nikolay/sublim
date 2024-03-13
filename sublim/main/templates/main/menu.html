@@ -6,16 +6,17 @@
 <div>    
     <form action={% url 'search' %} method="post">
     {% csrf_token %}
-        <li class="search"><input id="srh" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
+        <p class="search"><input id="srh" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
         {{ good_form_auto_gen }}
-        <input type='submit' value='Найти'>
-        </li>
+        <input class="menu-search-submit" type='submit' value='Найти'>
+        </p>
     </form>
 </div>
 
-
-<div id="mainmenu">
-    <ul class="nav">
+<!--
+    Меню в разработке для регистрации и личного кабинета
+<div class="mainmenu">
+    <ul class="mainmenu">
         {% for nav in topnavset %}
         {% if nav.active %}
         <li class="active">
@@ -27,25 +28,11 @@
         {% endfor %}
     </ul>
 </div>
-
-<!---->
+-->
+<!-- -->
 <div>
     <ul class="nav">
         {% for nav in navset %}
-        {% if nav.active %}
-        <li class="active">
-            {% else %}
-        <li>
-            {% endif %}
-            <a href="{{nav.url}}">{{nav.text}}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
-
-<div>
-    <ul class="left">
-        {% for nav in leftmenu %}
         {% if nav.active %}
         <li class="active">
             {% else %}

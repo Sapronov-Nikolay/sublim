@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
 <script src="{% static 'main/js/cart.js' %}"> </script>
 
-<form>
+<form class="cart-form-cart">
     <table border="1">
         {% for zakaz in cart_form_auto_gen %}
         <tr>
@@ -25,5 +25,5 @@
 </form>
 <p>
 </p>
-<input id="zkz" type="submit" value="Оформить заказ">
+<input class="tovars-oform-zakaz" type="submit" value="Оформить заказ">
 {% endblock %}

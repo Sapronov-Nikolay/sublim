@@ -1,13 +1,9 @@
+
 ul.nav {
     display: block;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    overflow: auto;
-    background-color:#e6f39be8;
-    left: 50%;
-    right: 50%;
+    margin: 10px;
+    clear: both;
+
 }
 
 ul.top_menu {
@@ -28,8 +24,49 @@ ul.top_menu {
     color: #e8ff19;
 }
 
+.nav {
+    padding: 0%;
+
+
+}
+
 li {
     background-attachment: 2px;
+}
+/* КНОПКИ ДОБАВИТЬ В КАРТОЧКАХ ТОВАРОВ */
+.tovars-dobavit-cart {
+    border: none;
+    background-color: #1cb921;
+    color: #e4f875;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-left: 1px;
+    border-radius: 6px;
+}
+
+/* КНОПКИ ДОБАВИТЬ В КАРТОЧКАХ ТОВАРОВ ПРИ НАВЕДЕНИИ */
+.tovars-dobavit-cart:hover {
+    background-color: #26e22d;
+    color: #e4f875;
+}
+
+.cart-form-cart {
+    padding: 2%;
+    padding-left: 20%;
+    padding-right: 2%;
+    padding-top: 5%;
+}
+
+/* ПОЛЕ ВВОДА В КАРТОЧКЕ */
+.tovars-vvod-cart {
+    background-color: #f2fd8d;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+    font-family: monospace;
+    font-weight: 600;
 }
 
 /* Выпадающее меню */
@@ -38,54 +75,47 @@ li {
     border-radius: 25px;
     font-family: Open Sans Condensed, sans-serif;
     background-color: #1cb921;
-    color: rgb(228, 248, 117);
+    color: #e4f875;
     padding: 5px;
     font-size: 25px;
     border: none;
     right: 50px;
 }
-
+/* ПОЛЕ ВЫБОРА КАТЕГОРИЙ ТОВАРОВ */
 .tovar-select-cat {
     font-family: Open Sans Condensed, sans-serif;
     background-color: #1cb921;
     transition: background-color 1s ease-in-out;
-    color: rgb(228, 248, 117);
+    color: #e4f875;
     padding: 5px;
     font-size: 25px;
-    border-color: greenyellow;
+    border-color: #adff2f;
     border-radius: 25px;
     position: 50px;
 }
-
+/* ПОЛЕ ВЫБОРА КАТЕГОРИЙ ТОВАРОВ ПРИ НАВЕДЕНИИ КУРСОРА */
 .tovar-select-cat:hover {
     transition: box-shadow, color, 0.3s ease-in-out;
     box-shadow: 5px -5px 10px 0px #105215be;
     color: rgb(250, 227, 17);
-    
+    border-color: #466911;
 }
-
+/* ПОЛЕ ВЫПАДАБЩЕГО МЕНЮ КАТЕГОРИИ */
 .tovar-form-cat:active {
     margin-block-start: 0.5lh;
     line-height: 0, 1,2;
     color: currentColor;
     transition: line-height 0.5s, color 0.5s;
-
+    border-color: #466911;
 }
 
-/*#mainmenu {
-    border: 1px solid black;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    display: inline;
-    background-color: #a3def5a6;
-} 
 
 /* для горизонтального меню кнопки*/
 .nav li {
     background-color: #3d8836e8;
     display: inline;
     padding: 20px;
+    width: 100%;
     margin: 20px;
     position: relative;
     left: 20%;
@@ -133,21 +163,24 @@ a:visited {
 } /* ГРУППА ССЫЛКИ-END */
 
 
-
-.search {
-    background-color: none;
-    border: none;
-    padding: 1px;
-}
-
-#cart {
-    background-color: #dafc1a;
+.tovars-cart-zakaz {
+    background-color: #a2cc09;
     font-weight: 600;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
     font-size: 24px;
     margin-top: 20px;
     float: right;
     width: 230px;
-    height: 40px;
     text-align: center;
+    border: 5px solid;
+    border-color:#ff432a;
+    box-shadow: 0 0 5px 10px #ff432a;
+}
+
+.tovars-cart-zakaz:hover {
+    background-color: #afff64f5;
+    color:#3e1df8;
+    border: 5px solid ;
+    height: 45px;
+    box-shadow: 0 0 5px 5px #3e1df8;
 }

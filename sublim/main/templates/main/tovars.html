@@ -19,11 +19,11 @@
         {% endfor %}
     </select>
 </form>
-<form action="/cart/" method="post">
+<form class="tovars-form-karte" action="/cart/" method="post">
     {% csrf_token %}
     <!--Кнопка с выпадающем меню-->
 
-    <table border="1">
+    <table class="tovars-table" border="1">
         {% for товар in Товары %}
         <tr>
             <th><img width="200px" height="200px" src="/media/{{товар.picture}}" ></th>
@@ -32,12 +32,12 @@
             <th width=" 2%">{{товар.specification}}</th>
             <th width=" 5%">{{товар.price}}</th>
             <th width=" 5%">{{товар.discount}} %</th>
-            <th width=" 5%">{{товар.category}}</th>
-            <th width=" 10%"><input type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"
-        onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input type="button" value="Добавить"></th>
+            <th width=" 8%">{{товар.category}}</th>
+            <th width=" 2%"><input class="tovars-vvod-cart" type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"
+        onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input class="tovars-dobavit-cart" type="button" value="Добавить"></th>
         </tr>
         {% endfor %}
     </table>
-    <input id="cart" type="submit" value="Заказать">
+    <input class="tovars-cart-zakaz" type="submit" value="Заказать">
 </form>
 {% endblock %}

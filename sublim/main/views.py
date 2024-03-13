@@ -62,7 +62,7 @@ def search(request):
     if request.method == 'POST':
         # print(request.POST)
         # print(request.POST['poisk'])
-        goods = Good.objects.filter(namegood=request.POST['poisk'].lower())
+        goods = Good.objects.filter(namegood=request.POST['poisk']) #.lower() С ним не работает поиск
 
 
     return render(

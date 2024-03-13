@@ -1,14 +1,90 @@
-tr {
-   background: #c4faa0; 
+.tovars-form-karte {
+    padding: 2%;
+    flex-grow: 1;
+    flex-basis: 16%;
 }
+
+.tovars-oform-zakaz {
+    border: none;
+    background-color: #1cb921;
+    color: #e4f875;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 3px;
+    padding-top: 2px;
+    margin-top: 5px;
+    margin-left: 1px;
+    border-radius: 6px;
+}
+
+.tovars-oform-zakaz:hover {
+    background-color: #26e22d;
+    color: #e4f875;
+}
+
+tr {
+    background: #c4faa0; 
+
+}
+
 body {
-    background:#71ffd0d8
+    background:#71ffd0d8;
+    max-width: 90%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/* ПОЛЕ ВВОДА В ПОИСКОВИКЕ */
+#srh {
+    background-color: #f2fd8d;
+    padding: 8px;
+    padding-right: 150px;
+    margin-right: 25px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+/* ПОЛЕ ВВОДА В ПОИСКОВИКЕ ПРИ ВВОДЕ */
+#srh:active {
+    background-color: #f2fd8d;
+    padding: 8px;
+    padding-right: 150px;
+    margin-right: 25px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+
+/* КНОПКА НАЙТИ */
+.menu-search-submit {
+    border: none;
+    background-color: #1cb921;
+    color: #e4f875;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 3px;
+    padding-top: 2px;
+    margin-top: 5px;
+    margin-left: 1px;
+    border-radius: 6px;
+}
+
+/* КНОПКА НАЙТИ ПРИ НАВЕДЕНИИ */
+.menu-search-submit:hover {
+    background-color: #26e22d;
+    color: #e4f875;
 }
 
 #tovars {
     background-color: #80ff00cb;
+    border-radius: 10px;
 }
 
+/* ПОЗИЦИЯ КАРТИНОК В ТОВАРАХ */
 #bg {
     background-attachment: fixed;
     background-size: 100%;
@@ -20,6 +96,8 @@ body {
 h2.privet-container2 {
     margin: 10px;
 }
+
+/* ПРИВЕТСТВЕННЫЙ ТЕКСТ НА ПАРАДНОЙ */
     /* ЗАГЛАВИЕ */
 div.privet-container {
     margin: 20px;
