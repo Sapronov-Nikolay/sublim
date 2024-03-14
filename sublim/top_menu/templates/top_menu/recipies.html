@@ -1,0 +1,35 @@
+{% extends 'main/header_footer.html' %}
+
+{% block content %}
+<title>{% block title %}Рецепты{% endblock %}</title>
+{% include 'main/menu.html' %}
+{% load static %}
+<html lang="ru">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'main/js/body.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
+    <title>{{Document}}</title>
+<body>
+<div>
+    <ul class="nav">
+        {% for nav in navset %}
+        {% if nav.active %}
+        <li class="active">
+            {% else %}
+        <li>
+            {% endif %}
+            <a href="{{nav.url}}">{{nav.text}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<h1>Рецепты</h1>
+</body>
+{% endblock %}
+
+
+
+

@@ -1,21 +1,19 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-from main.models import *
+#from sublim.main.views import get_menu
 
 
 
 
-menu = [{'main': "Главная"},
-        {'goods': "Товары"}, 
-        {'cart': "Корзина"}, "О сублимировании", "Регистрация"
-]
-def index(request):
-    posts = Good.objects.all()
-    contexttop = {
-        'Document': 'главное на сегодня',
-        'posts': posts,   # отображает модель с товарами
-        'text': 'Содержимое',
-        'menu': menu    # Отображает меню в index.html значение {{m}} class="top_menu"
-    }
-    return render(request, 'top_menu/index.html', context=contexttop)
+
+
+def recipies(request):
+    return render(
+        request,
+        'top_menu/recipies.html',
+            {
+                #"navset": get_menu("/"),
+            }
+        )
 

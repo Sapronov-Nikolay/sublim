@@ -32,10 +32,8 @@ urlpatterns = [
 navset = [
     {'url': '/',                         'text': 'Главная',               'active': False},
     {'url': '/shop',                     'text': 'Магазин',               'active': False},
-    #{'url': '/categories',               'text': 'Каталог',               'active': False},
     {'url': '/cart',                     'text': 'Корзина',               'active': False},
-    {'url': '/delivery',                 'text': 'Доставка',              'active': False},
-    {'url': '/recipies',                 'text': 'Рецепты',               'active': False},
+    {'url': '/top_menu/recipies',        'text': 'Рецепты',               'active': False},
     {'url': '/sublim',                   'text': 'О сублимировании',      'active': False},
 
 ]
