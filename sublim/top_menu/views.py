@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-#from sublim.main.views import get_menu
+from main.views import get_menu
 
 
 
@@ -13,7 +13,7 @@ def recipies(request):
         request,
         'top_menu/recipies.html',
             {
-                #"navset": get_menu("/"),
+                "navset": get_menu("/top_menu"),
             }
         )
 

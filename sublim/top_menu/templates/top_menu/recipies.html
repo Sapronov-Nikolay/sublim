@@ -13,19 +13,7 @@
     <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
     <title>{{Document}}</title>
 <body>
-<div>
-    <ul class="nav">
-        {% for nav in navset %}
-        {% if nav.active %}
-        <li class="active">
-            {% else %}
-        <li>
-            {% endif %}
-            <a href="{{nav.url}}">{{nav.text}}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+
 <h1>Рецепты</h1>
 </body>
 {% endblock %}
