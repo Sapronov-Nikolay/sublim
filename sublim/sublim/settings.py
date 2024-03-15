@@ -22,9 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# чтобы переключаться ЗАКОММЕНТИРУЙ или РАЗКОММЕНТИРУЙ нужное значение
+# Чтобы переключаться ЗАКОММЕНТИРУЙ или РАСКОММЕНТИРУЙ нужное значение
 DEBUG = True
-#DEBUG = False  # При этом не работает "static" - Запустите сервер по команде: py manage.py runserver --insecure. MEDIA при этом не грузятся
+#DEBUG = False  # При этом не работает "static" - Запустите сервер по команде:      py manage.py runserver --insecure.
+# MEDIA при этом не грузятся
 
 ALLOWED_HOSTS = [
     '127.0.0.1',

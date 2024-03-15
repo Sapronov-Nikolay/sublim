@@ -22,14 +22,18 @@
     background-color: #26e22d;
     color: #e4f875;
 }
-
-tr {
-    background: #c4faa0; 
+/* Поле строки таблицы в представлении товаров = tovars.css */
+.tovsrs-table-tr {
+    background: #c4faa0;
+    border-radius: 5px;
+    color: #321c68;
+    font-family: Helvetica;
+    font-size: 15px;
 
 }
-
+/* Тело страницы фон общий = body.css */
 body {
-    background:#71ffd0d8;
+    background:#5fffe4d8;
     max-width: 90%;
     margin-bottom: 3%;
     margin-left: auto;
