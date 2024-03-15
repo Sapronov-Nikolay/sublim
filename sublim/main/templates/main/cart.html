@@ -8,7 +8,7 @@
 <script src="{% static 'main/js/cart.js' %}"> </script>
 
 <form class="cart-form-cart">
-    <table border="1">
+    <table class="cart-table-cart" border="1">
         {% for zakaz in cart_form_auto_gen %}
         <tr class="cart-tr-cart">
             <th><img width="100px" height="100px" src="/media/{{zakaz.picture}}" ></th>
