@@ -18,10 +18,7 @@
     border-radius: 6px;
 }
 
-.tovars-oform-zakaz:hover {
-    background-color: #26e22d;
-    color: #e4f875;
-}
+
 /* Поле строки таблицы в представлении товаров = tovars.css */
 .tovsrs-table-tr {
     background: #c4faa0;
@@ -41,6 +38,7 @@ body {
     padding-left: 16px;
     padding-right: 16px;
 }
+
 
 /* ПОЛЕ ВВОДА В ПОИСКОВИКЕ */
 #srh {

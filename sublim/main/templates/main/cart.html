@@ -4,22 +4,23 @@
 {% include 'main/menu.html' %}  <!--Отображает параметры из menu.html и header_footer.html-->
 {% load static %}
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/cart.css' %}">
 <script src="{% static 'main/js/cart.js' %}"> </script>
 
 <form class="cart-form-cart">
     <table border="1">
         {% for zakaz in cart_form_auto_gen %}
         <tr class="cart-tr-cart">
-            <th><img width="50px" height="50px" src="/media/{{zakaz.picture}}" ></th>
+            <th><img width="100px" height="100px" src="/media/{{zakaz.picture}}" ></th>
             </th>
-            <th class="cart-pole-zakaz-1" width="50px" height="50px">{{zakaz.namegood}}</th>
-            <th class="cart-pole-zakaz-2" width="50px" height="50px">{{zakaz.price}}</th>
-            <th class="cart-pole-zakaz-3" width="50px" height="50px">{{zakaz.kolvo}}</th>
-            <th class="cart-pole-zakaz-4" width="55px" height="50px">{{zakaz.summa}} &#8381;</th>
+            <th class="cart-pole-zakaz-1" width="400px" height="70px">{{zakaz.namegood}}</th>
+            <th class="cart-pole-zakaz-2" width="200px" height="70px">{{zakaz.price}}</th>
+            <th class="cart-pole-zakaz-3" width="200px" height="70px">{{zakaz.kolvo}}</th>
+            <th class="cart-pole-zakaz-4" width="200px" height="70px">{{zakaz.summa}} &#8381;</th>
         </tr>
         {% endfor %}
         <tr class="cart-tr-cart-total_sum">
-            <th colspan="4">Итого:</th><th>{{total_sum}} &#8381;</th>
+            <th class="cart-th-cart-itog" colspan="4">Итого:</th><th class="cart-th-cart-total_sum">{{total_sum}} &#8381;</th>
         </tr>
     </table>
 </form>
