@@ -34,7 +34,7 @@ navset = [
     {'url': '/shop',                     'text': 'Магазин',               'active': False},
     {'url': '/cart',                     'text': 'Корзина',               'active': False},
     {'url': '/top_menu/recipies',        'text': 'Рецепты',               'active': False},
-    {'url': '/sublim',                   'text': 'О сублимировании',      'active': False},
+    {'url': '/top_menu/sublim',          'text': 'О сублимировании',      'active': False},
 
 ]
 # def add_cart(request): во views.py

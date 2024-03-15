@@ -4,10 +4,6 @@ from django.http import HttpResponse
 from main.views import get_menu
 
 
-
-
-
-
 def recipies(request):
     return render(
         request,
@@ -17,3 +13,11 @@ def recipies(request):
             }
         )
 
+def sublim(request):
+    return render(
+        request,
+        'top_menu/sublim.html',
+        {
+            "navset": get_menu("/top_menu"),
+        }
+    )

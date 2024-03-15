@@ -4,4 +4,5 @@ from top_menu import views
 
 urlpatterns = [
     path('recipies/', views.recipies, name='recipies'),
+    path('sublim/', views.sublim, name='sublim'),
 ]
