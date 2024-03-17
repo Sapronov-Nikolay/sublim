@@ -1,0 +1,39 @@
+/* Выпадающее меню */
+.tovars-form-category {
+    display:block;
+    border-radius: 25px;
+    font-family: Open Sans Condensed, sans-serif;
+    background-color: #1cb921;
+    color: #e4f875;
+    padding: 5px;
+    font-size: 25px;
+    border: none;
+    right: 50px;
+}
+/* ПОЛЕ ВЫБОРА КАТЕГОРИЙ ТОВАРОВ */
+.tovars-select-category {
+    font-family: Open Sans Condensed, sans-serif;
+    background-color: #1cb921;
+    transition: background-color 1s ease-in-out;
+    color: #e4f875;
+    padding: 5px;
+    font-size: 25px;
+    border-color: #adff2f;
+    border-radius: 25px;
+    position: 50px;
+}
+/* ПОЛЕ ВЫБОРА КАТЕГОРИЙ ТОВАРОВ ПРИ НАВЕДЕНИИ КУРСОРА */
+.tovars-select-category:hover {
+    transition: box-shadow, color, 0.3s ease-in-out;
+    box-shadow: 5px -5px 10px 0px #105215be;
+    color: rgb(250, 227, 17);
+    border-color: #466911;
+}
+/* ПОЛЕ ВЫПАДАБЩЕГО МЕНЮ КАТЕГОРИИ */
+.tovars-form-category:active {
+    margin-block-start: 0.1lh;
+    line-height: 0, 1,2;
+    color: currentColor;
+    transition: line-height 0.5s, color 0.5s;
+    border-color: #466911;
+}

@@ -1,8 +1,8 @@
 
 ul.nav {
-    display: block;
+    text-align: center;
     margin: 10px;
-    clear: both;
+    padding-bottom: 3%;
 
 }
 
@@ -34,7 +34,7 @@ li {
     background-attachment: 2px;
 }
 /* КНОПКИ ДОБАВИТЬ В КАРТОЧКАХ ТОВАРОВ */
-.tovars-dobavit-cart {
+.tovars-table-dobavit-quantity {
     border: none;
     background-color: #1cb921;
     color: #e4f875;
@@ -45,14 +45,14 @@ li {
 }
 
 /* КНОПКИ ДОБАВИТЬ В КАРТОЧКАХ ТОВАРОВ ПРИ НАВЕДЕНИИ */
-.tovars-dobavit-cart:hover {
+.tovars-table-dobavit-quantity:hover {
     background-color: #26e22d;
     color: #e4f875;
 }
 
 
 /* ПОЛЕ ВВОДА В КАРТОЧКЕ */
-.tovars-vvod-cart {
+.tovars-table-vvod-quantity {
     background-color: #f2fd8d;
     margin-right: 20px;
     margin-left: 20px;
@@ -63,45 +63,7 @@ li {
     font-weight: 600;
 }
 
-/* Выпадающее меню */
-.tovar-form-cat {
-    display:block;
-    border-radius: 25px;
-    font-family: Open Sans Condensed, sans-serif;
-    background-color: #1cb921;
-    color: #e4f875;
-    padding: 5px;
-    font-size: 25px;
-    border: none;
-    right: 50px;
-}
-/* ПОЛЕ ВЫБОРА КАТЕГОРИЙ ТОВАРОВ */
-.tovar-select-cat {
-    font-family: Open Sans Condensed, sans-serif;
-    background-color: #1cb921;
-    transition: background-color 1s ease-in-out;
-    color: #e4f875;
-    padding: 5px;
-    font-size: 25px;
-    border-color: #adff2f;
-    border-radius: 25px;
-    position: 50px;
-}
-/* ПОЛЕ ВЫБОРА КАТЕГОРИЙ ТОВАРОВ ПРИ НАВЕДЕНИИ КУРСОРА */
-.tovar-select-cat:hover {
-    transition: box-shadow, color, 0.3s ease-in-out;
-    box-shadow: 5px -5px 10px 0px #105215be;
-    color: rgb(250, 227, 17);
-    border-color: #466911;
-}
-/* ПОЛЕ ВЫПАДАБЩЕГО МЕНЮ КАТЕГОРИИ */
-.tovar-form-cat:active {
-    margin-block-start: 0.5lh;
-    line-height: 0, 1,2;
-    color: currentColor;
-    transition: line-height 0.5s, color 0.5s;
-    border-color: #466911;
-}
+
 
 
 /* для горизонтального меню кнопки*/
@@ -111,7 +73,6 @@ li {
     padding: 20px;
     width: 100%;
     margin: 20px;
-    position: relative;
     left: 20%;
     right: 20%;
     text-align: center;
@@ -156,7 +117,7 @@ a:visited {
     text-decoration: none;
 } /* ГРУППА ССЫЛКИ-END */
 
-
+/* ЛНОПКА ЗАКАЗАТЬ В МАГАЗИНЕ */
 .tovars-cart-zakaz {
     background-color: #a2cc09;
     font-weight: 600;

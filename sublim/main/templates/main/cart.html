@@ -8,21 +8,24 @@
 <script src="{% static 'main/js/cart.js' %}"> </script>
 
 <form class="cart-form-cart">
-    <table class="cart-table-cart" border="1">
+<div><h3 class="cart-form-cart-h3">ЗАКАЗЫ В КОРЗИНЕ</h3></div>
         {% for zakaz in cart_form_auto_gen %}
-        <tr class="cart-tr-cart">
-            <th><img width="100px" height="100px" src="/media/{{zakaz.picture}}" ></th>
-            </th>
-            <th class="cart-pole-zakaz-1" width="400px" height="70px">{{zakaz.namegood}}</th>
-            <th class="cart-pole-zakaz-2" width="200px" height="70px">{{zakaz.price}}</th>
-            <th class="cart-pole-zakaz-3" width="200px" height="70px">{{zakaz.kolvo}}</th>
-            <th class="cart-pole-zakaz-4" width="200px" height="70px">{{zakaz.summa}} &#8381;</th>
-        </tr>
+    <div class="cart-table-cart" border="1">
+        <div class="cart-in-img">
+            <div class="cart-div-img"><img width="220px" height="220px" src="/media/{{zakaz.picture}}"></div>
+        </div>
+            <div class="cart-pole-name-1" width="400px" height="70px"><p class="cart-name-zakaz">Товар</p> {{zakaz.namegood}}</div>
+            <div class="cart-pole-price-2" width="200px" height="70px"><p class="cart-price-zakaz">Цена за 1 шт</p>{{zakaz.price}}&#8381;</div>
+            <div class="cart-pole-quatity-3" width="200px" height="70px"><p class="cart-quatity-zakaz">Количество</p>{{zakaz.kolvo}} шт</div>
+            <hr class="cart-hr-line"> <!--Линия разделительная. ЕЁ параметры в cert.css-->
+            <div class="cart-pole-price_quatity-4" width="200px" height="70px"><p class="cart-price_quatity-zakaz">Цена за количество</p>{{zakaz.summa}}&#8381;</div>
+        </div>
         {% endfor %}
-        <tr class="cart-tr-cart-total_sum">
-            <th class="cart-th-cart-itog" colspan="4">Итого:</th><th class="cart-th-cart-total_sum">{{total_sum}} &#8381;</th>
-        </tr>
-    </table>
+        <br>
+        <th class="cart-tr-cart-total_sum">
+            <div class="cart-th-cart-itog" colspan="4">Итого:</div><div class="cart-th-cart-total_sum">{{total_sum}}&#8381;</div>
+        </th>
+    </div>
 </form>
 <p>
 </p>

@@ -1,22 +1,23 @@
+/* Тело страницы фон общий = body.css */
+body {
+    background:#5fffe4d8;
+    max-width: 90%;
+    margin-bottom: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+
 .tovars-form-karte {
     padding: 2%;
     flex-grow: 1;
     flex-basis: 16%;
 }
 
-.tovars-oform-zakaz {
-    border: none;
-    background-color: #1cb921;
-    color: #e4f875;
-    font-size: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 3px;
-    padding-top: 2px;
-    margin-top: 5px;
-    margin-left: 1px;
-    border-radius: 6px;
-}
+
 
 
 /* Поле строки таблицы в представлении товаров = tovars.css */
@@ -28,16 +29,7 @@
     font-size: 15px;
 
 }
-/* Тело страницы фон общий = body.css */
-body {
-    background:#5fffe4d8;
-    max-width: 90%;
-    margin-bottom: 3%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-}
+
 
 
 /* ПОЛЕ ВВОДА В ПОИСКОВИКЕ */
@@ -124,3 +116,10 @@ div.privet-opis {
     font:600; /* Жирность текста работает не для всех font-family */
     color:#9e1c38f3;
 }  /* Текст про разницу между сушкой и сублимацией END */
+
+/* footer */
+.footer {
+    text-align: center;
+    margin-top: 10%;
+    font-family: Verdana;
+}

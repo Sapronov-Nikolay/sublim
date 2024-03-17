@@ -1,52 +1,183 @@
-/* Область вокруг таблицы с заказами = cart.css */
+/* Тело объекта с заказами = for cart.html in cart.css */
 .cart-form-cart {
-  background: #8af345;
-  box-shadow: 0 0 30px 30px #7bd83d;
-  border-radius:70px;
-  padding: 2%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 2%;
-  margin-bottom: 100px;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 100px;
+  text-align: center;
+  background: #bcfa92;
+  box-shadow: 0 0 20px 30px #c1f89c;
+  border-radius:80px;
+  padding: 1%;
+  margin: 2%;
+}
+/* Заголовок для тела объекта с заказами = for cart.html in cart.css */
+.cart-form-cart-h3 {
+  display: inline-block;
+  color: #8a1555;
+  font-family: monospace;
+  font-size: 35px;
+  margin: 1px;
 }
 
+/* СОДЕРЖИМОЕ КАРТОЧКИ ТОВАРОВ */
+/* Поле в котором лежит всё содержимое карточек товаров = for cart.html in cart.css */
 .cart-table-cart {
-  margin: auto;
+  box-shadow: 0 0 20px 5px #6ef7ac;
+  border-color: #8a1555;
+  margin: 3%;
+  margin-top: 6%;
+  padding: 2%;
+  background:#b2fcb4;
 }
-
-/* Тело строки таблицы поля с заказами = cart.css */
-.cart-tr-cart {
-  border-radius:100px;
-  background: #c4faa0;
-  border-radius: 5px;
-  color: #321c68;
+/* Поле, в котором лежит объект с фото товара = for cart.html in cart.css */
+.cart-in-img {
+  box-shadow: 0 0 15px 5px #60f084 inset;
+  border-radius:20px;
+  background:#9cf7b3;
   font-family:'Courier New', Courier, monospace;
   font-size: 35px;
 }
+/* Поле с фото товара = for cart.html in cart.css */
+.cart-div-img {
+  text-align: center;
+  margin-left: 5px;
+  padding: 2%;
+}
 
-/* Поле итогов в еаблице заказов = cart.css */
+/* ПОЛЯ ТЕКСТОВЫХ ДАННЫХ ТОВАРОВ */
+
+                      /* 1-я колонка */
+/* Поле с заголовком для наименования = for cart.html in cart.css */
+.cart-name-zakaz {
+  color: #63103d;
+  font-family: 'bookman old style', serif;
+  font-size: 40px;
+  margin: 10px;
+}
+/* Наименование товара = for cart.html in cart.css */
+.cart-pole-name-1 {
+  display: inline-block;
+  border-radius: 5px;
+  color: #8a1555;
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+}
+
+                      /* 2-я колонка */
+/* Поле с заголовком для цены за штуку = for cart.html in cart.css */
+.cart-price-zakaz {
+  color: #63103d;
+  font-family: 'bookman old style', serif;
+  font-size: 40px;
+  margin: 10px;
+}
+/* Цена товара за 1 шт. = for cart.html in cart.css */
+.cart-pole-price-2 {
+  display: inline-block;
+  border-radius: 5px;
+  color: #8a1555;
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+}
+
+                      /* 3-я колонка */
+/* Поле с заголовком для цены за штуку = for cart.html in cart.css */
+.cart-quatity-zakaz {
+  color: #63103d;
+  font-family: 'bookman old style', serif;
+  font-size: 40px;
+  margin: 10px;
+}
+/* Выбранное количество товара = for cart.html in cart.css */
+.cart-pole-quatity-3 {
+  display: inline-block;
+  border-radius: 5px;
+  color: #8a1555;
+  font-family: monospace;
+  font-size: 35px;
+  margin: 20px;
+}
+
+                        /* ЛИНИЯ РАЗДЕЛИТЕЛЬНАЯ */
+/* Линия, разделяющаа данные товара от цены за количество = for cart.html in cart.css */
+.cart-hr-line {
+  display: block;
+  height: 0px;
+  border-color:#26e2aa;
+  box-shadow: 0 0 10px 1px #26e2aa;
+  width: 100%;
+}
+
+
+                      /* ЗАГОЛОВОК ЯЧЕЙКИ ЦЕНЫ ЗА КОЛИЧЕСТВО */
+/* Поле с заголовком для цены за количество = for cart.html in cart.css */
+.cart-price_quatity-zakaz {
+  color: #63103d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  margin: 10px;
+}
+/* Цена товара за общее количество = for cart.html in cart.css */
+.cart-pole-price_quatity-4 {
+  display: inline-block;
+  color: #97155d;
+  font-family: Impact, sans-serif;
+  font-size: 50px;
+  margin: 10px;
+}
+
+
+/* ЗОНА ОБЩИХ ИТОГОВ ПО ВСЕМУ ЗАКАЗАННОМУ */
+/* Поле итогов в ячейке заказов = for cart.html in cart.css */
 .cart-th-cart-itog {
+  display: inline-block;
+  border-radius: 50px;
   background: #c6fd44;
   border-radius: 5px;
   color: #8a1555;
   font-family: monospace;
   font-size: 35px;
 }
-
-/* Поле итоговой суммы в еаблице заказов = cart.css */
+/* Поле итоговой суммы в ячейке заказов = for cart.html in cart.css */
 .cart-th-cart-total_sum {
+  display: inline-block;
   background: #6d4a2a;
   border-radius: 5px;
   color: #fadb29;
   font-family: monospace;
   font-size: 35px;
+  margin-left: 30px;
 }
 
-/* Поле ввода оформления заказа = cart.css */
+/* КНОПКА ОФОРМИТЬ ЗАКАЗ */
+/* Кнопка оформления заказа = for cart.html in cart.css */
+.tovars-oform-zakaz {
+  box-shadow: 0 0 10px 3px #1cb921;
+  border: none;
+  background-color: #1cb921;
+  color: #e4f875;
+  font-size: 50px;
+  display: block;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Кнопка оформления заказа при наведении = for cart.html in cart.css */
 .tovars-oform-zakaz:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 10px 3px #26e22d;
   background-color: #26e22d;
   color: #e4f875;
+  border-radius: 6px;
+}
+/* Кнопка оформления заказа при отводе курсора мыши = for cart.html in cart.css */
+.tovars-oform-zakaz:not(hover) {
+  transition: 0.5s;
+}
+/* Кнопка оформления заказа при клике мышью = for cart.html in cart.css */
+.tovars-oform-zakaz:active {
+  transition: 0.2s;
+  box-shadow: 0 0 10px 3px #9bf39e;
+  background-color: #9bf39e;
+  color: #c9da6a;
+  border-radius: 6px;
 }

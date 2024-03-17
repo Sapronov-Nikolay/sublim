@@ -3,13 +3,14 @@
 {% block content %}
 <title>{% block title %}Товары{% endblock %}</title>
 <link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}" >
+<link rel="stylesheet" href="{% static 'main/css/menu_category.css' %}">
 <script src="{% static 'main/js/cart.js' %}"> </script>
 {% include 'main/menu.html' %} <!--Отображает параметры из menu.html и header_footer.html-->
 
-<form class="tovar-form-cat" action="/shop/">
+<form class="tovars-form-category" action="/shop/">
     {% csrf_token %}
     <!--Кнопка с выпадающем меню-->
-    <select class="tovar-select-cat" onchange="this.form.submit()" name="category">
+    <select class="tovars-select-category" onchange="this.form.submit()" name="category">
         {% for slug in categories %}
             {% if slug.id == cat_selected %}
                 <option selected>{{slug}}</option>
@@ -33,8 +34,8 @@
             <th class="tovars-pole-table-5" width=" 5%">{{товар.price}}</th>
             <th class="tovars-pole-table-6" width=" 10%">{{товар.discount}} %</th>
             <th class="tovars-pole-table-7" width=" 12%">{{товар.category}}</th>
-            <th class="tovars-pole-table-8" width=" 2%"><input class="tovars-vvod-cart" type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"
-        onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input class="tovars-dobavit-cart" type="button" value="Добавить"></th>
+            <th class="tovars-pole-table-8" width=" 2%"><input class="tovars-table-vvod-quantity" type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"
+        onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input class="tovars-table-dobavit-quantity" type="button" value="Добавить"></th>
         </tr>
         {% endfor %}
     </table>
