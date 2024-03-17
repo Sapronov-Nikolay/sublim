@@ -8,7 +8,7 @@
     <form class="menu-form-search" action={% url 'search' %} method="post">
     {% csrf_token %}
         <div class="menu-div-field-search">
-            <input class="menu-input-field-text-search" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
+            <input class="menu-input-field-text-search" placeholder="Поиск" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
         {{ good_form_auto_gen }}
             <input class="menu-search-submit" type='submit' value='Найти'>
         </div>
