@@ -1,9 +1,8 @@
-/* Выпадающее меню */
+/* Кнопка для выпадающего меню категорий = for tovars.html in menu_category.css*/
 .tovars-form-category {
-    display:block;
+    text-align: center;
     border-radius: 25px;
     font-family: Open Sans Condensed, sans-serif;
-    background-color: #1cb921;
     color: #e4f875;
     padding: 5px;
     font-size: 25px;
@@ -12,28 +11,37 @@
 }
 /* ПОЛЕ ВЫБОРА КАТЕГОРИЙ ТОВАРОВ */
 .tovars-select-category {
+    text-align: left;
     font-family: Open Sans Condensed, sans-serif;
     background-color: #1cb921;
     transition: background-color 1s ease-in-out;
     color: #e4f875;
     padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 25px;
     border-color: #adff2f;
     border-radius: 25px;
-    position: 50px;
 }
-/* ПОЛЕ ВЫБОРА КАТЕГОРИЙ ТОВАРОВ ПРИ НАВЕДЕНИИ КУРСОРА */
+/* КНОПКА КАТЕГОРИЙ ТОВАРОВ ПРИ НАВЕДЕНИИ КУРСОРА */
 .tovars-select-category:hover {
     transition: box-shadow, color, 0.3s ease-in-out;
     box-shadow: 5px -5px 10px 0px #105215be;
-    color: rgb(250, 227, 17);
+    color: #adff2f;
     border-color: #466911;
 }
+/* КНОПКА КАТЕГОРИЙ ТОВАРОВ ПРИ ОТВЕДЕНИИ КУРСОРА */
+.tovars-select-category:not(hover) {
+    transition: box-shadow, color, 0.3s ease-in-out;
+    box-shadow: 5px -5px 10px 0px #1cb921;
+}
 /* ПОЛЕ ВЫПАДАБЩЕГО МЕНЮ КАТЕГОРИИ */
-.tovars-form-category:active {
-    margin-block-start: 0.1lh;
-    line-height: 0, 1,2;
-    color: currentColor;
-    transition: line-height 0.5s, color 0.5s;
-    border-color: #466911;
+
+
+.menu-option-selected_slug {
+    background-color: #2fff6db6;
+}
+
+.menu-option-selected_slug:active {
+    background-color: rgba(255,255,255,.1);
 }

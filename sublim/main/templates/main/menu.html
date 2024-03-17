@@ -2,14 +2,16 @@
 <link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}" >
 
 <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
+<link rel="stylesheet" href="{% static 'main/css/search.css' %}">
 <title>{% block title %}Меню{% endblock %}</title>
-<div>    
-    <form action={% url 'search' %} method="post">
+<div class="menu-search-all">    
+    <form class="menu-form-search" action={% url 'search' %} method="post">
     {% csrf_token %}
-        <p class="search"><input id="srh" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
+        <div class="menu-div-field-search">
+            <input class="menu-input-field-text-search" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
         {{ good_form_auto_gen }}
-        <input class="menu-search-submit" type='submit' value='Найти'>
-        </p>
+            <input class="menu-search-submit" type='submit' value='Найти'>
+        </div>
     </form>
 </div>
 

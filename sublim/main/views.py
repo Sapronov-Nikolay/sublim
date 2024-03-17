@@ -64,6 +64,9 @@ def search(request):
         # print(request.POST['poisk'])
         goods = Good.objects.filter(namegood=request.POST['poisk']) #.lower() С ним не работает поиск
 
+    categ = ""
+    for a in Category.objects.all():
+        categ += a.categoriya
 
     return render(
         request,

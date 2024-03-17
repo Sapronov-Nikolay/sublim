@@ -7,15 +7,16 @@
 <script src="{% static 'main/js/cart.js' %}"> </script>
 {% include 'main/menu.html' %} <!--Отображает параметры из menu.html и header_footer.html-->
 
+    <!--Кнопка с выпадающем меню-->
 <form class="tovars-form-category" action="/shop/">
     {% csrf_token %}
-    <!--Кнопка с выпадающем меню-->
+    
     <select class="tovars-select-category" onchange="this.form.submit()" name="category">
         {% for slug in categories %}
             {% if slug.id == cat_selected %}
-                <option selected>{{slug}}</option>
+                <option class="menu-option-selected_slug" selected>{{slug}}</option>
             {% else %}
-                <option>{{slug}}</option>
+                <option class="menu-option-selected_slug">{{slug}}</option>
             {% endif %}
         {% endfor %}
     </select>

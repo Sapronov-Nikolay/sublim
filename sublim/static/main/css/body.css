@@ -31,48 +31,6 @@ body {
 }
 
 
-
-/* ПОЛЕ ВВОДА В ПОИСКОВИКЕ */
-#srh {
-    background-color: #f2fd8d;
-    padding: 8px;
-    padding-right: 150px;
-    margin-right: 25px;
-    margin-left: 10px;
-    border-radius: 10px;
-}
-/* ПОЛЕ ВВОДА В ПОИСКОВИКЕ ПРИ ВВОДЕ */
-#srh:active {
-    background-color: #f2fd8d;
-    padding: 8px;
-    padding-right: 150px;
-    margin-right: 25px;
-    margin-left: 10px;
-    border-radius: 10px;
-}
-
-
-/* КНОПКА НАЙТИ */
-.menu-search-submit {
-    border: none;
-    background-color: #1cb921;
-    color: #e4f875;
-    font-size: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 3px;
-    padding-top: 2px;
-    margin-top: 5px;
-    margin-left: 1px;
-    border-radius: 6px;
-}
-
-/* КНОПКА НАЙТИ ПРИ НАВЕДЕНИИ */
-.menu-search-submit:hover {
-    background-color: #26e22d;
-    color: #e4f875;
-}
-
 #tovars {
     background-color: #80ff00cb;
     border-radius: 10px;

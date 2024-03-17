@@ -3,8 +3,8 @@ ul.nav {
     text-align: center;
     margin: 10px;
     padding-bottom: 3%;
-
 }
+
 
 ul.top_menu {
     padding: 20px;
@@ -33,6 +33,7 @@ ul.top_menu {
 li {
     background-attachment: 2px;
 }
+
 /* КНОПКИ ДОБАВИТЬ В КАРТОЧКАХ ТОВАРОВ */
 .tovars-table-dobavit-quantity {
     border: none;
@@ -112,6 +113,7 @@ a {
 a:hover {
     color: #f3fcf8fd;
 }
+
 /* Убрано подчёркивание с текстовых сылок */
 a:visited {
     text-decoration: none;
