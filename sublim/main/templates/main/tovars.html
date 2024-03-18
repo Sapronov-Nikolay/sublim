@@ -2,26 +2,21 @@
 {% load static %}
 {% block content %}
 <title>{% block title %}Товары{% endblock %}</title>
-<<<<<<< HEAD
-<link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}" >
-<link rel="stylesheet" href="{% static 'main/css/menu_category.css' %}">
-=======
 <link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}">
->>>>>>> 796e3df (Убрала кнопку добавит в товарах. И чуть орфографии подправила)
 <script src="{% static 'main/js/cart.js' %}"> </script>
 {% include 'main/menu.html' %} <!--Отображает параметры из menu.html и header_footer.html-->
 
-    <!--Кнопка с выпадающем меню-->
+<!--Кнопка с выпадающем меню-->
 <form class="tovars-form-category" action="/shop/">
     {% csrf_token %}
-    
+
     <select class="tovars-select-category" onchange="this.form.submit()" name="category">
         {% for slug in categories %}
-            {% if slug.id == cat_selected %}
-                <option class="menu-option-selected_slug" selected>{{slug}}</option>
-            {% else %}
-                <option class="menu-option-selected_slug">{{slug}}</option>
-            {% endif %}
+        {% if slug.id == cat_selected %}
+        <option class="menu-option-selected_slug" selected>{{slug}}</option>
+        {% else %}
+        <option class="menu-option-selected_slug">{{slug}}</option>
+        {% endif %}
         {% endfor %}
     </select>
 </form>
@@ -31,29 +26,18 @@
 
     <table class="tovars-table" border="1">
         {% for товар in Товары %}
-<<<<<<< HEAD
         <tr class="tovsrs-table-tr">
-            <th class="tovars-pole-table-1"><img width="200px" height="200px" src="/media/{{товар.picture}}" ></th>
+            <th class="tovars-pole-table-1"><img width="200px" height="200px" src="/media/{{товар.picture}}"></th>
             <th class="tovars-pole-table-2" width=" 15%">{{товар.namegood}}</th>
             <th class="tovars-pole-table-3" width=" 35%">{{товар.content}}</th>
             <th class="tovars-pole-table-4" width=" 2%">{{товар.specification}}</th>
             <th class="tovars-pole-table-5" width=" 5%">{{товар.price}}</th>
             <th class="tovars-pole-table-6" width=" 10%">{{товар.discount}} %</th>
             <th class="tovars-pole-table-7" width=" 12%">{{товар.category}}</th>
-            <th class="tovars-pole-table-8" width=" 2%"><input class="tovars-table-vvod-quantity" type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"
-        onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input class="tovars-table-dobavit-quantity" type="button" value="Добавить"></th>
-=======
-        <tr>
-            <th><img width="200px" height="200px" src="/media/{{товар.picture}}"></th>
-            <th width=" 15%">{{товар.namegood}}</th>
-            <th width=" 35%">{{товар.content}}</th>
-            <th width=" 2%">{{товар.specification}}</th>
-            <th width=" 5%">{{товар.price}}</th>
-            <th width=" 5%">{{товар.discount}} %</th>
-            <th width=" 5%">{{товар.category}}</th>
-            <th width=" 10%"><input type="number" name="i{{товар.id}}" id="i{{товар.id}}" value="0"
-                    onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"></th>
->>>>>>> 796e3df (Убрала кнопку добавит в товарах. И чуть орфографии подправила)
+            <th class="tovars-pole-table-8" width=" 2%"><input class="tovars-table-vvod-quantity" type="number"
+                    name="i{{товар.id}}" id="i{{товар.id}}" value="0"
+                    onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input
+                    class="tovars-table-dobavit-quantity" type="button" value="Добавить"></th>
         </tr>
         {% endfor %}
     </table>

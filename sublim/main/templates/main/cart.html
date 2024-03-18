@@ -8,41 +8,35 @@
 <script src="{% static 'main/js/cart.js' %}"> </script>
 
 <form class="cart-form-cart">
-<div><h3 class="cart-form-cart-h3">ЗАКАЗЫ В КОРЗИНЕ</h3></div>
-        {% for zakaz in cart_form_auto_gen %}
-<<<<<<< HEAD
+    <div>
+        <h3 class="cart-form-cart-h3">ЗАКАЗЫ В КОРЗИНЕ</h3>
+    </div>
+    {% for zakaz in cart_form_auto_gen %}
     <div class="cart-table-cart" border="1">
         <div class="cart-in-img">
             <div class="cart-div-img"><img width="220px" height="220px" src="/media/{{zakaz.picture}}"></div>
         </div>
-            <div class="cart-pole-name-1" width="400px" height="70px"><p class="cart-name-zakaz">Товар</p> {{zakaz.namegood}}</div>
-            <div class="cart-pole-price-2" width="200px" height="70px"><p class="cart-price-zakaz">Цена за 1 шт</p>{{zakaz.price}}&#8381;</div>
-            <div class="cart-pole-quatity-3" width="200px" height="70px"><p class="cart-quatity-zakaz">Количество</p>{{zakaz.kolvo}} шт</div>
-            <hr class="cart-hr-line"> <!--Линия разделительная. ЕЁ параметры в cert.css-->
-            <div class="cart-pole-price_quatity-4" width="200px" height="70px"><p class="cart-price_quatity-zakaz">Цена за количество</p>{{zakaz.summa}}&#8381;</div>
+        <div class="cart-pole-name-1" width="400px" height="70px">
+            <p class="cart-name-zakaz">Товар</p> {{zakaz.namegood}}
         </div>
-        {% endfor %}
-        <br>
-        <th class="cart-tr-cart-total_sum">
-            <div class="cart-th-cart-itog" colspan="4">Итого:</div><div class="cart-th-cart-total_sum">{{total_sum}}&#8381;</div>
-        </th>
+        <div class="cart-pole-price-2" width="200px" height="70px">
+            <p class="cart-price-zakaz">Цена за 1 шт</p>{{zakaz.price}}&#8381;
+        </div>
+        <div class="cart-pole-quatity-3" width="200px" height="70px">
+            <p class="cart-quatity-zakaz">Количество</p>{{zakaz.kolvo}} шт
+        </div>
+        <hr class="cart-hr-line"> <!--Линия разделительная. ЕЁ параметры в cert.css-->
+        <div class="cart-pole-price_quatity-4" width="200px" height="70px">
+            <p class="cart-price_quatity-zakaz">Цена за количество</p>{{zakaz.summa}}&#8381;
+        </div>
     </div>
-=======
-        <tr>
-            <th><img width="50px" height="50px" src="/media/{{zakaz.picture}}"></th>
-            </th>
-            <th width="50px" height="50px">{{zakaz.namegood}}</th>
-            <th width="50px" height="50px">{{zakaz.price}}</th>
-            <th width="50px" height="50px">{{zakaz.kolvo}}</th>
-            <th width="55px" height="50px">{{zakaz.summa}} &#8381;</th>
-        </tr>
-        {% endfor %}
-        <tr>
-            <th colspan="4">Итого:</th>
-            <th>{{total_sum}} &#8381;</th>
-        </tr>
-    </table>
->>>>>>> 796e3df (Убрала кнопку добавит в товарах. И чуть орфографии подправила)
+    {% endfor %}
+    <br>
+    <th class="cart-tr-cart-total_sum">
+        <div class="cart-th-cart-itog" colspan="4">Итого:</div>
+        <div class="cart-th-cart-total_sum">{{total_sum}}&#8381;</div>
+    </th>
+    </div>
 </form>
 <p>
 </p>
