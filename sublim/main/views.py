@@ -58,16 +58,19 @@ def index(request):
 
 def search(request):
     # goods = Good.objects.all()  # filter(namegood=input()) # , 'картофель'])
-    goods = []
     if request.method == 'POST':
         # print(request.POST)
         # print(request.POST['poisk'])
-        goods = Good.objects.filter(namegood=request.POST['poisk']) #.lower() С ним не работает поиск
+        goods = []
+        search = request.POST['poisk'].lower()
+        for good in Good.objects.all():
+            if good.namegood.lower() == search:
+                goods.append(good)
 
-    categ = ""
-    for a in Category.objects.all():
-        categ += a.categoriya
-
+    categories = map(
+        lambda cat: Category.objects.get(pk=cat['category_id']),
+        Good.objects.order_by().values('category_id').distinct()
+    )
     return render(
         request,
         "main/tovars.html",
@@ -76,7 +79,8 @@ def search(request):
         {
 
             "Товары": goods,
-            "summa": 0,  # summa,
+            "summa": 0,  # summa,,
+            "categories": categories,
             "navset": get_menu("/shop") # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
 
         }

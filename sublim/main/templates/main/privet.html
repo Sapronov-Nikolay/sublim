@@ -2,52 +2,91 @@
 
 {% block content %}
 <title>{% block title %}Приветствие{% endblock %}</title>
-{% include 'main/menu.html' %}  <!--Отображает параметры из menu.html и header_footer.html-->
+{% include 'main/menu.html' %} <!--Отображает параметры из menu.html и header_footer.html-->
 
 
 {% load static %}
 <html lang="ru">
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 <!-- Метатег viewport, решающий проблему отображения текста -->
 <!-- - с разной плотностью пикселей на разных устройствах -->
 <!-- Параметр width=device-width приравнивает ширину вьюпорта к CSS-ширине устройства. -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
-<link rel="shortcut icon" type="image/ico" href="{% static 'img/xmas_icon_260233.ico' %}"/>
+<link rel="shortcut icon" type="image/ico" href="{% static 'img/xmas_icon_260233.ico' %}" />
 <script src="{% static 'main/js/body.js' %}"></script>
-<body id='bg' style="background-image: url({% static 'main/img/sublimats-VS.jpg' %});">
+
+
+<body id='bg' style="background-image: url({% static 'main/img/sublimats-VS.jpg' %})">
 </body>
 
+<div class="container" style="max-width: 1140px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, 360px);
+grid-gap: 20px;">
 
-    <h1>Зачем нужно приветствие на сайте?</h1>
-    <h4>Приветственное письмо – это первое обращение к аудитории, оно встречает «на входе». 
-    Порой от приветствия зависит, пройдет ли человек дальше, купит ли товар или услугу. Приветственное слово на сайте выполняет следующие задачи:
-        <ul>
-            <li>сохранять лаконичность повествования;</li>
-            <li>выдерживать минимальный объем;</li>
-            <li>стимулировать к действию;</li>
-            <li>выражать желание сотрудничать;</li>
-            <li>сделать акцент на пользователе.</li>
-        </ul>
-    Обращение может быть статичным, располагаться в углу или по центру страницы. Популярностью пользуются всплывающие окна. 
-    Текст должен быть обращен к целевой аудитории, особенно если настроено продвижение для получения тематического трафика.
-    </h4> <!--Отображается корректно, только на главной странице-->
-    
-    <div class="privet-container">
-        <h2 class="privet-container2">ВЫСУШЕННЫЕ<br></h2>
-        <h2 class="privet-container2">СУБЛИМИРОВАННЫЕ<br></h2>
+    <div>
+
+        <h1
+            style="text-align:center;font-family: 'Courier New', Courier, monospace;color: #4253c1;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+            СУБЛИМИРОВАННЫЕ ПРОДУКТЫ</h1>
+
+        <h2
+            style="font-family: 'Courier New', Courier, monospace;color: #dc6872;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">
+            БЫСТРО!</h2>
+        <h2
+            style="font-family: 'Courier New', Courier, monospace;color: #dc6872;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+            ВКУСНО!</h2>
+        <h2
+            style="font-family: 'Courier New', Courier, monospace;color: #dc6872;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">
+            ПОЛЕЗНО!</h2>
     </div>
-    <div class="privet-opis">
-        <p class="privet-opis2">
-            1. Лишились бОльшей части полезных веществ<br>
+
+    <div class="item" style="grid-column: 1 / -2;
+    padding: 50px;
+    display: grid;
+    align-content: end;">
+        <h2
+            style="font-family: 'Courier New', Courier, monospace;color: #4253c1;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+            ВЫСУШЕННЫЕ</h2>
+        <p class="item_opis" style="font-family: 'Courier New', Courier, monospace;
+        font-style: normal;
+        font-weight: bold;
+        font-size: medium;
+        line-height: normal;
+        text-transform: capitalize;
+        color: #222020;line-height: 1.5;
+  letter-spacing: 2px;">
+            1. Лишились большей части полезных веществ<br>
             2. Уже никогда не станут прежними<br>
             3. Быстро испортятся
         </p>
-        <p class="privet-opis2">
+
+    </div>
+    <div class="item" style="grid-column: 1 / -2;
+    padding: 50px;
+    display: grid;
+    align-content: end;">
+        <h2
+            style="font-family: 'Courier New', Courier, monospace;color: #4253c1;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+            СУБЛИМИРОВАННЫЕ</h2>
+
+        <p class="item_opis" style="font-family: 'Courier New', Courier, monospace;
+        font-style: normal;
+        font-weight: bold;
+        font-size: medium;
+        line-height: normal;
+        text-transform: capitalize;
+        color: #222020;
+        line-height: 1.5;
+  letter-spacing: 2px;">
             1. Сохранили все питательные вещества и витамины<br>
             2. достаточно лишь залить водой и они вернут прежний вид: <br><b>- форму и вес</b><br>
             3. Могут храниться 10-25 лет
         </p>
     </div>
+</div>
+
 {% endblock %}

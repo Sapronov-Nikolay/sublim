@@ -1,33 +1,49 @@
 {% extends 'main/header_footer.html' %}
 {% block content %}
 <title>{% block title %}Корзина{% endblock %}</title>
-{% include 'main/menu.html' %}  <!--Отображает параметры из menu.html и header_footer.html-->
+{% include 'main/menu.html' %} <!--Отображает параметры из menu.html и header_footer.html-->
 {% load static %}
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/cart.css' %}">
 <script src="{% static 'main/js/cart.js' %}"> </script>
 
 <form class="cart-form-cart">
-<div><h3 class="cart-form-cart-h3">ЗАКАЗЫ В КОРЗИНЕ</h3></div>
-        {% for zakaz in cart_form_auto_gen %}
+    <div>
+        <h3 class="cart-form-cart-h3">ЗАКАЗЫ В КОРЗИНЕ</h3>
+    </div>
+    {% for zakaz in cart_form_auto_gen %}
     <div class="cart-table-cart" border="1">
         <div class="cart-in-img">
             <div class="cart-div-img"><img width="220px" height="220px" src="/media/{{zakaz.picture}}"></div>
         </div>
-            <div class="cart-pole-name-1" width="400px" height="70px"><p class="cart-name-zakaz">Товар</p> {{zakaz.namegood}}</div>
-            <div class="cart-pole-price-2" width="200px" height="70px"><p class="cart-price-zakaz">Цена за 1 шт</p>{{zakaz.price}}&#8381;</div>
-            <div class="cart-pole-quatity-3" width="200px" height="70px"><p class="cart-quatity-zakaz">Количество</p>{{zakaz.kolvo}} шт</div>
-            <hr class="cart-hr-line"> <!--Линия разделительная. ЕЁ параметры в cert.css-->
-            <div class="cart-pole-price_quatity-4" width="200px" height="70px"><p class="cart-price_quatity-zakaz">Цена за количество</p>{{zakaz.summa}}&#8381;</div>
+        <div class="cart-pole-name-1" width="400px" height="70px">
+            <p class="cart-name-zakaz">Товар</p> {{zakaz.namegood}}
         </div>
-        {% endfor %}
-        <br>
-        <th class="cart-tr-cart-total_sum">
-            <div class="cart-th-cart-itog" colspan="4">Итого:</div><div class="cart-th-cart-total_sum">{{total_sum}}&#8381;</div>
-        </th>
+        <div class="cart-pole-price-2" width="200px" height="70px">
+            <p class="cart-price-zakaz">Цена за 1 шт</p>{{zakaz.price}}&#8381;
+        </div>
+        <div class="cart-pole-quatity-3" width="200px" height="70px">
+            <p class="cart-quatity-zakaz">Количество</p>{{zakaz.kolvo}} шт
+        </div>
+        <hr class="cart-hr-line"> <!--Линия разделительная. ЕЁ параметры в cert.css-->
+        <div class="cart-pole-price_quatity-4" width="200px" height="70px">
+            <p class="cart-price_quatity-zakaz">Цена за количество</p>{{zakaz.summa}}&#8381;
+        </div>
+    </div>
+    {% endfor %}
+    <br>
+    <th class="cart-tr-cart-total_sum">
+        <div class="cart-th-cart-itog" colspan="4">Итого:</div>
+        <div class="cart-th-cart-total_sum">{{total_sum}}&#8381;</div>
+    </th>
     </div>
 </form>
 <p>
 </p>
-<input class="tovars-oform-zakaz" type="submit" value="Оформить заказ">
+<div>
+    <a href="https://t.me/Vash_sublim_zakaz_bot">
+        <input class="tovars-oform-zakaz" type="submit" value="Оформить заказ">
+    </a>
+</div>
+
 {% endblock %}
