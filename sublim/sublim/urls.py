@@ -33,8 +33,7 @@ navset = [
     {'url': '/',                         'text': 'Главная',               'active': False},
     {'url': '/shop',                     'text': 'Магазин',               'active': False},
     {'url': '/cart',                     'text': 'Корзина',               'active': False},
-    {'url': '/top_menu/recipies',        'text': 'Рецепты',               'active': False},
-    {'url': '/top_menu/sublim',          'text': 'О сублимировании',      'active': False},
+
 
 ]
 # def add_cart(request): во views.py
@@ -44,7 +43,8 @@ cartnavset = [
 
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
 
 
 handler404 = page_not_found
