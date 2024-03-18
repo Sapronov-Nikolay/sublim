@@ -58,15 +58,14 @@ def index(request):
 
 def search(request):
     # goods = Good.objects.all()  # filter(namegood=input()) # , 'картофель'])
-    goods = []
     if request.method == 'POST':
         # print(request.POST)
         # print(request.POST['poisk'])
-        goods = Good.objects.filter(namegood=request.POST['poisk']) #.lower() С ним не работает поиск
-
-    categ = ""
-    for a in Category.objects.all():
-        categ += a.categoriya
+        goods = []
+        search = request.POST['poisk'].lower()
+        for good in Good.objects.all():
+            if good.namegood.lower() == search:
+                goods.append(good)
 
     return render(
         request,
