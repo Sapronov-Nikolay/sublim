@@ -67,6 +67,10 @@ def search(request):
             if good.namegood.lower() == search:
                 goods.append(good)
 
+    categories = map(
+        lambda cat: Category.objects.get(pk=cat['category_id']),
+        Good.objects.order_by().values('category_id').distinct()
+    )
     return render(
         request,
         "main/tovars.html",
@@ -75,7 +79,8 @@ def search(request):
         {
 
             "Товары": goods,
-            "summa": 0,  # summa,
+            "summa": 0,  # summa,,
+            "categories": categories,
             "navset": get_menu("/shop") # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
 
         }
