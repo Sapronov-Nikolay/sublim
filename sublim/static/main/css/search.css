@@ -13,12 +13,12 @@
 /* Область где находятся поисковое поле и кнопка найти = for menu.html in search.css */
 .menu-div-field-search {
   display: inline-flex; /* заставляет прижиматься и обтекать содержимое */
-  background-color: #4fdd96dc;
-  box-shadow: 0 0 10px 10px #4fdd96dc;
+  background-color: #78fab9dc;
+  box-shadow: 0 0 5px 5px #78fab9dc;
   padding-bottom: 5px;
   padding-top: 3px;
-  padding-right: 10px;
-  border-radius: 10px;
+  padding-right: 5px;
+  border-radius: 5px;
 }
 
                     /* ОБЛАСТЬ ВВОДА И КНОПКА НАЙТИ */

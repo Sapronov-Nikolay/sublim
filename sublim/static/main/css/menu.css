@@ -1,3 +1,4 @@
+/* ОБЩИЙ КОНТЕЙНЕР, В КОТОРОМ ЛЕЖАТ ВСЕ ОБЪЕКТЫ МЕНЮ */
 
 ul.nav {
     text-align: center;
@@ -5,34 +6,48 @@ ul.nav {
     padding-bottom: 3%;
 }
 
-
-ul.top_menu {
+/* Внешние параметры кнопок меню for menu.html in menu.css */
+.nav li {
+    background-color: #3d8836e8;
+    display: inline;
+    padding: 8px;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: box-shadow, color, 0.3s ease-in-out;
+    box-shadow: 5px -5px 10px 0px #3d8836e8;
+}
+/* Текстовая часть горизонтального меню for menu.html in menu.css */
+.nav li a {
+    display: inline-block;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    overflow: auto;
-    background-color:#53ecb9e5;
-    border: 1px solid black;
+    font-size: 20px;
+}
+/* Текстовая часть горизонтального меню for menu.html in menu.css */
+.nav li:hover {
+    transition: box-shadow, color, 0.3s ease-in-out;
+    box-shadow: 5px -5px 10px 0px #1cb921;
+}
+/* Текстовая часть горизонтального меню при отведении курсора for menu.html in menu.css */
+.nav li:not(hover) {
+    transition: box-shadow, color, 0.3s ease-in-out;
+    box-shadow: 5px -5px 10px 0px #3d8836e8;
+}
+/* Текстовая часть горизонтального меню при клике мышью for menu.html in menu.css */
+.nav li:active {
+    transition: box-shadow, color, 0.051s ease-in-out;
+    box-shadow: 5px -5px 10px 5px #e6fd61e8;
+    padding: 7px;
 }
 
-.top_menu li {
-    margin-left: 10px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: block;
-    color: #e8ff19;
-}
 
+                            /* ОПРЕДЕЛИТЬ НУЖНОСТЬ */
 .nav {
     padding: 0%;
-
-
 }
 
-li {
-    background-attachment: 2px;
-}
+
 
 /* КНОПКИ ДОБАВИТЬ В КАРТОЧКАХ ТОВАРОВ */
 .tovars-table-dobavit-quantity {
@@ -62,82 +77,4 @@ li {
     font-size: 20px;
     font-family: monospace;
     font-weight: 600;
-}
-
-
-
-
-/* для горизонтального меню кнопки*/
-.nav li {
-    background-color: #3d8836e8;
-    display: inline;
-    padding: 20px;
-    width: 100%;
-    margin: 20px;
-    left: 20%;
-    right: 20%;
-    text-align: center;
-    border-radius: 10px;
-}
-/* Текстовая часть горизонтального меню */
-.nav li a {
-    display: inline-block;
-    padding: 20px;
-    font-size: 20px;
-    
-
-    
-}
-
-.left li {
-    background-color: #d8affade;
-    padding: 20px;
-    display: block;
-    width: 80px;
-    line-height: 1em;
-}
-
-
-/* ГРУППА ССЫЛКИ КНОПКА ЗАКАЗАТЬ*/
-a.cart {
-    color: #251111
-}
-a.goods {
-    color:#eaf81e
-}
-a {
-    text-decoration: none;
-    color: #bef81e;
-}
-/* Цвет текста при наведении курсора */
-a:hover {
-    color: #f3fcf8fd;
-}
-
-/* Убрано подчёркивание с текстовых сылок */
-a:visited {
-    text-decoration: none;
-} /* ГРУППА ССЫЛКИ-END */
-
-/* ЛНОПКА ЗАКАЗАТЬ В МАГАЗИНЕ */
-.tovars-cart-zakaz {
-    background-color: #a2cc09;
-    font-weight: 600;
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
-    font-size: 24px;
-    margin-top: 20px;
-    float: right;
-    width: 230px;
-    text-align: center;
-    border: 5px solid;
-    border-color:#ff432a;
-    box-shadow: 0 0 5px 10px #ff432a;
-}
-
-.tovars-cart-zakaz:hover {
-    background-color: #afff64f5;
-    color:#3e1df8;
-    border: 5px solid ;
-    height: 45px;
-    box-shadow: 0 0 5px 5px #3e1df8;
 }

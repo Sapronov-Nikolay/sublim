@@ -1,6 +1,31 @@
+/* ССЫЛКИ СОДЕРЖАЩИЕСЯ В КНОПКАХ*/
+/* Параметры для ссылочных элементов */
+a {
+    text-decoration: none;
+    color: #adff2f;
+}
+/* Цвет текста при наведении курсора */
+a:hover {
+    color: #f1f5ebfd;
+    transition: box-shadow, color, 0.3s ease-in-out;
+}
+
+/* Цвет текста при отведении курсора */
+a:not(hover) {
+    transition: box-shadow, color, 0.3s ease-in-out;
+}
+
+/* Убрано подчёркивание с текстовых сылок */
+a:visited {
+    transition: box-shadow, 0.1s ease-in-out;
+}
+/* ГРУППА ССЫЛКИ-END */
+
+
+
 /* Тело страницы фон общий = body.css */
 body {
-    background:#5fffe4d8;
+    background:#c3ffdaf3;
     max-width: 90%;
     margin-bottom: 3%;
     margin-left: 10%;
