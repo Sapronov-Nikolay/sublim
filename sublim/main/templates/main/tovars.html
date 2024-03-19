@@ -27,7 +27,7 @@
     {% csrf_token %}
     <!--Кнопка с выпадающем меню-->
 
-    <table class="tovars-table" border="1">
+    <table class="tovars-table" border="1" style="margin: 0 auto;">
         {% for товар in Товары %}
         <tr class="tovsrs-table-tr">
             <th class="tovars-pole-table-1"><img width="200px" height="200px" src="/media/{{товар.picture}}"></th>
