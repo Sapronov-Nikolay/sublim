@@ -27,11 +27,11 @@ a:visited {
 body {
     background:#c3ffdaf3;
     max-width: 90%;
-    margin-bottom: 3%;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-bottom: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 
@@ -68,11 +68,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-/* Текст про разницу между сушкой и сублимацией */
-    /* Размер внутреннего поля объекта */
-h2.privet-container2 {
-    margin: 10px;
-}
+
 
 /* ПРИВЕТСТВЕННЫЙ ТЕКСТ НА ПАРАДНОЙ */
     /* ЗАГЛАВИЕ */

@@ -9,7 +9,11 @@
     {% csrf_token %}
         <div class="menu-div-field-search">
             <input class="menu-input-field-text-search" placeholder="Поиск" name="poisk" type="text">   <!--Поле для ввода поисковых запросов-->
+        </div>
+    </form>
         {{ good_form_auto_gen }}
+    <form class="menu-form-submit">
+        <div class="menu-div-search-submit">
             <input class="menu-search-submit" type='submit' value='Найти'>
         </div>
     </form>
