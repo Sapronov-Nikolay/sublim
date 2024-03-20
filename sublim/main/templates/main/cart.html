@@ -5,6 +5,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/cart.css' %}">
+<body id='bg' style="background-image: url({% static 'main/img/fon-tovars.jpeg' %})">
 <script src="{% static 'main/js/cart.js' %}"> </script>
 
 <form class="cart-form-cart">
@@ -32,7 +33,7 @@
     </div>
     {% endfor %}
     <br>
-    <th class="cart-tr-cart-total_sum">
+    <th class="cart-th-cart-total_sum">
         <div class="cart-th-cart-itog" colspan="4">Итого:</div>
         <div class="cart-th-cart-total_sum">{{total_sum}}&#8381;</div>
     </th>

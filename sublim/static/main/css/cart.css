@@ -1,11 +1,13 @@
 /* Тело объекта с заказами = for cart.html in cart.css */
 .cart-form-cart {
   text-align: center;
-  background: #bcfa92;
-  box-shadow: 0 0 20px 30px #c1f89c;
+  background: #bcfa92ab;
+  box-shadow: 0 0 10px 10px #c1f89cc0;
   border-radius:80px;
   padding: 1%;
-  margin: 2%;
+  margin: 1%;
+  margin-left: 22%;
+  margin-right: 22%;
 }
 /* Заголовок для тела объекта с заказами = for cart.html in cart.css */
 .cart-form-cart-h3 {
@@ -19,12 +21,13 @@
 /* СОДЕРЖИМОЕ КАРТОЧКИ ТОВАРОВ */
 /* Поле в котором лежит всё содержимое карточек товаров = for cart.html in cart.css */
 .cart-table-cart {
-  box-shadow: 0 0 20px 5px #6ef7ac;
+  box-shadow: 0 0 20px 5px #6ef7acc7;
   border-color: #8a1555;
   margin: 3%;
   margin-top: 6%;
   padding: 2%;
-  background:#b2fcb4;
+  background:#b2fcb4ce;
+  
 }
 /* Поле, в котором лежит объект с фото товара = for cart.html in cart.css */
 .cart-in-img {
@@ -39,6 +42,7 @@
   text-align: center;
   margin-left: 5px;
   padding: 2%;
+  opacity: 1;
 }
 
 /* ПОЛЯ ТЕКСТОВЫХ ДАННЫХ ТОВАРОВ */
@@ -48,7 +52,7 @@
 .cart-name-zakaz {
   color: #63103d;
   font-family: 'bookman old style', serif;
-  font-size: 40px;
+  font-size: 25px;
   margin: 10px;
 }
 /* Наименование товара = for cart.html in cart.css */
@@ -57,7 +61,7 @@
   border-radius: 5px;
   color: #8a1555;
   font-family: monospace;
-  font-size: 35px;
+  font-size: 25px;
   margin: 20px;
 }
 
@@ -66,7 +70,7 @@
 .cart-price-zakaz {
   color: #63103d;
   font-family: 'bookman old style', serif;
-  font-size: 40px;
+  font-size: 25px;
   margin: 10px;
 }
 /* Цена товара за 1 шт. = for cart.html in cart.css */
@@ -75,7 +79,7 @@
   border-radius: 5px;
   color: #8a1555;
   font-family: monospace;
-  font-size: 35px;
+  font-size: 25px;
   margin: 20px;
 }
 
@@ -84,7 +88,7 @@
 .cart-quatity-zakaz {
   color: #63103d;
   font-family: 'bookman old style', serif;
-  font-size: 40px;
+  font-size: 25px;
   margin: 10px;
 }
 /* Выбранное количество товара = for cart.html in cart.css */
@@ -93,7 +97,7 @@
   border-radius: 5px;
   color: #8a1555;
   font-family: monospace;
-  font-size: 35px;
+  font-size: 25px;
   margin: 20px;
 }
 
@@ -113,7 +117,7 @@
 .cart-price_quatity-zakaz {
   color: #63103d;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
+  font-size: 20px;
   margin: 10px;
 }
 /* Цена товара за общее количество = for cart.html in cart.css */
@@ -121,7 +125,7 @@
   display: inline-block;
   color: #97155d;
   font-family: Impact, sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   margin: 10px;
 }
 

@@ -27,7 +27,7 @@ a:visited {
 body {
     background:#c3ffdaf3;
     max-width: 90%;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     margin-left: 3%;
     margin-right: 1%;
     padding-left: 1%;
@@ -52,6 +52,6 @@ body {
 /* footer */
 .footer {
     text-align: center;
-    margin-top: 1%;
+    margin-top: 7%;
     font-family: Verdana;
 }
