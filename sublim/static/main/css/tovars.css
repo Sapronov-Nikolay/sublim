@@ -1,9 +1,9 @@
 
 
-/* ЛНОПКА ЗАКАЗАТЬ В МАГАЗИНЕ */
+/* КНОПКА ЗАКАЗАТЬ В МАГАЗИНЕ */
 /* Параметры кнопки заказать for tovars.html in tovars.css */
 .tovars-cart-zakaz {
-  background-color: #ffa5dd;
+  background-color: #d7f8d8c7;
   font-weight: 600;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
   font-size: 24px;
@@ -13,20 +13,23 @@
   text-align: center;
   height: 45px;
   border: 5px solid;
-  border-color:#dd0b51;
-  color: #dd0b51;
-  box-shadow: 0 0 5px 10px #dd0b51;
+  border-color:#1cb921a9;
+  color: #1aac1f;
+  box-shadow: 0 0 5px 10px #1cb921a9;
+  cursor: pointer;
 }
 /* Параметры кнопки заказать при наведении курсора for tovars.html in tovars.css */
 .tovars-cart-zakaz:hover {
-  background-color: #e0b7f3f5;
-  color:#a66be9;
+  background-color: #cffd85e1;
+  color:#aab41c;
   border: 5px solid ;
   height: 45px;
-  box-shadow: 0 0 5px 8px #a66be9;
+  box-shadow: 0 0 5px 8px #aab41c;
   transition: box-shadow, color, 0.2s ease-in-out;
 }
 /* Параметры кнопки заказать при отведении курсора for tovars.html in tovars.css */
 .tovars-cart-zakaz:not(hover) {
   transition: box-shadow, color, 0.2s ease-in-out;
 }
+
+

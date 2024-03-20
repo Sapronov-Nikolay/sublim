@@ -35,11 +35,12 @@
     transition: box-shadow, color, 0.3s ease-in-out;
     box-shadow: 5px -5px 10px 0px #1cb921;
 }
+
 /* ПОЛЕ ВЫПАДАБЩЕГО МЕНЮ КАТЕГОРИИ */
 
-
+/* Фон выпадающего меню Категории */
 .menu-option-selected_slug {
-    background-color: #2fff6db6;
+    background-color: #439b5eb6;
 }
 
 .menu-option-selected_slug:hover {

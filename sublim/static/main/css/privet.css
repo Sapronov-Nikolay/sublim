@@ -1,0 +1,25 @@
+/* ПРИВЕТСТВЕННЫЙ ТЕКСТ НА ПАРАДНОЙ */
+    /* ЗАГЛАВИЕ */
+    div.privet-container {
+      margin: 20px;
+      display: flex;
+      justify-content: space-around;
+      font: 600; /* Жирность текста работает не для всех font-family */
+      font-family: fantasy;
+      font-size: 260%;
+      color: #0621bbef;
+  }
+      /* Размер внутреннего поля объекта */
+  p.privet-opis2 {
+      margin: 10px;
+  }
+      /* ОПИСАНИЕ */
+  div.privet-opis {
+      margin: 20px;
+      display: flex;
+      justify-content: space-around;
+      font-family: fantasy;
+      font-size: 210%;
+      font:600; /* Жирность текста работает не для всех font-family */
+      color:#9e1c38f3;
+  }  /* Текст про разницу между сушкой и сублимацией END */

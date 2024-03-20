@@ -1,58 +1,98 @@
-                    /* ПОИСКОВАЯ СИСТЕМА */
+                    /* ПОИСКОВАЯ СИСТЕМА ВНЕШНИЕ ОБОЛОЧКИ */
 /* Поле, где лежит вся поисковая система = for menu.html in search.css */
 .menu-search-all {
-  margin: auto;  /* Может пригодиться в дальнейшем */
+  text-align: center;
+  margin: auto;
+  padding-top: 2px;
 }
-/* Поле в котором лежит поле menu-div-field-search = for menu.html in search.css */
+/* Поле в котором лежит поле "menu-div-field-search" = for menu.html in search.css */
 .menu-form-search {
+  display: inline-flex;
   text-align: center; /* Центрует форму по центру */
-  border-radius: 100px;
-  margin: 2%;
-
+  margin: 5px;
 }
-/* Область где находятся поисковое поле и кнопка найти = for menu.html in search.css */
+
+/* Область где находятся поисковое поле "menu-input-field-text-search" = for menu.html in search.css */
 .menu-div-field-search {
   display: inline-flex; /* заставляет прижиматься и обтекать содержимое */
-  background-color: #78fab9dc;
-  box-shadow: 0 0 5px 5px #78fab9dc;
-  padding-bottom: 5px;
-  padding-top: 3px;
-  padding-right: 5px;
-  border-radius: 5px;
+  background-color: #55976083;
+  box-shadow: 0 0 5px 3px #55976083;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-right: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 8px;
 }
 
-                    /* ОБЛАСТЬ ВВОДА И КНОПКА НАЙТИ */
-/* ПОЛЕ ВВОДА В ПОИСКОВИКЕ = for menu.html in search.css */
+
+                    /* ОБЛАСТЬ ВВОДА И КНОПКА НАЙТИ ВНУТРЕННЯЯ ЧАСТЬ */
+/* ОБЛАСТЬ ВВОДА ТЕКСТА В ПОИСКОВИКЕ = for menu.html in search.css */
 .menu-input-field-text-search[type="text"] {
   background-color: #f2fd8d;
   width: 45ch;  /* Задаёт количество символов, видимых от края до края в поле ввода */
-  padding: 8px;
-  margin: 8px;
-  border-radius: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 8px;
 }
 /* ПОЛЕ ВВОДА В ПОИСКОВИКЕ ПРИ ВВОДЕ = for menu.html in search.css */
 .menu-input-field-text-search[type="text"]:active {
   background-color: #f2fd8d;
   width: 45ch;  /* Задаёт количество символов, видимых от края до края в в поле ввода */
-  padding: 8px;
-  margin: 8px;
-  border-radius: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: 2px;
+  border-radius: 8px;
 }
 
 
-/* КНОПКА НАЙТИ = for menu.html in search.css */
-.menu-search-submit {
-  border: none;
+/* ОБОЛОЧКА ВОКРУГ КНОПКИ НАЙТИ = for menu.html in search.css */
+.menu-div-search-submit {
+  background-color: #55976083;
+  box-shadow: 0 0 4px 5px #55976083;
+  padding-bottom: 1px;
+  padding-top: 2px;
+  padding-right: 1px;
+  margin-top: 3px;
+  margin-left: 12px;
+  border-radius: 8px;
+}
+/* ТЕЛО КНОПКИ НАЙТИ = for menu.html in search.css */
+.menu-search-submit[type="submit"] {
+  width: auto;  /* Задаёт количество символов, видимых от края до края в поле ввода */
   text-align: center;
+  box-shadow: -2px -2px 5px 5px #55976083;
+  display: inline;
+  border: none;
   background-color: #1cb921;
   color: #e4f875;
   font-size: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 8px;
+  margin-bottom: 1px;
   border-radius: 6px;
 }
-/* КНОПКА НАЙТИ ПРИ НАВЕДЕНИИ = for menu.html in search.css */
+/* КНОПКА НАЙТИ ПРИ НАВЕДЕНИИ КУРСОРА = for menu.html in search.css */
 .menu-search-submit:hover {
-  background-color: #26e22d;
-  color: #e4f875;
+  box-shadow: -2px -2px 5px 5px #4bb95dcb;
+  background-color: #1cb921;
+  color: #fdfff0e5;
+  transition: box-shadow, color, 0.3s ease-in-out;
+}
+/* КНОПКА НАЙТИ ПРИ ОТВЕДЕНИИ КУРСОРА = for menu.html in search.css */
+.menu-search-submit:not(hover) {
+  transition: box-shadow, color, 0.3s ease-in-out;
+}
+/* КНОПКА НАЙТИ КЛИКЕ КУРСОРА = for menu.html in search.css */
+.menu-search-submit:active {
+  transition: box-shadow, 0.1s ease-in-out;
+  font-size: 30px;
 }

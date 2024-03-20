@@ -27,39 +27,19 @@ a:visited {
 body {
     background:#c3ffdaf3;
     max-width: 90%;
-    margin-bottom: 3%;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-bottom: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 
 
 .tovars-form-karte {
     padding: 2%;
-    flex-grow: 1;
-    flex-basis: 16%;
 }
 
-
-
-
-/* Поле строки таблицы в представлении товаров = tovars.css */
-.tovsrs-table-tr {
-    background: #c4faa0;
-    border-radius: 5px;
-    color: #321c68;
-    font-family: Helvetica;
-    font-size: 15px;
-
-}
-
-
-#tovars {
-    background-color: #80ff00cb;
-    border-radius: 10px;
-}
 
 /* ПОЗИЦИЯ КАРТИНОК В ТОВАРАХ */
 #bg {
@@ -68,37 +48,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
-/* Текст про разницу между сушкой и сублимацией */
-    /* Размер внутреннего поля объекта */
-h2.privet-container2 {
-    margin: 10px;
-}
-
-/* ПРИВЕТСТВЕННЫЙ ТЕКСТ НА ПАРАДНОЙ */
-    /* ЗАГЛАВИЕ */
-div.privet-container {
-    margin: 20px;
-    display: flex;
-    justify-content: space-around;
-    font: 600; /* Жирность текста работает не для всех font-family */
-    font-family: fantasy;
-    font-size: 260%;
-    color: #0621bbef;
-}
-    /* Размер внутреннего поля объекта */
-p.privet-opis2 {
-    margin: 10px;
-}
-    /* ОПИСАНИЕ */
-div.privet-opis {
-    margin: 20px;
-    display: flex;
-    justify-content: space-around;
-    font-family: fantasy;
-    font-size: 210%;
-    font:600; /* Жирность текста работает не для всех font-family */
-    color:#9e1c38f3;
-}  /* Текст про разницу между сушкой и сублимацией END */
 
 /* footer */
 .footer {
