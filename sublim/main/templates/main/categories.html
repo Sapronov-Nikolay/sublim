@@ -16,16 +16,5 @@
 {% block content %}
 {% include 'main/menu.html' %}
 
-{% comment %} <label for="slug">Категории</label>
-<!--Кнопка с выпадающем меню-->
-<select>
-    {% for slug in categories %}
-        {% if slug == 'Мясные' %}
-            <option id="opt1" selected>{{slug}}</option>
-        {% else %}
-            <option>{{slug}}</option>
-        {% endif %}
-    {% endfor %}
-</select>
-{% endcomment %}
+
 {% endblock %}

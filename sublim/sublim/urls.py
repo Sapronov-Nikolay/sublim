@@ -24,7 +24,6 @@ from main.views import page_not_found
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
-    path('top_menu/', include('top_menu.urls')),
 ]
 
 
