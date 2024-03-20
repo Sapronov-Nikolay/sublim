@@ -1,7 +1,159 @@
 
+/* ОБЛАСТЬ ОТОБРАЖЕНИЯ ТОВАРОВ */
+/* Внешняя оболочка */
+.tovars-div-general {
+  display: flexbox;
+  border-spacing: 8 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 10px;
+  border-radius: 100px;
+}
+/* Зона фото for tavars.html in tavars.css */
+.tovars-div-img {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 50px;
+  box-shadow: 0 0 4px 5px #91cc6fa8;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* КОНТЕНТ КАРТОЧЕК */
+/* Общее поле карточки товара for tavars.html in tavars.css */
+.tovars-div-product_card {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 15px;
+  background: #d6f88765;
+  border: 1px;
+  border-bottom: 5px solid #f2f8f8b0;
+  opacity: 1;
+  border-radius: 50px;
+  box-shadow: 0 0 5px 10px #1cb921a9;
+}
+
+/* Наименование товара for tavars.html in tavars.css */
+.tovars-div-namegood {
+  font-size: 25px;
+  color: #661140;
+  font-weight: 800;
+  padding: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: #f2f8f8bd;
+  border-bottom: 5px solid #f2f8f83a;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+/* Поле для описания товара for tavars.html in tavars.css */
+.tovsrs-div-content {
+  font-weight: 400;
+  padding: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: #f2f8f8cc;
+  border: none;
+  border-bottom: 50px solid #f2f8f83a;
+  opacity: 0.6;
+  border-radius: 15px;
+}
+/* Поле для спецификации for tavars.html in tavars.css */
+.tovsrs-div-specification {
+  font-weight: bold;
+  padding: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: #f2f8f8cc;
+  border: none;
+  border-bottom: 5px solid #f2f8f83a;
+  opacity: 0.6;
+  border-radius: 15px;
+}
+/* Поле для цены for tavars.html in tavars.css */
+.tovsrs-div-price {
+  font-size: 35px;
+  font-weight: 900;
+  color:#661140;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: #f2f8f8cc;
+  border: none;
+  border-bottom: 5px solid #f2f8f83a;
+  opacity: 0.6;
+  border-radius: 15px;
+}
+/* Подпись перед названием for tavars.html in tavars.css */
+.tovars-name-ceteg{
+  display:inline-block;
+  color:#2e5f21da;
+  font-size: 18px;
+}
+/* Поле для категории for tavars.html in tavars.css */
+.tovers-div-category {
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 25px;
+  background: #f2f8f8b4;
+  border: none;
+  border-radius: 10px;
+  border-bottom: 5px solid #f2f8f83a;
+  opacity: 0.7;
+}
+/* Поле для номера и кнопки в корзину for tavars.html in tavars.css */
+.tovers-blick-inputs {
+  font-weight: bold;
+  padding: 2px;
+  border: none;
+  border-bottom: 0px solid #f2f8f83a;
+  opacity: 0.8;
+}
+/* Поле для ввода количества товаров for tavars.html in tavars.css */
+.tovars-input-number {
+  display:inline-flexbox;
+  background-color: #fae99ce1;
+  border-color: #b1bb5c;
+  border-radius: 10px;
+  width: 10ch;
+  height: 32px;
+	line-height: 32px;
+	padding: 0;
+	margin: 5px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+/* кнопка в корзину for tavars.html in tavars.css */
+.tovars-div-input-button {
+  background-color: #b1e71df1;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+
+}
+/* кнопка в корзину при наведении курсора for tavars.html in tavars.css */
+.tovars-div-input-button:hover {
+transition: box-shadow, color, 0.051s ease-in-out;
+background-color: #cdf560f1;
+border-radius: 10px;
+}
 
 /* КНОПКА ЗАКАЗАТЬ В МАГАЗИНЕ */
-/* Параметры кнопки заказать for tovars.html in tovars.css */
+/* Параметры кнопки заказать for tovars.html in tovars.css end search.css */
 .tovars-cart-zakaz {
   background-color: #d7f8d8c7;
   font-weight: 600;
@@ -31,5 +183,3 @@
 .tovars-cart-zakaz:not(hover) {
   transition: box-shadow, color, 0.2s ease-in-out;
 }
-
-

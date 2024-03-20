@@ -28,65 +28,23 @@
         {% csrf_token %}
         <!--Кнопка с выпадающем меню-->
 
-        <table style="border-spacing: 8 30px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: bold;">
+        <!--ПОЛЕ ОТОБРАЖЕНИЯ ТОВАРОВ-->
+        <div class="tovars-div-general">
             {% for товар in Товары %}
-            <tr>
-
-                <th style="font-weight: bold;
-                padding: 5px;
-                background: #f2f8f8;
-                border: none;
-                border-bottom: 5px solid #F2F8F8; opacity: 0.8;"><img width="200px" height="200px"
-                        src="/media/{{товар.picture}}">
-                </th>
-                <th style="font-weight: bold;
-                padding: 5px;
-                background: #F2F8F8;
-                border: none;
-                border-bottom: 5px solid #F2F8F8; opacity: 0.5;">{{товар.namegood}}</th>
-                <th style="font-weight: bold;
-                padding: 5px;
-                background: #F2F8F8;
-                border: none;
-                border-bottom: 5px solid #F2F8F8; opacity: 0.5;">{{товар.content}}</th>
-                <th style="font-weight: bold;
-                padding: 5px;
-                background: #F2F8F8;
-                border: none;
-                border-bottom: 5px solid #F2F8F8; opacity: 0.5;">{{товар.specification}}</th>
-                <th style="font-weight: bold;
-                padding: 5px;
-                background: #F2F8F8;
-                border: none;
-                border-bottom: 5px solid #F2F8F8; opacity: 0.8;">{{товар.price}}</th>
-                </th>
-                <th style="font-weight: bold;
-                padding: 5px;
-                background: #F2F8F8;
-                border: none;
-                border-bottom: 5px solid #F2F8F8; opacity: 0.5;">{{товар.category}}</th>
-                <th style="font-weight: bold;
-                padding: 5px;
-                background: #F2F8F8;
-                border: none;
-                border-bottom: 5px solid #F2F8F8; opacity: 0.8;"><input style="display: block;
-	height: 32px;
-	line-height: 32px;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	text-align: center;
-	-moz-appearance: textfield;
-	-webkit-appearance: textfield;
-	appearance: textfield;" type="number" name="i{{товар.id}}" id="i{{товар.id}}" min="0" value="0"
-                        onchange="add_to_cart(document.getElementById('i{{товар.id}}'))"><input
-                        style="background-color: rgb(37, 231, 134);" type="button" value="В корзину"></th>
-            </tr>
+            <div class="tovars-div-product_card">
+                <div class="tovars-div-img"><img width="250px" height="250px"src="/media/{{товар.picture}}"></div>
+                <div class="tovars-div-namegood">{{товар.namegood}}</div>
+                <div class="tovsrs-div-content">{{товар.content}}</div>
+                <div class="tovsrs-div-specification">{{товар.specification}}</div>
+                <div class="tovsrs-div-price">{{товар.price}} &#8381;</div>
+                <div class="tovers-div-category"><p class="tovars-name-ceteg">Категория: </p> {{товар.category}}</div>
+                <div class="tovers-blick-inputs">
+                    <input class="tovars-input-number" type="number" name="i{{товар.id}}" id="i{{товар.id}}" min="0" value="0"
+                    onchange="add_to_cart(document.getElementById('i{{товар.id}}'))">
+                    <input class="tovars-div-input-button" type="button" value="В корзину"></div>
+            </div>
+        </div>
             {% endfor %}
-        </table>
         <input class="tovars-cart-zakaz" type="submit" value="Заказать">
-    </form>
     {% endblock %}
+    </form>
