@@ -14,87 +14,57 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="{% static 'main/css/body.css' %}">
-<link rel="shortcut icon" type="image/ico" href="{% static 'img/xmas_icon_260233.ico' %}" />
-
-
+<link rel="stylesheet" href="{% static 'main/css/privet.css' %}">
+<link rel="shortcut icon" type="image/ico" href="{% static 'img/xmas_icon_260233.ico' %}">
 
 <body id='bg' style="background-image: url({% static 'main/img/fon-tovars.jpeg' %})">
 
 
-
-    <div class="container" style="max-width: 1140px;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(auto-fit, 360px);
-grid-gap: 20px;">
-
-        <div>
-
-            <h1
-                style="font-size: 40px;text-align:center;font-family: 'Courier New', Courier, monospace;color: #127f2a;text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);">
-                СУБЛИМИРОВАННЫЕ ПРОДУКТЫ</h1>
-
-            <h2
-                style="font-size: 30px; text-align:center;font-family: 'Courier New', Courier, monospace;color: #dc6872;text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5)">
-                БЫСТРО!</h2>
-            <h2
-                style="font-size: 30px;text-align:center;font-family: 'Courier New', Courier, monospace;color: #dc6872;text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);">
-                ВКУСНО!</h2>
-            <h2
-                style="font-size: 30px;text-align:center;font-family: 'Courier New', Courier, monospace;color: #dc6872;text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5)">
-                ПОЛЕЗНО!</h2>
+    <div class="privet-div-container">
+        <!--Первая колонка-->
+        <div class="privet-div-colums">
+            <h1 class="privet-zagolovok-h1">СУБЛИМИРОВАННЫЕ ПРОДУКТЫ</h1>
+            <h2 class="privet-podzagolovok-h2">БЫСТРО!</h2>
+            <h2 class="privet-podzagolovok-h2">ВКУСНО!</h2>
+            <h2 class="privet-podzagolovok-h2">ПОЛЕЗНО!</h2>
         </div>
+        <!--Первая колонка - -END-->
 
-
-        <div style="margin: auto;">
-
-            <div class="item" style="grid-column: 1 / -2;
-    padding: 50px;
-    display: grid;
-    align-content: end;">
-                <h2
-                    style="font-size: 30px;font-family: 'Courier New', Courier, monospace;color: #4253c1;text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);">
+        <!--Вторая колонка-->
+        <div class="privet-div-colums">
+            <!--Первый подблок сверху-->
+            <div class="privet-div-item">
+                <h2 class="privet-h2-item">
                     СУБЛИМИРОВАННЫЕ</h2>
 
-                <p class="item_opis" style="font-family: 'Courier New', Courier, monospace;
-        font-style: normal;
-        font-weight: bold;
-        font-size: medium;
-        line-height: normal;
-        text-transform: capitalize;
-        color: #222020;
-        line-height: 1.5;
-  letter-spacing: 2px;">
+                <p class="privet-item-opis-p">
                     1. Сохранили все питательные вещества и витамины<br>
-                    2. достаточно лишь залить водой и они вернут прежний вид: <br><b>- форму и вес</b><br>
+                    2. Достаточно лишь залить водой и они вернут прежний вид: <br><b>- форму и вес</b><br>
                     3. Могут храниться 10-25 лет
                 </p>
             </div>
+            <!--Промежуток-->
             <p></p>
-            <h1 style="text-align:center;color: #4253c1;text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);">
-                VS</h1>
+            <h1 class="privet-middle-h1">VS</h1>
             <p></p>
-            <div class="item" style="grid-column: 1 / -2;
-    padding: 50px;
-    display: grid;
-    align-content: end;">
-                <h2
-                    style="font-size: 30px;font-family: 'Courier New', Courier, monospace;color: #4253c1;text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);">
+            <!--Второй подблок нижний-->
+            <div class="privet-div-item">
+                <h2 class="privet-h2-item">
                     ВЫСУШЕННЫЕ</h2>
-                <p class="item_opis" style="font-family: 'Courier New', Courier, monospace;
-        font-style: normal;
-        font-weight: bold;
-        font-size: medium;
-        line-height: normal;
-        text-transform: capitalize;
-        color: #222020;line-height: 1.5;
-  letter-spacing: 2px;">
+                <p class="privet-item-opis-p">
                     1. Лишились большей части полезных веществ<br>
                     2. Уже никогда не станут прежними<br>
                     3. Быстро испортятся
                 </p>
 
             </div>
+        </div>
+        <!--Вторая колонка - -END-->
+
+        <!--Третья колонка-->
+        <div class="privet-div-colums-3">
+            <!--Ретрансляция текста-->
+            {% include 'main/index.html' %}
         </div>
     </div>
 </body>

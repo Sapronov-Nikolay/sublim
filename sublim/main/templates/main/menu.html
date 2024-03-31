@@ -1,6 +1,6 @@
 {% load static %}
 <link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}" >
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
 <link rel="stylesheet" href="{% static 'main/css/search.css' %}">
 <title>{% block title %}Меню{% endblock %}</title>
@@ -12,7 +12,7 @@
         </div>
         {{ good_form_auto_gen }}
         <div class="menu-div-search-submit">
-            <input class="menu-search-submit" type='submit' value='Найти'>
+            <input class="menu-search-submit" type='submit' value='Найти'></input>
         </div>
     </form>
 </form>

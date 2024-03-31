@@ -1,25 +1,117 @@
-/* ПРИВЕТСТВЕННЫЙ ТЕКСТ НА ПАРАДНОЙ */
-    /* ЗАГЛАВИЕ */
-    div.privet-container {
-      margin: 20px;
-      display: flex;
-      justify-content: space-around;
-      font: 600; /* Жирность текста работает не для всех font-family */
-      font-family: fantasy;
-      font-size: 260%;
-      color: #0621bbef;
+/* ПРИВЕТСТВЕННЫЙ ТЕКСТ НА ПАРАДНОЙ for privet.html in privet.css */
+/* ПАРАМЕТРЫ ВНЕШНИХ СТРУКТУР */
+
+        /* Общий контейнер для приветствий for privet.html in privet.css */
+.privet-div-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    grid-gap: 20px;
+}
+        /* Колонки для текстовых блоков for privet.html in privet.css */
+.privet-div-colums {
+    margin: auto;
+}
+/* ПАРАМЕТРЫ ВНЕШНИХ СТРУКТУР --END*/
+
+
+/* Текстовые блоки в ПЕРВОЙ КОЛОНКЕ */
+        /* ЗАГЛАВИЕ ПЕРВОЙ КОЛОНКИ for privet.html in privet.css */
+.privet-zagolovok-h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #127f2a;
+    text-shadow: 6px 6px 10px #00000080;
   }
-      /* Размер внутреннего поля объекта */
-  p.privet-opis2 {
-      margin: 10px;
-  }
-      /* ОПИСАНИЕ */
-  div.privet-opis {
-      margin: 20px;
-      display: flex;
-      justify-content: space-around;
-      font-family: fantasy;
-      font-size: 210%;
-      font:600; /* Жирность текста работает не для всех font-family */
-      color:#9e1c38f3;
-  }  /* Текст про разницу между сушкой и сублимацией END */
+        /* ПОДЗАГОЛОВКИ for privet.html in privet.css */
+.privet-podzagolovok-h2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #dc6872;
+    text-shadow: 6px 6px 10px #00000080;
+}
+/* Текстовые блоки в ПЕРВОЙ КОЛОНКЕ --END*/
+
+
+/* Промежуток VS for privet.html in privet.css */
+.privet-middle-h1 {
+    text-align:center;
+    color: #4253c1;
+    text-shadow: 6px 6px 10px #00000080;
+}
+/* Промежуток VS --END*/
+
+
+/* ПОДБЛОКИ ВО ВТОРОЙ КОЛОНКЕ for privet.html in privet.css */
+.privet-div-item {
+    grid-column: 1 / -2;
+    padding: 50px;
+    display: grid;
+    align-content: end;
+}
+        /* ЗАГЛАВИЕ ПОДБЛОКА ВТОРОЙ КОЛОНКИ for privet.html in privet.css */
+.privet-h2-item {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #4253c1;
+    text-shadow: 6px 6px 10px #00000080;
+}
+        /* Описание для всех подблоков во ВТОРОЙ КОЛОНКЕ for privet.html in privet.css */
+.privet-item-opis-p {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: medium;
+    line-height: normal;
+    text-transform: none;
+    text-align: left;
+    color: #222020;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+/* ПОДБЛОКИ ВО ВТОРОЙ КОЛОНКЕ --END*/
+
+/* ПАРАМЕТРЫ ДЛЯ ТРЕТЬЕЙ КОЛОНКИ for privet.html in privet.css */
+.privet-div-colums-3 {
+    display: block;
+    margin: auto;
+    background:#bffc979c;
+    border:2px;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 12px #e9ff20d3;
+    background: radial-gradient(#8fff44d7, #85ff3356, #e9ff208a, #e9ff20f3)
+}
+        /* Заголовок для ТРЕТЬЕЙ КОЛОНКИ for index.html in privet.css for privet.html*/
+.privet-index-zagolovok-h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #626b0c;
+    text-shadow: 6px 6px 10px #00000080;
+}
+/* РЕТРАНСЛЯЦИЯ ИЗ INDEX.HTML */
+        /* Поле с Фото для описания перед текстом for index.html in privet.css for privet.html*/
+.index-privet-div-img-colum-3 {
+    display: block;
+    overflow:hidden;
+    background: url(/static/main/img/FotoOvoshi.jpg) no-repeat;
+    height: 30%;
+    background-size: cover;
+}
+
+        /* Поле для Текста в ТРЕТЬЕЙ КОЛОНКЕ for index.html in privet.css for privet.html */
+.index-privet-p-div_colum-3 {
+    font-weight:300;
+    font-size: 12px;
+    text-align: left;
+    color: #222020;
+    letter-spacing: 2px;
+    font-family: Helvetica, sans-serif;
+}
+
+/* ПАРАМЕТРЫ ДЛЯ ТРЕТЬЕЙ КОЛОНКИ --END*/

@@ -33,7 +33,6 @@
 /* КОНТЕНТ КАРТОЧЕК */
 /* Общее поле карточки товара for tavars.html in tavars.css */
 .tovars-div-product_card {
-  
   text-align: center;
   font-weight: bold;
   padding: 5px;
@@ -63,6 +62,9 @@
 }
 /* Поле для описания товара for tavars.html in tavars.css */
 .tovsrs-div-content {
+  display: auto;
+  overflow-y: scroll;
+  height: 25%;
   font-weight: 400;
   padding: 5px;
   margin-left: 10%;
