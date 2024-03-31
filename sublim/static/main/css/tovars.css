@@ -33,6 +33,7 @@
 /* КОНТЕНТ КАРТОЧЕК */
 /* Общее поле карточки товара for tavars.html in tavars.css */
 .tovars-div-product_card {
+  height: 820px;
   text-align: center;
   font-weight: bold;
   padding: 5px;
@@ -63,6 +64,8 @@
 /* Поле для описания товара for tavars.html in tavars.css */
 .tovsrs-div-content {
   display: auto;
+  text-align: justify;
+  text-indent: 20px;
   overflow-y: scroll;
   height: 25%;
   font-weight: 400;
@@ -154,6 +157,7 @@
   border-radius: 10px;
   margin-bottom: 2px;
   margin-top: 2px;
+  height: 32px;
 
 }
 /* кнопка в корзину при наведении курсора for tavars.html in tavars.css */
@@ -176,6 +180,7 @@ border-radius: 10px;
   text-align: center;
   height: 45px;
   border: 5px solid;
+  border-radius: 50px;
   border-color:#1cb921a9;
   color: #1aac1f;
   box-shadow: 0 0 5px 10px #1cb921a9;
