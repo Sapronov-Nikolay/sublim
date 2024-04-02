@@ -98,7 +98,7 @@
         /* Поле с Фото для описания перед текстом for index.html in privet.css for privet.html*/
 .index-privet-div-img-colum-3 {
     display: block;
-    overflow:hidden;
+    overflow: hidden;
     background: url(/static/main/img/FotoOvoshi.jpg) no-repeat;
     height: 30%;
     background-size: cover;

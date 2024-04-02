@@ -3,8 +3,8 @@
 /* Внешняя оболочка */
 .tovars-div-general {
   display: grid;
-  width: 1200px;
-  height: 720px;
+  width: 70%; /* Ширина карточки */
+  height: 720px; /* Промежуток между карточками */
   grid-template-columns: 1fr 1fr;
   column-gap: 3%;
   grid-template-rows: 2fr 2fr;
@@ -22,6 +22,9 @@
 }
 /* Зона фото for tavars.html in tavars.css */
 .tovars-div-img {
+  text-align: center;
+  display: block;
+  overflow: hidden;
   padding: 5px;
   margin: 5px;
   border-radius: 50px;
@@ -33,7 +36,9 @@
 /* КОНТЕНТ КАРТОЧЕК */
 /* Общее поле карточки товара for tavars.html in tavars.css */
 .tovars-div-product_card {
-  height: 820px;
+  display: block;
+  overflow: hidden;
+  height: 820px; /* Длинна карточки в контенте */
   text-align: center;
   font-weight: bold;
   padding: 5px;
