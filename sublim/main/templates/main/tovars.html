@@ -44,7 +44,25 @@
                     <input class="tovars-div-input-button" type="button" value="В корзину"></div>
             
         </div>
+
             {% endfor %}
-        <input class="tovars-cart-zakaz" type="submit" value="Заказать">
-    {% endblock %}
+
     </form>
+<br>
+{% for pagen in page_obj %}
+<p>{{ pagen }}</p>
+{% endfor %}
+<nav>
+    <ul>
+        {% for p in pagen.paginator.page_range %}
+            <li>
+                <a href="?pagen={{ p }}">{{ p }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+<br>
+        <input class="tovars-cart-zakaz" type="submit" value="Заказать">
+<br>
+
+    {% endblock %}

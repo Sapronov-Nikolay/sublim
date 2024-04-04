@@ -5,6 +5,7 @@ from django.http import HttpResponseNotFound
 from django.shortcuts import get_object_or_404, render
 from .models import Good, Category
 from .forms import GoodForm  # , CartForm
+from django.core.paginator import Paginator
 
 
 def get_top_menu(active):
@@ -86,7 +87,7 @@ def search(request):
         }
     )
 
-
+'''
 def add_good(request):
     if request.method == 'POST':
         print(request.POST)
@@ -99,7 +100,7 @@ def add_good(request):
 
         )
     )
-
+'''
 
 def pokupki(request):
     print("\n\n\nkuku", request.method, request.GET)
@@ -157,6 +158,13 @@ def add_cart(request):
             'total_sum': int(total_sum)
         }
     )
+
+def pagen(request):
+    contact_list = Good.objects.all()
+    paginator = Paginator(contact_list, 4)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'main/tovars.html', {'page_obj': page_obj })
 
 # "Это для приветственного окна"
 def privet(request):
