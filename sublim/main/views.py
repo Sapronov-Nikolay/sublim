@@ -116,18 +116,23 @@ def pokupki(request):
                 categoriya=request.GET['category']).id
         goods = Good.objects.filter(
             category_id=cat_id)
-
-    return render(
-        request,
-        "main/tovars.html",
+        
+    paginator = Paginator(goods, 4)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
 
         # Kонтекст передаваемых переменных
-        {
-            "Товары": goods,
+    context = {
+            #"Товары": goods,
             "cat_selected": cat_id,
             "navset": get_menu("/shop"),
             "categories": categories,
-        }
+            "page_obj": page_obj
+               }
+    return render(
+        request,
+        "main/tovars.html",
+        context
     )
 
 
@@ -159,12 +164,6 @@ def add_cart(request):
         }
     )
 
-def pagen(request):
-    contact_list = Good.objects.all()
-    paginator = Paginator(contact_list, 4)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    return render(request, 'main/tovars.html', {'page_obj': page_obj })
 
 # "Это для приветственного окна"
 def privet(request):

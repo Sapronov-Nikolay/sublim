@@ -172,6 +172,24 @@ background-color: #cdf560f1;
 border-radius: 10px;
 }
 
+/* кнопка пагинации for tavars.html in tavars.css */
+.tovars-div-paginator {
+  text-align: center;
+  background-color: #67831bf1;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  height: 40px;
+  width: 70%;
+}
+/* кнопка пагинации при наведении курсора for tavars.html in tavars.css */
+.tovars-div-input-button:hover {
+transition: box-shadow, color, 0.051s ease-in-out;
+background-color: #2e3a0ef1;
+border-radius: 10px;
+}
+
 /* КНОПКА ЗАКАЗАТЬ В МАГАЗИНЕ */
 /* Параметры кнопки заказать for tovars.html in tovars.css end search.css */
 .tovars-cart-zakaz {
