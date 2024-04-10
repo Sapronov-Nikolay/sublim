@@ -52,34 +52,36 @@
 <br>
 
 
-       <div class="tovars-div-paginator">
-                <span class="tovars-div-paginator">
-                    {% if page_obj.has_previous %}
-                    {% if category %}
-                        <a href="?page=1&category={{category}}">&laquo;</a>
-                        <a href="?page={{ page_obj.previous_page_number }}&category={{category}}">Назад</a>
-                            {% else %}
-                            <a href="?page=1">&laquo; </a>
-                            <a href="?page={{ page_obj.previous_page_number }}">Назад</a>
-                            {% endif %}
-                    {% endif %}
+<div class="tovars-div-paginator">
+    <span class="tovars-div-paginator">
+        {% if page_obj.has_previous %}
+        {% if category %}
+            <a href="?page=1&category={{category}}">&laquo;</a>
+            <a href="?page={{ page_obj.previous_page_number }}&category={{category}}">Назад</a>
+                {% else %}
+                <a href="?page=1">&laquo; </a>
+                <a href="?page={{ page_obj.previous_page_number }}">Назад</a>
+                {% endif %}
+        {% endif %}
 
-                    <span class="tovars-div-paginator">
-                        Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
-                    </span>
+        <span class="tovars-div-paginator">
+            Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+        </span>
 
-                    {% if page_obj.has_next %}
-                    {% if category %}
-                        <a href="?page={{ page_obj.next_page_number }}&category={{category}}">Вперёд</a>
-                        <a href="?page={{ page_obj.paginator.num_pages }}&category={{category}}"> &raquo;</a>
-                        {% else %}
-                        <a href="?page={{ page_obj.next_page_number }}">Вперёд</a>
-                        <a href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a>
-                        {% endif%}
-                    {% endif %}
-                </span>
-            </div>
+        {% if page_obj.has_next %}
+        {% if category %}
+            <a href="?page={{ page_obj.next_page_number }}&category={{category}}">Вперёд</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}&category={{category}}"> &raquo;</a>
+            {% else %}
+            <a href="?page={{ page_obj.next_page_number }}">Вперёд</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a>
+            {% endif%}
+        {% endif %}
+    </span>
+</div>
 
-        <input class="tovars-cart-zakaz" type="submit" value="Заказать">
+</body>
+
+<input class="tovars-cart-zakaz" type="submit" value="Заказать">
 <br>
-            {% endblock %}
+{% endblock %}
