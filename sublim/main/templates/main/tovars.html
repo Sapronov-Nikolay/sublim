@@ -1,6 +1,7 @@
 {% extends 'main/header_footer.html' %}
 {% load static %}
 {% block content %}
+
 <title>{% block title %}Товары{% endblock %}</title>
 <link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}">
 
@@ -8,9 +9,11 @@
     <link rel="stylesheet" href="{% static 'main/css/menu_category.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/tovars.css' %}">
     <script src="{% static 'main/js/cart.js' %}"> </script>
-    {% include 'main/menu.html' %} <!--Отображает параметры из menu.html и header_footer.html-->
 
-    <!--Кнопка с выпадающем меню-->
+    <!--ФОРМА ОТОБРАЖЕНИЯ ПОЛЯ С МЕНЮ-->
+    {% include 'main/menu.html' %} <!--Отображает параметры из menu.html-->
+
+    <!--КНОПКА КАТЕГОРИЙ ТОВАРОВ с выпадающBм меню-->
     <form class="tovars-form-category" action="/shop/">
         {% csrf_token %}
 
@@ -24,64 +27,71 @@
             {% endfor %}
         </select>
     </form>
-    <form class="tovars-form-karte" action="/cart/" method="post">
+
+<!--ФОРМА ОТОБРАЖЕНИЯ КАРТОЧЕК ТОВАРОВ-->
+    <form class="tovars-form-karte" action="/cart/" method="post">      <!--НАЧАЛО БЛОКА FORM-->
         {% csrf_token %}
         <!--Кнопка с выпадающем меню-->
-
+        <div class="tovars-div-grid-general">
         <!--ПОЛЕ ОТОБРАЖЕНИЯ ТОВАРОВ-->
-        <div class="tovars-div-general">
-            {% for товар in page_obj %}
-            <div class="tovars-div-product_card">
-                <div class="tovars-div-img"><img width="250px" height="250px"src="/media/{{товар.picture}}"></div>
-                <div class="tovars-div-namegood">{{товар.namegood}}</div>
-                <div class="tovsrs-div-content">{{товар.content}}</div>
-                <div class="tovsrs-div-specification">{{товар.specification}}</div>
-                <div class="tovsrs-div-price">{{товар.price}} &#8381;</div>
-                <div class="tovers-div-category"><p class="tovars-name-ceteg">Категория: </p> {{товар.category}}</div>
-                <div class="tovers-blick-inputs">
-                    <input class="tovars-input-number" type="number" name="i{{товар.id}}" id="i{{товар.id}}" min="0" value="0"
-                    onchange="add_to_cart(document.getElementById('i{{товар.id}}'))">
-                    <input class="tovars-div-input-button" type="button" value="В корзину"></div>
-            
+            <div class="tovars-div-general">
+                    {% for товар in page_obj %}
+                    <div class="tovars-div-product_card">
+                        <div class="tovars-div-img"><img width="250px" height="250px"src="/media/{{товар.picture}}"></div>
+                        <div class="tovars-div-namegood">{{товар.namegood}}</div>
+                        <div class="tovsrs-div-content">{{товар.content}}</div>
+                        <div class="tovsrs-div-specification">{{товар.specification}}</div>
+                        <div class="tovsrs-div-price">{{товар.price}} &#8381;</div>
+                        <div class="tovers-div-category"><p class="tovars-name-ceteg">Категория: </p> {{товар.category}}</div>
+                        <div class="tovers-blick-inputs">
+                            <input class="tovars-input-number" type="number" name="i{{товар.id}}" id="i{{товар.id}}" min="0" value="0"
+                            onchange="add_to_cart(document.getElementById('i{{товар.id}}'))">
+                            <input class="tovars-div-input-button" type="button" value="В корзину"></div>
+                    </div>
+        
+
+                    {% endfor %}
+            </div>
         </div>
 
-            {% endfor %}
-
-    </form>
-<br>
-<br>
-
-
-<div class="tovars-div-paginator">
-    <span class="tovars-div-paginator">
-        {% if page_obj.has_previous %}
-        {% if category %}
-            <a href="?page=1&category={{category}}">&laquo;</a>
-            <a href="?page={{ page_obj.previous_page_number }}&category={{category}}">Назад</a>
-                {% else %}
-                <a href="?page=1">&laquo; </a>
-                <a href="?page={{ page_obj.previous_page_number }}">Назад</a>
+        <!--ПАГИНАЦИЯ С ЦИКЛАМИ ЕЁ ФУНКЦИОНИРОВАНИЯ ПАРАМЕТРУ ВО VIEWS.PY-->
+        <div class="tovars-div-grid-paginator">
+        <!--ФОРМА ПАРАМЕТРОВ "НАЗАД"-->
+            <span class="tovars-div-paginator">
+                {% if page_obj.has_previous %}
+                {% if category %}
+                    <a href="?page=1&category={{category}}">&laquo;</a>
+                    <a href="?page={{ page_obj.previous_page_number }}&category={{category}}">Назад </a>
+                        {% else %}
+                        <a href="?page=1">&laquo; </a>
+                        <a href="?page={{ page_obj.previous_page_number }}">Назад </a>
+                        {% endif %}
                 {% endif %}
-        {% endif %}
 
-        <span class="tovars-div-paginator">
-            Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
-        </span>
+        <!--ФОРМА ПАРАМЕТРОВ ОТОБРАЖЕНИЯ ПАГИНАЦИИ НА СТРАНИЦЕ-->
+                <span class="tovars-div-paginator">
+                    Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+                </span>
 
-        {% if page_obj.has_next %}
-        {% if category %}
-            <a href="?page={{ page_obj.next_page_number }}&category={{category}}">Вперёд</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}&category={{category}}"> &raquo;</a>
-            {% else %}
-            <a href="?page={{ page_obj.next_page_number }}">Вперёд</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a>
-            {% endif%}
-        {% endif %}
-    </span>
-</div>
+        <!--ФОРМА ПАРАМЕТРОВ "ВПЕРЁД"-->
+                {% if page_obj.has_next %}
+                {% if category %}
+                    <a href="?page={{ page_obj.next_page_number }}&category={{category}}"> Вперёд</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}&category={{category}}"> &raquo;</a>
+                    {% else %}
+                    <a href="?page={{ page_obj.next_page_number }}"> Вперёд</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a>
+                    {% endif%}
+                {% endif %}
+            </span>
+        </div>
 
-</body>
+        <!--КНОПКА "ЗАКАЗАТЬ" РАБОТАЕТ ТОЛЬКО В ПРЕДЕЛАХ РАССПОЛОЖЕНИЯ БЛОКА "<FORM>***</FORM>"-->
+        <div class="tovars-div-grid-zakaz">
+            <input class="tovars-cart-zakaz" type="submit" value="Заказать">
+        </div>
 
-<input class="tovars-cart-zakaz" type="submit" value="Заказать">
 <br>
+    </form>     <!--ЗАВЕРШЕНИЕ БЛОКА FORM-->
+</body>
 {% endblock %}

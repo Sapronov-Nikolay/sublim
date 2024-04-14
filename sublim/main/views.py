@@ -68,6 +68,10 @@ def search(request):
             if good.namegood.lower() == search:
                 goods.append(good)
 
+    paginator = Paginator(goods, 4)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     categories = map(
         lambda cat: Category.objects.get(pk=cat['category_id']),
         Good.objects.order_by().values('category_id').distinct()
@@ -79,10 +83,13 @@ def search(request):
         # Kонтекст передаваемых переменных
         {
 
-            "Товары": goods,
+            
             "summa": 0,  # summa,,
             "categories": categories,
+            "Товары": goods,
+            "page_obj": page_obj,            
             "navset": get_menu("/shop") # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
+
 
         }
     )
@@ -94,7 +101,7 @@ def add_good(request):
         good_poisk = GoodForm(request.POST)
         if good_poisk.is_valid():
             print(good_poisk.namegood)
-    good_form = GoodForm()  # ругается на это
+    good_form = GoodForm("goods")  # ругается на это
     return render(
         render(
 
@@ -123,11 +130,11 @@ def pokupki(request):
 
         # Kонтекст передаваемых переменных
     context = {
-            #"Товары": goods,
+            "Товары": goods,
             "cat_selected": cat_id,
             "navset": get_menu("/shop"),
             "categories": categories,
-            "page_obj": page_obj
+            "page_obj": page_obj,
                }
     return render(
         request,

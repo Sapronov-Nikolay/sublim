@@ -1,3 +1,24 @@
+/* GRID-контейнер для формы КАРТОЧЕК С ТОВАРАМИ */
+.tovars-div-grid-general {
+  border: 10px solid #b61c69;
+  display: grid;
+  grid-auto-rows: minmax(50px, auto);
+
+}
+/* GRID-контейнер для формы ПАГИНАЦИИ */
+.tovars-div-grid-paginator {
+  border: 10px solid #1f66eb;
+  display: grid;
+  grid-auto-rows: minmax(200px, auto);
+  align-items: end;
+}
+/* GRID-контейнер для кнопки ЗАКАЗАТЬ */
+.tovars-div-grid-zakaz {
+  border: 10px solid #f15f78;
+  display: grid;
+  grid-auto-rows: minmax(500px, auto);
+  grid-row: 1/4;
+}
 
 /* ОБЛАСТЬ ОТОБРАЖЕНИЯ ТОВАРОВ */
 /* Внешняя оболочка */
@@ -5,9 +26,9 @@
   display: grid;
   width: 70%; /* Ширина карточки */
   height: 720px; /* Промежуток между карточками */
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
   column-gap: 3%;
-  grid-template-rows: 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
   row-gap: 6%;
   border-spacing: 8 30px;
   font-family: 'Open Sans', sans-serif;
@@ -110,7 +131,7 @@
   opacity: 0.6;
   border-radius: 15px;
 }
-/* Подпись перед названием for tavars.html in tavars.css */
+/* Подпись "КАТЕГОРИЯ" перед названием категории for tavars.html in tavars.css */
 .tovars-name-ceteg{
   display:inline-block;
   color:#2e5f21da;
@@ -174,14 +195,16 @@ border-radius: 10px;
 
 /* кнопка пагинации for tavars.html in tavars.css */
 .tovars-div-paginator {
-  text-align: center;
+  text-align: center; /* Позиция текста смещение по горизонтали */
+  align-self: end; /* Позиция смещения по вертикали */
+  justify-self: center; /* Позиция смещения по горизонтали */
   background-color: #67831bf1;
   font-size: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
   height: 40px;
-  width: 70%;
+  width: 20%;
 }
 /* кнопка пагинации при наведении курсора for tavars.html in tavars.css */
 .tovars-div-input-button:hover {
@@ -201,6 +224,8 @@ border-radius: 10px;
   float: right;
   width: 230px;
   text-align: center;
+  align-self: end;
+  justify-self: center;
   height: 45px;
   border: 5px solid;
   border-radius: 50px;

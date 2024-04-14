@@ -3,6 +3,8 @@
 
         /* Общий контейнер для приветствий for privet.html in privet.css */
 .privet-div-container {
+    position: relative;
+	min-height: 100%;
     max-width: 1140px;
     margin: 0 auto;
     display: grid;

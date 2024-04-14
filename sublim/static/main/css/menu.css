@@ -49,32 +49,3 @@ ul.nav {
 
 
 
-/* КНОПКИ ДОБАВИТЬ В КАРТОЧКАХ ТОВАРОВ */
-.tovars-table-dobavit-quantity {
-    border: none;
-    background-color: #1cb921;
-    color: #e4f875;
-    font-size: 25px;
-    margin-top: 5px;
-    margin-left: 1px;
-    border-radius: 6px;
-}
-
-/* КНОПКИ ДОБАВИТЬ В КАРТОЧКАХ ТОВАРОВ ПРИ НАВЕДЕНИИ */
-.tovars-table-dobavit-quantity:hover {
-    background-color: #26e22d;
-    color: #e4f875;
-}
-
-
-/* ПОЛЕ ВВОДА В КАРТОЧКЕ */
-.tovars-table-vvod-quantity {
-    background-color: #f2fd8d;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 20px;
-    font-family: monospace;
-    font-weight: 600;
-}
