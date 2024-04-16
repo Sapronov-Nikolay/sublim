@@ -1,23 +1,33 @@
 /* GRID-контейнер для формы КАРТОЧЕК С ТОВАРАМИ */
 .tovars-div-grid-general {
   border: 10px solid #b61c69;
-  display: grid;
-  grid-auto-rows: minmax(50px, auto);
-
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 200px;
+  grid-template-areas: ". a a ."
+  ". a a .";
 }
 /* GRID-контейнер для формы ПАГИНАЦИИ */
 .tovars-div-grid-paginator {
   border: 10px solid #1f66eb;
   display: grid;
-  grid-auto-rows: minmax(200px, auto);
-  align-items: end;
+  grid-row-gap: 10px;
+  align-content: end;
+  grid-template-rows: repeat(1, 60%);
+  gap: 20px;
+  grid-column-start: 2;
+  justify-self: center;
 }
 /* GRID-контейнер для кнопки ЗАКАЗАТЬ */
 .tovars-div-grid-zakaz {
   border: 10px solid #f15f78;
   display: grid;
-  grid-auto-rows: minmax(500px, auto);
-  grid-row: 1/4;
+  grid-row-gap: 10px;
+  align-content: center;
+  grid-template-rows: repeat(1, 60%);
+  gap: 20px;
+  grid-area: 1 / 2;
+  justify-self: center;
 }
 
 /* ОБЛАСТЬ ОТОБРАЖЕНИЯ ТОВАРОВ */
@@ -26,9 +36,9 @@
   display: grid;
   width: 70%; /* Ширина карточки */
   height: 720px; /* Промежуток между карточками */
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr) );
   column-gap: 3%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(850px, 1fr) );
   row-gap: 6%;
   border-spacing: 8 30px;
   font-family: 'Open Sans', sans-serif;
