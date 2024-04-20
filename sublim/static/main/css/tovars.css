@@ -4,6 +4,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   grid-auto-rows: 200px;
+  padding: 30px;
   grid-template-areas: ". a a ."
   ". a a .";
 }
@@ -35,11 +36,11 @@
 .tovars-div-general {
   display: grid;
   width: 70%; /* Ширина карточки */
-  height: 720px; /* Промежуток между карточками */
+  /* height: 720px; /* Промежуток между карточками */
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr) );
   column-gap: 3%;
-  grid-template-rows: repeat(auto-fit, minmax(850px, 1fr) );
-  row-gap: 6%;
+  grid-template-rows: repeat(auto-fit, minmax(1px, 1fr) );
+  row-gap: 40px;
   border-spacing: 8 30px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
