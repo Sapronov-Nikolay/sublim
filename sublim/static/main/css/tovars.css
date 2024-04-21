@@ -1,6 +1,5 @@
 /* GRID-контейнер для формы КАРТОЧЕК С ТОВАРАМИ */
 .tovars-div-grid-general {
-  border: 10px solid #b61c69;
   grid-gap: 10px;
   grid-auto-rows: 200px;
   padding: 30px;
@@ -9,7 +8,6 @@
 }
 /* GRID-контейнер для формы ПАГИНАЦИИ */
 .tovars-div-grid-paginator {
-  border: 10px solid #1f66eb;
   display: grid;
   grid-row-gap: 200px;
   grid-row-gap: 10px;
@@ -21,7 +19,6 @@
 }
 /* GRID-контейнер для кнопки ЗАКАЗАТЬ */
 .tovars-div-grid-zakaz {
-  border: 10px solid #f15f78;
   display: grid;
   grid-row-gap: 10px;
   align-content: center;
@@ -35,7 +32,6 @@
 /* Форма со всем содержимым  */
 .tovars-form-karte {
   grid-row-gap: 200%;
-  border: 10px solid #1ed2d8;
 }
 
 /* ОБЛАСТЬ ОТОБРАЖЕНИЯ ТОВАРОВ */
@@ -206,28 +202,54 @@
 /* кнопка в корзину при наведении курсора for tavars.html in tavars.css */
 .tovars-div-input-button:hover {
 transition: box-shadow, color, 0.051s ease-in-out;
-background-color: #cdf560f1;
+background-color: #cdf55ff1;
 border-radius: 10px;
 }
+/* Поле для  пагинации при наведении курсора for tavars.html in tavars.css */
+.tovars-div-input-button:hover {
+  transition: box-shadow, color, 0.051s ease-in-out;
+  background-color: #9cc439f1;
+  border-radius: 10px;
+  }
 
-/* кнопка пагинации for tavars.html in tavars.css */
+/* Поле для пагинации for tavars.html in tavars.css */
 .tovars-div-paginator {
   text-align: center; /* Позиция текста смещение по горизонтали */
   align-self: end; /* Позиция смещения по вертикали */
   justify-self: center; /* Позиция смещения по горизонтали */
-  background-color: #67831bf1;
-  font-size: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  font-size: 50px;
+  border-radius: 100px;
+  margin-bottom: 40px;
   margin-top: 20px;
-  height: 40px;
-  width: 20%;
+  height: 100%;
+  width: 100%;
 }
-/* кнопка пагинации при наведении курсора for tavars.html in tavars.css */
-.tovars-div-input-button:hover {
-transition: box-shadow, color, 0.051s ease-in-out;
-background-color: #2e3a0ef1;
-border-radius: 10px;
+/* Текст для обозначения страниц */
+.tovars-span-paginator {
+  background: radial-gradient(#8fff4493, #e9ff20b4);
+  box-shadow: 0 0 15px 20px #e9ff20b4;
+  margin: 3%;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+}
+/* Кнопки переключения страниц */
+.tovars-a-paginator {
+  background-color: #0daf35a6;
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: 0 0 5px 10px #1cb921a9;
+  border-color:#1cb921a9;
+}
+/* Кнопки переключения страниц при наведении*/
+.tovars-a-paginator:hover {
+  box-shadow: 0 0 5px 10px #1cb921c9;
+  background-color: #20a064cc;
+}
+/* Кнопки переключения страниц при клике мыши*/
+.tovars-a-paginator:active {
+  background-color: #c1c420da;
+  box-shadow: 0 0 6px 10px #e5f509ce;
+  transition: box-shadow, color, 0.1s ease-in-out;
 }
 
 /* КНОПКА ЗАКАЗАТЬ В МАГАЗИНЕ */

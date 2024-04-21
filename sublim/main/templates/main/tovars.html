@@ -50,7 +50,6 @@
                             onchange="add_to_cart(document.getElementById('i{{товар.id}}'))">
                             <input class="tovars-div-input-button" type="button" value="В корзину"></div>
                     </div>
-        
 
                     {% endfor %}
             </div>
@@ -65,26 +64,26 @@
                 {% if page_obj.has_previous %}
                 {% if category %}
                     <a href="?page=1&category={{category}}">&laquo;</a>
-                    <a href="?page={{ page_obj.previous_page_number }}&category={{category}}">Назад </a>
+                    <a class="tovars-a-paginator" href="?page={{ page_obj.previous_page_number }}&category={{category}}">&laquo; Назад </a>
                         {% else %}
-                        <a href="?page=1">&laquo; </a>
-                        <a href="?page={{ page_obj.previous_page_number }}">Назад </a>
+                        <a href="?page=1"></a>
+                        <a class="tovars-a-paginator" href="?page={{ page_obj.previous_page_number }}">&laquo; Назад </a>
                         {% endif %}
                 {% endif %}
 
         <!--ФОРМА ПАРАМЕТРОВ ОТОБРАЖЕНИЯ ПАГИНАЦИИ НА СТРАНИЦЕ-->
-                <span class="tovars-div-paginator">
-                    Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+                <span class="tovars-span-paginator">
+                    Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
                 </span>
 
         <!--ФОРМА ПАРАМЕТРОВ "ВПЕРЁД"-->
                 {% if page_obj.has_next %}
                 {% if category %}
                     <a class="tovars-a-paginator" href="?page={{ page_obj.next_page_number }}&category={{category}}"> Вперёд &raquo;</a>
-                    <!--<a class="tovars-div-paginator" href="?page={{ page_obj.paginator.num_pages }}&category={{category}}"> &raquo;</a>-->
+                    <a href="?page={{ page_obj.paginator.num_pages }}&category={{category}}"> &raquo;</a>
                     {% else %}
                     <a class="tovars-a-paginator" href="?page={{ page_obj.next_page_number }}"> Вперёд &raquo;</a>
-                    <!--<a class="tovars-div-paginator" href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a>-->
+                    <a href="?page={{ page_obj.paginator.num_pages }}"></a>
                     {% endif%}
                 {% endif %}
             </span>
