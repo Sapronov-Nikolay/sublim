@@ -5,7 +5,7 @@
 <title>{% block title %}Товары{% endblock %}</title>
 <link rel="shortcut icon" type="image/png" href="{% static 'main/img/xmas_icon_260233.ico' %}">
 
-<body id='bg' style="background-image: url({% static 'main/img/fon-tovars.jpeg' %})">
+<body id='bg' style="background-image: url({% static 'main/img/fon-tovars.jpeg' %})">БОДИ
     <link rel="stylesheet" href="{% static 'main/css/menu_category.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/tovars.css' %}">
     <script src="{% static 'main/js/cart.js' %}"> </script>
@@ -17,15 +17,17 @@
     <form class="tovars-form-category" action="/shop/">
         {% csrf_token %}
 
-        <select class="tovars-select-category" onchange="this.form.submit()" name="category">
-            {% for slug in categories %}
-            {% if slug.id == cat_selected %}
-            <option class="menu-option-selected_slug" selected>{{slug}}</option>
-            {% else %}
-            <option class="menu-option-selected_slug">{{slug}}</option>
-            {% endif %}
-            {% endfor %}
-        </select>
+        <div class=".tovars-menu-div-select-category">
+            <select class="tovars-menu-select-category" onchange="this.form.submit()" name="category">
+                {% for slug in categories %}
+                {% if slug.id == cat_selected %}
+                <option class="menu-option-selected_slug" selected>{{slug}}</option>
+                {% else %}
+                <option class="menu-option-selected_slug">{{slug}}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </div>
     </form>
 
 <!--ФОРМА ОТОБРАЖЕНИЯ КАРТОЧЕК ТОВАРОВ-->
@@ -54,6 +56,8 @@
             </div>
         </div>
 
+
+
         <!--ПАГИНАЦИЯ С ЦИКЛАМИ ЕЁ ФУНКЦИОНИРОВАНИЯ ПАРАМЕТРУ ВО VIEWS.PY-->
         <div class="tovars-div-grid-paginator">
         <!--ФОРМА ПАРАМЕТРОВ "НАЗАД"-->
@@ -76,11 +80,11 @@
         <!--ФОРМА ПАРАМЕТРОВ "ВПЕРЁД"-->
                 {% if page_obj.has_next %}
                 {% if category %}
-                    <a href="?page={{ page_obj.next_page_number }}&category={{category}}"> Вперёд</a>
-                    <a href="?page={{ page_obj.paginator.num_pages }}&category={{category}}"> &raquo;</a>
+                    <a class="tovars-a-paginator" href="?page={{ page_obj.next_page_number }}&category={{category}}"> Вперёд &raquo;</a>
+                    <!--<a class="tovars-div-paginator" href="?page={{ page_obj.paginator.num_pages }}&category={{category}}"> &raquo;</a>-->
                     {% else %}
-                    <a href="?page={{ page_obj.next_page_number }}"> Вперёд</a>
-                    <a href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a>
+                    <a class="tovars-a-paginator" href="?page={{ page_obj.next_page_number }}"> Вперёд &raquo;</a>
+                    <!--<a class="tovars-div-paginator" href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a>-->
                     {% endif%}
                 {% endif %}
             </span>

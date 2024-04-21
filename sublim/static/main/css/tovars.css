@@ -1,9 +1,9 @@
 /* GRID-контейнер для формы КАРТОЧЕК С ТОВАРАМИ */
 .tovars-div-grid-general {
   border: 10px solid #b61c69;
-  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   grid-auto-rows: 200px;
+  padding: 30px;
   grid-template-areas: ". a a ."
   ". a a .";
 }
@@ -11,6 +11,7 @@
 .tovars-div-grid-paginator {
   border: 10px solid #1f66eb;
   display: grid;
+  grid-row-gap: 200px;
   grid-row-gap: 10px;
   align-content: end;
   grid-template-rows: repeat(1, 60%);
@@ -24,10 +25,17 @@
   display: grid;
   grid-row-gap: 10px;
   align-content: center;
+  grid-row-gap: 200px;
   grid-template-rows: repeat(1, 60%);
   gap: 20px;
   grid-area: 1 / 2;
   justify-self: center;
+}
+
+/* Форма со всем содержимым  */
+.tovars-form-karte {
+  grid-row-gap: 200%;
+  border: 10px solid #1ed2d8;
 }
 
 /* ОБЛАСТЬ ОТОБРАЖЕНИЯ ТОВАРОВ */
@@ -35,18 +43,17 @@
 .tovars-div-general {
   display: grid;
   width: 70%; /* Ширина карточки */
-  height: 720px; /* Промежуток между карточками */
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr) );
+  /*height: 720px; /* Промежуток между карточками */
+  align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   column-gap: 3%;
-  grid-template-rows: repeat(auto-fit, minmax(850px, 1fr) );
-  row-gap: 6%;
+  grid-template-rows: repeat(auto-fit, minmax(1px 1fr) );
+  transition: 300ms;
+  row-gap: 20px;
   border-spacing: 8 30px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   padding-bottom: 70px;
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-bottom: 0px;
   border-radius: 100px;
   text-align: right;
   margin: 0 auto;
@@ -75,7 +82,7 @@
   padding: 5px;
   margin-left: 1%;
   margin-right: 1%;
-  margin-bottom: 0px;
+  margin-top: 5%;
   background: #d6f88765;
   border: 1px;
   border-bottom: 5px solid #f2f8f8b0;

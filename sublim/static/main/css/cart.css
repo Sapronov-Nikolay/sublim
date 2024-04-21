@@ -1,5 +1,9 @@
 /* Тело объекта с заказами = for cart.html in cart.css */
 .cart-form-cart {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(1px 1fr) );
+  transition: 300ms;
   text-align: center;
   background: #bcfa92ab;
   box-shadow: 0 0 10px 10px #c1f89cc0;

@@ -8,10 +8,11 @@
 <body id='bg' style="background-image: url({% static 'main/img/fon-tovars.jpeg' %})">
 <script src="{% static 'main/js/cart.js' %}"> </script>
 
-<form class="cart-form-cart">
     <div>
         <h3 class="cart-form-cart-h3">ЗАКАЗЫ В КОРЗИНЕ</h3>
     </div>
+<form class="cart-form-cart">
+    
     {% for zakaz in cart_form_auto_gen %}
     <div class="cart-table-cart" border="1">
         <div class="cart-in-img">
@@ -33,12 +34,13 @@
     </div>
     {% endfor %}
     <br>
+    
+    </div>
+</form>
     <th class="cart-th-cart-total_sum">
         <div class="cart-th-cart-itog" colspan="4">Итого:</div>
         <div class="cart-th-cart-total_sum">{{total_sum}}&#8381;</div>
     </th>
-    </div>
-</form>
 <p>
 </p>
 <div>
