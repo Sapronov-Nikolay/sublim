@@ -1,5 +1,9 @@
 /* Кнопка для выпадающего меню категорий = for tovars.html in menu_category.css*/
 .tovars-form-category {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 150px;
+    z-index: 6; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
     color: none;
 }
 /* ПОЛЕ ВЫБОРА КАТЕГОРИЙ ТОВАРОВ */
@@ -13,7 +17,6 @@
     font-size: 25px;
     border: none;
     right: 50px;
-    
 }
 
 .tovars-menu-select-category {

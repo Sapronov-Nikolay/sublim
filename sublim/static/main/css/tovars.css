@@ -3,8 +3,6 @@
   grid-gap: 10px;
   grid-auto-rows: 200px;
   padding: 30px;
-  grid-template-areas: ". a a ."
-  ". a a .";
 }
 /* GRID-контейнер для формы ПАГИНАЦИИ */
 .tovars-div-grid-paginator {
@@ -43,7 +41,6 @@
   align-content: start;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   column-gap: 3%;
-  grid-template-rows: repeat(auto-fit, minmax(1px 1fr) );
   transition: 300ms;
   row-gap: 20px;
   border-spacing: 8 30px;
@@ -56,6 +53,7 @@
 }
 /* Зона фото for tavars.html in tavars.css */
 .tovars-div-img {
+  z-index: 3; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   text-align: center;
   display: block;
   overflow: hidden;
@@ -70,6 +68,7 @@
 /* КОНТЕНТ КАРТОЧЕК */
 /* Общее поле карточки товара for tavars.html in tavars.css */
 .tovars-div-product_card {
+  z-index: 4; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   display: block;
   overflow: hidden;
   height: 820px; /* Длинна карточки в контенте */
@@ -102,7 +101,6 @@
 }
 /* Поле для описания товара for tavars.html in tavars.css */
 .tovsrs-div-content {
-  display: auto;
   text-align: justify;
   text-indent: 20px;
   overflow-y: scroll;
@@ -119,6 +117,7 @@
 }
 /* Поле для спецификации for tavars.html in tavars.css */
 .tovsrs-div-specification {
+  z-index: 4; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   font-weight: bold;
   padding: 5px;
   margin-left: 10%;
@@ -131,6 +130,7 @@
 }
 /* Поле для цены for tavars.html in tavars.css */
 .tovsrs-div-price {
+  z-index: 4; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   font-size: 35px;
   font-weight: 900;
   color:#661140;
@@ -145,13 +145,15 @@
   border-radius: 15px;
 }
 /* Подпись "КАТЕГОРИЯ" перед названием категории for tavars.html in tavars.css */
-.tovars-name-ceteg{
+.tovars-name-ceteg {
+  z-index: 4; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   display:inline-block;
   color:#2e5f21da;
   font-size: 18px;
 }
 /* Поле для категории for tavars.html in tavars.css */
 .tovers-div-category {
+  z-index: 4; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   font-weight: bold;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -166,6 +168,7 @@
 }
 /* Поле для номера и кнопки в корзину for tavars.html in tavars.css */
 .tovers-blick-inputs {
+  z-index: 6; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   font-weight: bold;
   padding: 2px;
   border: none;
@@ -174,6 +177,7 @@
 }
 /* Поле для ввода количества товаров for tavars.html in tavars.css */
 .tovars-input-number {
+  z-index: 1; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   display:inline-flexbox;
   background-color: #fae99ce1;
   border-color: #b1bb5c;
@@ -226,6 +230,7 @@ border-radius: 10px;
 }
 /* Текст для обозначения страниц */
 .tovars-span-paginator {
+  z-index: 3; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   background: radial-gradient(#8fff4493, #e9ff20b4);
   box-shadow: 0 0 15px 20px #e9ff20b4;
   margin: 3%;
@@ -234,6 +239,7 @@ border-radius: 10px;
 }
 /* Кнопки переключения страниц */
 .tovars-a-paginator {
+  z-index: 5; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   background-color: #0daf35a6;
   border-radius: 20px;
   padding: 8px;
@@ -255,6 +261,7 @@ border-radius: 10px;
 /* КНОПКА ЗАКАЗАТЬ В МАГАЗИНЕ */
 /* Параметры кнопки заказать for tovars.html in tovars.css end search.css */
 .tovars-cart-zakaz {
+  z-index: 5; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   background-color: #d7f8d8c7;
   font-weight: 600;
   font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';

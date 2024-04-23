@@ -1,5 +1,12 @@
 /* ОБЩИЙ КОНТЕЙНЕР, В КОТОРОМ ЛЕЖАТ ВСЕ ОБЪЕКТЫ МЕНЮ */
-
+/* Внешний контейнер для элемента меню for menu.html in menu.css */
+.menu-div-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+    z-index: 7; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
+}
+/* Область кнопок меню for menu.html in menu.css */
 ul.nav {
     text-align: center;
     margin: 10px;
