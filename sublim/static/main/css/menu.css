@@ -1,16 +1,17 @@
 /* ОБЩИЙ КОНТЕЙНЕР, В КОТОРОМ ЛЕЖАТ ВСЕ ОБЪЕКТЫ МЕНЮ */
 /* Внешний контейнер для элемента меню for menu.html in menu.css */
 .menu-div-nav {
+    background-image: linear-gradient(to bottom, #d7ffaa, #d7ffaa, #d7ffaa);
     position: -webkit-sticky;
     position: sticky;
     top: 70px;
+    padding-bottom: 5px;
     z-index: 7; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
 }
 /* Область кнопок меню for menu.html in menu.css */
 ul.nav {
     text-align: center;
-    margin: 10px;
-    padding-bottom: 3%;
+    padding-bottom: 50px;
 }
 
 /* Внешние параметры кнопок меню for menu.html in menu.css */

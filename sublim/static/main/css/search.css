@@ -1,13 +1,15 @@
                     /* ПОИСКОВАЯ СИСТЕМА ВНЕШНИЕ ОБОЛОЧКИ */
 /* Поле, где лежит вся поисковая система = for menu.html in search.css */
 .menu-search-all {
+  background-image: linear-gradient(to bottom, #d7ffaa, #d7ffaa);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 8; /* определяет порядок наложения элементов в трёхмерном пространстве на веб-странице. */
   text-align: center;
   margin-top: auto;
-  padding-top: 2px;
+  padding-top: 5px;
+  padding-bottom: 6px;
 }
 /* Поле в котором лежит поле "menu-div-field-search" = for menu.html in search.css */
 .menu-form-search {
