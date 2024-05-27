@@ -65,7 +65,8 @@ def search(request):
         goods = []
         search = request.POST['poisk'].lower()
         for good in Good.objects.all():
-            if good.namegood.lower() == search:
+            if search in good.namegood.lower():
+        # Проверяем наличие подстройки
                 goods.append(good)
 
     paginator = Paginator(goods, 4)
@@ -83,14 +84,11 @@ def search(request):
         # Kонтекст передаваемых переменных
         {
 
-            
             "summa": 0,  # summa,,
             "categories": categories,
             "Товары": goods,
             "page_obj": page_obj,            
             "navset": get_menu("/shop") # меню "Акции" "Магазин" "Доставка" "Рецепты" "О сублимировании"
-
-
         }
     )
 
